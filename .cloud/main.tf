@@ -13,6 +13,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">= 2.26"
     }
+    acme = {
+      source  = "vancluever/acme"
+      version = "~> 2.0"
+    }
   }
 
   required_version = ">= 0.14.9"
