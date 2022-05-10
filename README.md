@@ -1,8 +1,11 @@
-Logo font: .SF NS Display Condensed
-Website logos: https://iconmonstr.com
+# Jeeb.uk
 
-## Build & publish
+## Resources:
 
-```shell
-./build-and-upload.sh
-```
+* Logo font: .SF NS Display Condensed
+* [Website logos](https://iconmonstr.com)
+
+## Github flows
+
+* [Azure Actions Documentation](https://github.com/marketplace/actions/azure-cli-action)
+
