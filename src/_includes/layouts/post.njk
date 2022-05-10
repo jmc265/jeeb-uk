@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+showArrow: false
+showTitle: true
+---
+
+<div class="article-header">
+    {% if showBreadcrumbs %}
+        {% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+        <div class="breadcrumbs">{{ breadcrumbs | eleventyNavigationToHtml | safe }}</div>
+    {% endif %}
+
+    {% if showTitle %}
+        <h1>{{ title }}</h1>
+    {% endif %}
+
+    {% if showDate %}
+        <small><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+    {% endif %}
+</div>
+
+<article class="article-body">    
+    {{ content | safe }}
+
+    {% set children = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+    {% if (showChildren) and (children.length > 0) %}
+        <p>
+            <h2>Pages:</h2>
+            {{ children | eleventyNavigationToHtml | safe }}
+        </p>
+    {% endif %}
+</article>
+

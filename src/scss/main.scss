@@ -1,0 +1,128 @@
+html, body {
+    color: $foreground-color;
+    background: $background-color;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    line-height: 1.388888;
+}
+
+body {
+    margin: 0;
+}
+
+::selection {
+    background-color: $tertiary-color;
+    color: $background-color;
+    text-shadow: none;
+}
+
+a, a:visited {
+    color: $tertiary-color;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: $background-color;
+    background: $tertiary-color;
+
+    img {
+        background: none;
+    }
+}
+
+a[target=_blank]{ 
+    &:after {
+        content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAuUlEQVQoz42PMQ6CQBRE3xJs3MIreAl7SDwAVmBJ4QWMhYWGqIWFVzDGTqzc3kIO4HWw5FsIBs2CTjn7Zme+okH5aNxHivjbV7QoD6IFyOYjkAeh2GBtzqoMXUGGle/WHy0N8zoM4LTMmYFsgQJUDGr5brDAU5BduXqiTXos/Y7bUNCrwYdHEHkAXZMm1knapAnKGWiT7gEE8QXxW2/Ql9Pd5jcGmuS+jglXPzgPyKqG9R8fZwp1A3gClMw3YD8BHm8AAAAASUVORK5CYII=);
+        margin: 0px 3px 0px 5px;
+    }
+
+    &:hover, &:focus, &:active {
+        &::after {
+            content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAhklEQVQoz5WRsQ0CMRAEB4tCKIICXAogKkAEBCSmLQK+AFpiILEf67Ff/EoXeO92905e0YG6AfYsgXpV33UxJcbGV3T/EcwkXJoJneFzHnqpu7JeU6CeKtdDxaeeIOXhY35HNZZmb6XtxCABhN7BIYRnk1/0McB6PGYeERhKwu0P4wF4AHwARfqwnrLAYsIAAAAASUVORK5CYII=);
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    max-width: 700px;
+    position: relative;
+}
+
+.right-side {
+    margin-left: auto;
+}
+
+.title {
+    font-size: 3em;
+}
+
+.back-arrow {
+    font-family: monospace;
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+.post-list {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+
+    li {
+        display: flex;
+    }
+
+    &__link {
+    }
+
+    &__timestamp {
+        margin-left: auto;
+        white-space: nowrap;
+    }
+}
+
+.font-size-larger {
+    font-size: 1.25em;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-list {
+        &__timestamp {
+            display: none;
+        }
+    }
+}
+
+.pill {
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    color: $foreground-color;
+
+    &.active, &:hover {
+        color: $background-color;
+        background-color: $foreground-color;
+    }
+
+    &.active {
+        cursor: initial;
+        pointer-events: none;
+    }
+}

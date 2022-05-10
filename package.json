@@ -1,0 +1,30 @@
+{
+  "name": "jeeb-uk",
+  "version": "6.0.0",
+  "description": "Files & Code for jeeb.uk",
+  "scripts": {
+    "build": "npm run sass && npx @11ty/eleventy",
+    "watch": "eleventy --watch",
+    "start": "npm-run-all sass --parallel watch:*",
+    "debug": "DEBUG=* eleventy",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run sass -- --watch",
+    "sass": "sass --style=compressed src/scss/index.scss src/_includes/css/styles.css"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
+    "@sindresorhus/slugify": "^1.1.2",
+    "eleventy-plugin-youtube-embed": "^1.6.5",
+    "luxon": "^2.3.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-github-headings": "^2.0.0",
+    "markdown-it-modify-token": "^1.0.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "sass": "^1.49.7"
+  }
+}

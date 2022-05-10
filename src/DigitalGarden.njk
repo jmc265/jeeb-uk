@@ -1,0 +1,24 @@
+---
+layout: layouts/home.njk
+title: jeeb.uk - Digital Garden
+isDigitalGarden: true
+permalink: digital-garden/index.html
+eleventyNavigation:
+    key: DigitalGarden
+    title: 🌳
+---
+
+<div class="article-header">
+    <h1>Digital Garden 🌳</h1>
+    <p class="font-size-larger">What? Why? Who? <a href="./meta/readme">Start Here</a></p>
+</div>
+
+<section>
+    <div class="dg-list">
+        {{ collections.digitalGarden | eleventyNavigation("DigitalGarden", { includeSelf: false }) | eleventyNavigationToHtml | safe }}
+    </div>
+</section>
+
+<script>
+    {% include "js/masonry.js" ignore missing %}
+</script>

@@ -1,0 +1,21 @@
+{
+  "title": "jeeb.uk",
+  "url": "https://jeeb.uk/",
+  "language": "en",
+  "description": "I  am James and below are some words on Software Engineering as well as some programming-related projects.",
+  "feed": {
+    "subtitle": "I am James and below are some words on Software Engineering as well as some programming-related projects.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://jeeb.uk/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://jeeb.uk/feed/feed.json"
+  },
+  "author": {
+    "name": "James Cross",
+    "email": "jamescross265@gmail.com",
+    "url": "https://jeeb.uk/about-me/"
+  }
+}

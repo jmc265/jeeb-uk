@@ -1,0 +1,18 @@
+---
+layout: layouts/home.njk
+title: jeeb.uk
+isBlog: true
+eleventyNavigation:
+    key: Blog
+---
+<section>
+    <p class="font-size-larger">
+    <strong>Hi!</strong> I am <a href="/digital-garden/meta/about-me/">James</a> and below are some words on Software Engineering as well as some other things I am interested in.
+    </p>
+</section>
+
+<section>
+    {% set showYear = true %}
+    {% set postslist = collections.posts %}
+    {% include "postslist.njk" %}
+</section>
