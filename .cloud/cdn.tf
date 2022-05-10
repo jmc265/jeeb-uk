@@ -74,7 +74,7 @@ resource "azurerm_cdn_endpoint_custom_domain" "jeeb-uk-root" {
 resource "azurerm_cdn_endpoint_custom_domain" "jeeb-uk-www" {
   name            = "jeeb-uk-www"
   cdn_endpoint_id = azurerm_cdn_endpoint.jeeb-uk.id
-  host_name       = "${azurerm_dns_cname_record.www.name}.${data.azurerm_dns_zone.jeeb-uk.name}"
+  host_name       = "${azurerm_dns_cname_record.www.name}.${azurerm_dns_zone.jeeb-uk.name}"
   cdn_managed_https {
     certificate_type = "Dedicated"
     protocol_type    = "ServerNameIndication"

@@ -22,7 +22,7 @@ resource "acme_certificate" "jeeb-uk-root" {
       AZURE_CLIENT_SECRET = "${var.azure_client_secret}"
       AZURE_SUBSCRIPTION_ID = "${var.azure_subscription_id}"
       AZURE_TENANT_ID = "${var.azure_tenant_id}"
-      AZURE_RESOURCE_GROUP = "${azurerm_resource_group.core.name}"
+      AZURE_RESOURCE_GROUP = "${azurerm_resource_group.jeeb-uk.name}"
       AZURE_ZONE_NAME = "${azurerm_dns_zone.jeeb-uk.name}"
     }
   }

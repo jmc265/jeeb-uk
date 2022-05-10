@@ -28,5 +28,5 @@ resource "azurerm_dns_cname_record" "jeeb-uk-root-cdnverify" {
   zone_name           = azurerm_dns_zone.jeeb-uk.name
   resource_group_name = azurerm_resource_group.jeeb-uk.name
   ttl                 = 300
-  record              = "cdnverify.${azurerm_cdn_endpoint.blog.name}.azureedge.net"
+  record              = "cdnverify.${azurerm_cdn_endpoint.jeeb-uk.name}.azureedge.net"
 }
