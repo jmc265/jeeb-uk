@@ -1,0 +1,48 @@
+name: Build & Publish content
+on:
+  push:
+    branches:
+    - main
+    
+jobs:
+  build_publish:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: CHECKOUT
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: AZURE LOGIN 
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+              az storage blob upload-batch --account-name jeebstorage -d '$web' -s ./output
+              
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+              az cdn endpoint purge --content-paths  "/*" --profile-name "jeeb-uk-cdn" --name "jeeb-uk-cdnep" --resource-group "jeeb-uk"
+
+      - name: logout
+        run: |
+              az logout

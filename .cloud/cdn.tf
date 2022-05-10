@@ -1,12 +1,12 @@
 resource "azurerm_cdn_profile" "jeeb-uk" {
-  name                = "${var.short_prefix}-jeeb-uk-cdn"
+  name                = "${var.short_prefix}-cdn"
   resource_group_name = azurerm_resource_group.jeeb-uk.name
   location            = var.cdn_location
   sku                 = "Standard_Microsoft"
 }
 
 resource "azurerm_cdn_endpoint" "jeeb-uk" {
-  name                = "${var.short_prefix}-jeeb-uk-cdnep"
+  name                = "${var.short_prefix}-cdnep"
   profile_name        = azurerm_cdn_profile.jeeb-uk.name
   resource_group_name = azurerm_resource_group.jeeb-uk.name
   location            = var.cdn_location
