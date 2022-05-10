@@ -30,3 +30,7 @@ resource "azurerm_dns_cname_record" "jeeb-uk-root-cdnverify" {
   ttl                 = 300
   record              = "cdnverify.${azurerm_cdn_endpoint.jeeb-uk.name}.azureedge.net"
 }
+
+output "name_servers" {
+  value = azurerm_dns_zone.jeeb-uk.name_servers
+}
