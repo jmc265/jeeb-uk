@@ -34,14 +34,14 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-              az storage blob upload-batch --account-name jeebstorage -d '$web' -s ./output
+              az storage blob upload-batch --account-name jeebstorage -d '$web' -s ./output --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
               
       - name: Purge CDN endpoint
         uses: azure/CLI@v1
         with:
           azcliversion: 2.0.72
           inlineScript: |
-              az cdn endpoint purge --content-paths  "/*" --profile-name "jeeb-uk-cdn" --name "jeeb-uk-cdnep" --resource-group "jeeb-uk"
+              az cdn endpoint purge --content-paths  "/*" --profile-name "jeeb-uk-cdn" --name "jeeb-uk-cdnep" --resource-group "jeeb-uk" --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: logout
         run: |
