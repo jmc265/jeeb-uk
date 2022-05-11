@@ -18,16 +18,13 @@
         <div class="container">
             <div class="logo">
                 <a href="{{ '/' | url }}">
-                    {% if showArrow %}
-                        {% include "img/arrow.svg" %}
-                    {% endif %}
-                    {% include "img/jeebuk.svg" %}
+                    <img src="{{ '/assets/img/jeebuk.svg' | url }}" class="apply-svg-filter"/>
                 </a>
             </div>
             <div class="right-side">
                 <a class="pill {{ "active" if isBlog }}" href="/">Blog</a>
                 <a class="pill {{ "active" if isDigitalGarden }}" href="/digital-garden">Digital Garden</a>
-                <a id="toggle-theme-button">&nbsp;</a>
+                <img id="toggle-theme-button" src="{{ '/assets/img/sun.svg' | url }}" class="apply-svg-filter"/>
             </div>
         </div>
     </header>

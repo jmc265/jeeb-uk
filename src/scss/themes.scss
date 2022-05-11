@@ -17,5 +17,9 @@
     cursor: pointer;
     height: $button-size;
     width: $button-size;
-    background-image: var(--toggle-icon);
+    content: var(--toggle-icon);
+}
+
+.apply-svg-filter {
+    filter: var(--svg-filter);
 }
