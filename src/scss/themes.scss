@@ -1,0 +1,21 @@
+@media (prefers-color-scheme: dark) {
+    img {
+      opacity: .75;
+      transition: opacity .5s ease-in-out;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+}
+
+#toggle-theme-button {
+    $button-size: 24px;
+
+    display: block;
+    margin-left: 1rem;
+    cursor: pointer;
+    height: $button-size;
+    width: $button-size;
+    background-image: var(--toggle-icon);
+}

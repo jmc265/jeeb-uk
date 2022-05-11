@@ -49,7 +49,7 @@ img {
 
 header {
     position: relative;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--text-color);
 
     .container {
         display: flex;
@@ -67,6 +67,8 @@ header {
 
 .right-side {
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .title {
