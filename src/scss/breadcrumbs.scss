@@ -9,13 +9,13 @@
 
 .breadcrumbs ul li+li:before {
     padding: 0.5rem;
-    color: $foreground-color;
+    color: var(--text-color);
     content: "/\00a0";
 }
 
 // .breadcrumbs ul li:last-child a {
 //     pointer-events: none;
-//     color: $foreground-color !important;
+//     color: var(--text-color) !important;
 //     font-weight: bold;
 // }
 
