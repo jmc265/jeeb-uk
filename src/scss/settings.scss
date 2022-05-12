@@ -1,5 +1,60 @@
-// Red (#F65058FF), Yellow (#FBDE44FF) and Navy (#28334AFF)
-$background-color: #FFF;
-$foreground-color: #28334A;
-$tertiary-color: #F65058;
-$quaternary-color: #FBDE44;
+// Light Theme
+$light-background-color: #FFF;
+$light-background-accent-color: #EEE;
+$light-text-color: #28334A;
+$light-anchor-color: #F65058;
+$light-other-color: #FBDE44;
+$light-toggle-icon: url("/assets/img/moon.svg");
+$light-svg-filter: invert(15%) sepia(9%) saturate(3204%) hue-rotate(183deg) brightness(92%) contrast(84%);
+
+// Dark Theme
+$dark-background-color: #222425;
+$dark-background-accent-color: #2D2F32;
+$dark-text-color: #D4E5F7;
+$dark-anchor-color: #ED7073;
+$dark-other-color: #FBDE44;
+$dark-toggle-icon: url("/assets/img/sun.svg");
+$dark-svg-filter: invert(100%) sepia(19%) saturate(6507%) hue-rotate(175deg) brightness(101%) contrast(94%);
+
+body {
+    color-scheme: light dark;
+    --bkg-color: #{$light-background-color};
+    --accent-bkg-color: #{$light-background-accent-color};
+    --text-color: #{$light-text-color};
+    --anchor-color: #{$light-anchor-color};
+    --other-color: #{$light-other-color};
+    --toggle-icon: #{$light-toggle-icon};
+    --svg-filter: #{$light-svg-filter};
+}
+
+body.dark-theme {
+    --bkg-color: #{$dark-background-color};
+    --accent-bkg-color: #{$dark-background-accent-color};
+    --text-color: #{$dark-text-color};
+    --anchor-color: #{$dark-anchor-color};
+    --other-color: #{$dark-other-color};
+    --toggle-icon: #{$dark-toggle-icon};
+    --svg-filter: #{$dark-svg-filter};
+}
+
+@media (prefers-color-scheme: dark) {
+    body { 
+        --bkg-color: #{$dark-background-color};
+        --accent-bkg-color: #{$dark-background-accent-color};
+        --text-color: #{$dark-text-color};
+        --anchor-color: #{$dark-anchor-color};
+        --other-color: #{$dark-other-color};
+        --toggle-icon: #{$dark-toggle-icon};
+        --svg-filter: #{$dark-svg-filter};
+    }
+
+    body.light-theme {
+        --bkg-color: #{$light-background-color};
+        --accent-bkg-color: #{$light-background-accent-color};
+        --text-color: #{$light-text-color};
+        --anchor-color: #{$light-anchor-color};
+        --other-color: #{$light-other-color};
+        --toggle-icon: #{$light-toggle-icon};
+        --svg-filter: #{$light-svg-filter};
+    }
+}

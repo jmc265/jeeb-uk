@@ -18,7 +18,7 @@
         & > li {
             padding: 0.25rem;
             margin: 0.25rem;
-            background-color: #eee;
+            background-color: var(--accent-bkg-color);
 
             & > a {
                 font-size: 1.17em;
