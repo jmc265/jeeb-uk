@@ -1,6 +1,0 @@
-- **Browser:** [Firefox Developer Edition](https://www.mozilla.org/en-GB/firefox/developer/)
-	- [Bitwarden](https://bitwarden.com/) (installed on all devices)
-	- [Dark Reader](http://darkreader.org/)
-	- [Decentraleyes](https://decentraleyes.org/)
-	- [Easy Screenshot](https://addons.mozilla.org/en-US/firefox/addon/easyscreenshot/)
-	- [uBlock Origin](https://github.com/gorhill/uBlock#ublock-origin)
