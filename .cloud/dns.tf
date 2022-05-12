@@ -81,7 +81,7 @@ resource "azurerm_dns_cname_record" "jeeb-uk-autoconfig" {
   record              = "privateemail.com"
 }
 
-resource "azurerm_dns_srv_record" {
+resource "azurerm_dns_srv_record" "jeeb-uk-autodiscover" {
   name                = "_autodiscover"
   zone_name           = azurerm_dns_zone.jeeb-uk.name
   resource_group_name = azurerm_resource_group.jeeb-uk.name
