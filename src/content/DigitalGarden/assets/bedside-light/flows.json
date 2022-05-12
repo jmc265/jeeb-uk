@@ -1,0 +1,441 @@
+[
+    {
+        "id": "33ef7062.eef93",
+        "type": "inject",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "At 22:00",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "00 22 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "f3215259.545278",
+                "1c906f05.5851c9",
+                "6600e16e.5e1ef",
+                "973e774.a1d0388",
+                "2559b44e.68c754",
+                "685223ca.999c4c"
+            ]
+        ]
+    },
+    {
+        "id": "33b53556.cd77ea",
+        "type": "rpi-unicorn",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Lamp",
+        "png": "255,255,255",
+        "bright": "0",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f3215259.545278",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Brightness 100%",
+        "func": "return {\n    payload: `brightness,100`\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "33b53556.cd77ea"
+            ]
+        ]
+    },
+    {
+        "id": "1c906f05.5851c9",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Yellowish Colour",
+        "func": "function hexToRgb(hex) {\n  var result = /^#?([a-f\\d]{2})([a-f\\d]{2})([a-f\\d]{2})$/i.exec(hex);\n  return result ? \n  `${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(result[3], 16)}`\n  : null;\n}\nreturn {\n    payload: hexToRgb(\"#ffc624\")\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 220,
+        "wires": [
+            [
+                "33b53556.cd77ea"
+            ]
+        ]
+    },
+    {
+        "id": "6600e16e.5e1ef",
+        "type": "mopidy-out",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "server": "e1b70158.d6f4f",
+        "params": "{}",
+        "method": "tracklist.clear",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52ca5c34.8023bc",
+        "type": "mopidy-out",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "server": "e1b70158.d6f4f",
+        "params": "{\"tracks\":\"\",\"at_position\":\"\",\"uris\":\"[\\\"spotify:playlist:37i9dQZF1DX9uKNf5jGX6m\\\"]\"}",
+        "method": "tracklist.add",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "973e774.a1d0388",
+        "type": "mopidy-out",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "server": "e1b70158.d6f4f",
+        "params": "{\"volume\":\"10\"}",
+        "method": "mixer.setVolume",
+        "x": 720,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "890559e4.25acd8",
+        "type": "mopidy-out",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "server": "e1b70158.d6f4f",
+        "params": "{\"tl_track\":\"\",\"tlid\":\"\"}",
+        "method": "playback.play",
+        "x": 720,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2559b44e.68c754",
+        "type": "delay",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "52ca5c34.8023bc"
+            ]
+        ]
+    },
+    {
+        "id": "685223ca.999c4c",
+        "type": "delay",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "890559e4.25acd8"
+            ]
+        ]
+    },
+    {
+        "id": "6d153665.581198",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Fade Down Values",
+        "func": "const startBrightness = 100;\nconst endBrightness = 0;\nconst payload = [];\nfor (let i = startBrightness; i >= 0; i-=5) {\n    payload.push(i);\n}\nreturn {\n    payload\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "549fc9.8d9ce038"
+            ]
+        ]
+    },
+    {
+        "id": "549fc9.8d9ce038",
+        "type": "split",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Split obj",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 620,
+        "y": 540,
+        "wires": [
+            [
+                "5d1da186.3b0118"
+            ]
+        ]
+    },
+    {
+        "id": "5d1da186.3b0118",
+        "type": "delay",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "3cde9c3a.11d16c"
+            ]
+        ]
+    },
+    {
+        "id": "3f41321e.afc03e",
+        "type": "delay",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 410,
+        "y": 640,
+        "wires": [
+            [
+                "fedc9f4e.1f782"
+            ]
+        ]
+    },
+    {
+        "id": "fedc9f4e.1f782",
+        "type": "mopidy-out",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "server": "e1b70158.d6f4f",
+        "params": "{}",
+        "method": "playback.pause",
+        "x": 720,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cde9c3a.11d16c",
+        "type": "rpi-unicorn",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Lamp",
+        "png": "",
+        "bright": "",
+        "x": 820,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c17e68a4.18b26",
+        "type": "mqtt in",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "topic": "home/sleep",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ca69c5c.e39a038",
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "6d153665.581198",
+                "3f41321e.afc03e"
+            ]
+        ]
+    },
+    {
+        "id": "fa0a63bd.aecb7",
+        "type": "rpi-unicorn",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Bedside Lamp",
+        "png": "255,255,255",
+        "bright": "0",
+        "x": 740,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "a439749e.c5c89",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Brightness",
+        "func": "return {\n    payload: `brightness,${msg.payload}`\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "fa0a63bd.aecb7"
+            ]
+        ]
+    },
+    {
+        "id": "892dc03d.232ab",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Colour",
+        "func": "function componentToHex(c) {\n  var hex = c.toString(16);\n  return hex.length == 1 ? \"0\" + hex : hex;\n}\n\nfunction rgbToHex(r, g, b) {\n  return \"#\" + componentToHex(r) + componentToHex(g) + componentToHex(b);\n}\nfunction hexToRgb(hex) {\n  var result = /^#?([a-f\\d]{2})([a-f\\d]{2})([a-f\\d]{2})$/i.exec(hex);\n  return result ? \n  `${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(result[3], 16)}`\n  : null;\n}\n\nreturn {\n    payload: hexToRgb(msg.payload)\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 840,
+        "wires": [
+            [
+                "fa0a63bd.aecb7"
+            ]
+        ]
+    },
+    {
+        "id": "b14930eb.f65738",
+        "type": "function",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "Clear",
+        "func": "return {\n    payload: \"CLEAR\"\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 780,
+        "wires": [
+            [
+                "fa0a63bd.aecb7"
+            ]
+        ]
+    },
+    {
+        "id": "d4400a38.264e68",
+        "type": "switch",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 760,
+        "wires": [
+            [
+                "a439749e.c5c89"
+            ],
+            [
+                "b14930eb.f65738"
+            ]
+        ]
+    },
+    {
+        "id": "ba2d3c93.b840f8",
+        "type": "mqtt in",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "home/lamp/brightness",
+        "topic": "home/lamp/brightness",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ca69c5c.e39a038",
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "d4400a38.264e68"
+            ]
+        ]
+    },
+    {
+        "id": "c2ebd1d4.02086",
+        "type": "mqtt in",
+        "z": "5d2a9b1d.fe8bbc",
+        "name": "home/lamp/colour",
+        "topic": "home/lamp/colour",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ca69c5c.e39a038",
+        "x": 110,
+        "y": 840,
+        "wires": [
+            [
+                "892dc03d.232ab"
+            ]
+        ]
+    },
+    {
+        "id": "e1b70158.d6f4f",
+        "type": "mopidy-config",
+        "z": "",
+        "name": "Local Mopidy",
+        "host": "localhost",
+        "port": "6680"
+    },
+    {
+        "id": "ca69c5c.e39a038",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Local MQTT",
+        "broker": "http://localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true
+    }
+]
