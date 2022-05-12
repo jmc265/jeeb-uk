@@ -31,6 +31,32 @@ resource "azurerm_dns_cname_record" "jeeb-uk-root-cdnverify" {
   record              = "cdnverify.${azurerm_cdn_endpoint.jeeb-uk.name}.azureedge.net"
 }
 
+resource "azurerm_dns_mx_record" "jeeb-uk-email" {
+  name                = "@"
+  zone_name           = azurerm_dns_zone.jeeb-uk.name
+  resource_group_name = azurerm_resource_group.jeeb-uk.name
+  ttl                 = 300
+  record {
+    preference = 10
+    exchange   = "mx1.privateemail.com"
+  }
+
+  record {
+    preference = 10
+    exchange   = "mx2.privateemail.com"
+  }
+}
+
+resource "azurerm_dns_txt_record" "jeeb-uk-email" {
+  name                = "@"
+  zone_name           = azurerm_dns_zone.jeeb-uk.name
+  resource_group_name = azurerm_resource_group.jeeb-uk.name
+  ttl                 = 300
+  record {
+    value = "v=spf1 include:spf.privateemail.com ~all"
+  }
+}
+
 output "name_servers" {
   value = azurerm_dns_zone.jeeb-uk.name_servers
 }
