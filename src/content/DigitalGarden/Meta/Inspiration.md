@@ -1,0 +1,10 @@
+## Links
+- [Everything I know](https://wiki.nikiv.dev/)
+- [r/DigitalGardens/](https://www.reddit.com/r/DigitalGardens/)
+- [Paul Copplestone](https://paul.copplest.one/)
+- [Bharat Kalluri](https://bharatkalluri.com/)
+- [Aaron Parecki](https://aaronparecki.com/life-stack/)
+- [Eddie Hinkle](https://eddiehinkle.com/ )
+- [Evergreen notes](https://notes.andymatuschak.org/Evergreen notes) 
+- [Ru Singh](https://rusingh.com/) 
+- [Interesting ideas for blogs](https://brainbaking.com/post/2022/04/cool-things-people-do-with-their-blogs/) 
