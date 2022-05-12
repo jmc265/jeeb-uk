@@ -56,7 +56,7 @@ module.exports = function(c) {
                     "order": getOrder(data, filePath)
                 }
            },
-           "permalink": data => slugify(data.page.filePathStem).replace("/content", "") + "/index.html"
+           "permalink": data => slugify(data.page.filePathStem).replace("/content", "").replace("/digital-garden", "") + "/index.html"
         }
     }
 }

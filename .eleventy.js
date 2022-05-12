@@ -84,7 +84,7 @@ module.exports = function (eleventyConfig) {
                     }
                     if (href.endsWith(".md")) {
                         const slugifiedHref = slugify(href);
-                        token.attrObj.href = `/digital-garden/${slugifiedHref.replaceAll("../", "")}`;
+                        token.attrObj.href = `/${slugifiedHref.replaceAll("../", "")}`;
                     }
                     break;
             }
