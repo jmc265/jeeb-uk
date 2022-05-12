@@ -92,7 +92,7 @@ module.exports = function (eleventyConfig) {
     })
         .use(require('markdown-it-modify-token'))
         .use(markdownItGithubHeadings, {
-            className: "heading-anchor",
+            className: "heading-anchor apply-svg-filter",
             prefixHeadingIds: false
         });
     eleventyConfig.setLibrary("md", markdownLibrary);
