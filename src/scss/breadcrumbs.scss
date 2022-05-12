@@ -1,6 +1,7 @@
 .breadcrumbs ul {
     list-style: none;
     padding-left: 0;
+    font-size: 0.8rem;
 }
 
 .breadcrumbs ul li {
@@ -8,17 +9,18 @@
 }
 
 .breadcrumbs ul li+li:before {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     color: var(--text-color);
-    content: "/\00a0";
+    content: ">";
+    transform: scale(0.6,1.7) translateY(-2px);
+    display: inline-block;
 }
 
-// .breadcrumbs ul li:last-child a {
-//     pointer-events: none;
-//     color: var(--text-color) !important;
-//     font-weight: bold;
+.breadcrumbs ul li:last-child a {
+    pointer-events: none;
+    color: var(--text-color) !important;
+}
+
+// .breadcrumbs ul li:last-child {
+//     display: none;
 // }
-
-.breadcrumbs ul li:last-child {
-    display: none;
-}
