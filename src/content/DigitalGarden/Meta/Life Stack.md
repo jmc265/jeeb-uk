@@ -18,7 +18,7 @@
 #### Apps
 - **Browser:** [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix&hl=en_GB&gl=US)
 ### Home Server (Self-hosting)
-- [Lots of information on hardware and services here](What%20I%20Self%20Host.md Hosting/What I Self Host.md>)
+- [Lots of information on hardware and services here](<../Self Hosting/What I Self Host.md>)
 ### Cloud
 - **Cloud Services**: [Azure](https://azure.microsoft.com)
 - **Backup:** [Azure Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) & [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) ([more info here](Backups.md Hosting/Backups>))
@@ -29,7 +29,7 @@
 - **Video:** Netflix & [Plex](https://plex.tv/)
 - **Audio Books:** Audible
 ### Software
-- [All my software](Digital%20Garden/Software/Index.md)
+- [All my software](../Software/Index.md)
 ### Gaming
 - **VR Headset:** [Oculus Rift S](https://www.oculus.com/rift-s)
 - **Console:** PS4 (only really used to watch BluRays recently...)
@@ -41,9 +41,9 @@
 	- **Lens:**
 - **Raw Photo Editor:** [darktable](https://www.darktable.org/)
 ## Drone
-- [My Drone](My%20Drone.md Drone.md>)
+- [My Drone](<../Drones/My Drone.md>)
 ## 3D Printing
-- [My Printer](My%20Printer.md Printing/My Printer.md>)
+- [My Printer](<../3D Printing/My Printer.md>)
 ## Links
 ### Inspiration:
 - https://aaronparecki.com/life-stack/

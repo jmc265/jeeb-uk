@@ -1,4 +1,4 @@
-As a Software Engineer, I spend a fair amount of my time in a Terminal. Especially when dealing with my [Self Hosting setup](Digital%20Garden%20🌳/Self%20Hosting/Index.md Hosting/Index.md>). Therefore, it makes sense to spend some time to make the experience as pleasant as possible.
+As a Software Engineer, I spend a fair amount of my time in a Terminal. Especially when dealing with my [Self Hosting setup](<../Self Hosting/Index.md>). Therefore, it makes sense to spend some time to make the experience as pleasant as possible.
 
 My setup for all my terminals is shown in [github.com/jmc265/dotfiles](https://github.com/jmc265/dotfiles), but I have listed my current setup below:
 
