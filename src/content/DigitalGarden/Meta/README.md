@@ -20,3 +20,4 @@ These notes are primarily meant for:
 
 ## How?
 The notes are all Markdown files (edited in [Obsidian](https://obsidian.md/)) which are then rendered out to HTML using [Eleventy](https://www.11ty.dev/).
+The full source for [jeeb.uk](https://jeeb.uk) can be viewed in the repo [github.com/jmc265/jeeb-uk](https://github.com/jmc265/jeeb-uk).

@@ -22,7 +22,7 @@ In order of most impactful to my daily life to least impactful:
 - [Portainer](https://www.portainer.io/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/portainer/compose.yml)) - I installed Portainer as a way to better visualise and manage the various docker containers and "stacks" (compose files) that I was creating. However, I have found that I never really use it, and instead just revert to the CLI.
 
 ## How I self host
-### [Hardware](Hardware.md)
+### [Hardware](./Hardware.md)
 - [Intel NUC7JYB](https://ark.intel.com/content/www/us/en/ark/products/126135/intel-nuc-kit-nuc7cjyh.html) with additional RAM (8GB) running Ubuntu
 - 1TB Western Digital and 2TB Toshiba hard drives
 ### Cloud
