@@ -11,7 +11,7 @@ const slugify = require("./src/eleventy/slugify");
 module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPassthroughCopy({
-        "src/content/Digital Garden/assets": "assets",
+        "src/content/DigitalGarden/assets": "assets",
         "src/_includes/css": "assets/css",
         "src/_includes/js": "assets/js",
         "src/_includes/img": "assets/img",

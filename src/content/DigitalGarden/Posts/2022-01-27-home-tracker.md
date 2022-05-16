@@ -27,7 +27,7 @@ From these requirements, the solution that sprang to mind was to put calendar en
 
 So after registering a new bot on the Telegram platform, I started adding nodes to my Node-RED instance. As I wanted this to be as few clicks as possible, I decided to use an inline keyboard to navigate through the options. This first flow creates the top-level options:
 
-![nodered flow](nodered.png)
+![nodered flow](../assets/hometracker/nodered.png)
 
 The "initial keyboard" node is as follows:
 ```javascript
@@ -58,17 +58,17 @@ return [ msg ];
 ```
 
 This results in the bot posting 2 buttons when a user types in anything to the chat:
-![telegram](telegram.png)
+![telegram](../assets/hometracker/telegram.png)
 
 In the Javascript node above, you can see that when the user clicks on the "Sleeping" button, the `callback_data` to my Node-RED app will include the key "SLEEPING". I use this to post a further inline keyboard with additional options:
-![nodered flow](nodered2.png)
+![nodered flow](../assets/hometracker/nodered2.png)
 This results in a second message and button selection:
-![telegram](telegram2.png)
+![telegram](../assets/hometracker/telegram2.png)
 
 Finally, when we click on either the 30min or 1hr buttons, I want to add an iCal entry into an `.ics` file. 
 
 The nodes for doing this look as follows:
-![nodered flow](nodered3.png)
+![nodered flow](../assets/hometracker/nodered3.png)
 
 The nodes labeled `summary = Sleep (xxx)` assign some values which are then read by the `Add Event` node. Importantly they set:
 * `msg.summary` = "Sleep"
@@ -102,7 +102,7 @@ return {
  After all this is complete, the Node-RED app then sends a message back to notify the user that everything has been tracked.
 
  The complete flow, including the feeding sub-flow and a sleep timer (which creates an ical event based on the length of time between pressing "start" and "end") is:
- ![nodered flow](nodered4.png)
+ ![nodered flow](../assets/hometracker/nodered4.png)
 
  This was tested and works fine for adding events to the ical file. The final bit of the puzzle was getting Google Calendar to display the events. As the file was on my local server at home, I had to expose the file to the internet, and I chose nginx in a docker container to do this. Probably a bit of an overkill but I needed something quick.
 
@@ -135,4 +135,4 @@ cal-nginx:
 
 With this setup, my ics file was now exposed to `https://cal.domain.com/cal.ics`. Google Calendar allows importing from a URL and they claim that they sync this every 12 hours or so. In practice it appears to be a lot longer refresh period than that, and besides we want to see the results much quicker than that. Luckily someone has created a Google AppScript which takes an ics file and replicates the entries to your calendar as often as you like. This is [GAS-ICS-Sync](https://github.com/derekantrican/GAS-ICS-Sync). After installing and configuring the script, I can see my entries in Google Calendar:
 
-![calendar](calendar.jpg)
+![calendar](../assets/hometracker/calendar.jpg)

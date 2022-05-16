@@ -23,7 +23,7 @@ I wanted my first foray into FPV drones to be fairly cheap, whilst also giving m
 
 ## Completed
 Here is the drone with a Fitfort action cam attached to the top:
-![Beta85X V2](beta85x.jpg)
+![Beta85X V2](../assets/beta85x.jpg)
 
 ## Links
  - [OscarLiang.com](https://oscarliang.com)

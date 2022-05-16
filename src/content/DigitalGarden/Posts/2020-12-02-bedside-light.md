@@ -43,7 +43,7 @@ Make sure the above are all installed and if you are using Spotify, have that se
 
 Let's deal with turning on the light first. We will setup an automation that looks like the below:
 
-![Lamp Automation](lamp-automation.png)
+![Lamp Automation](../assets/lamp-automation.png)
 
 Let's walk through that from right to left.
 
@@ -69,7 +69,7 @@ The left-most node is a simple inject which triggers at 22:00 every day of the w
 
 Next let's add some some nodes to start playing some music at the same time:
 
-![Music Automation](music-automation.png)
+![Music Automation](../assets/music-automation.png)
 
 We have a list of nodes that effect Mopidy:
 
@@ -84,7 +84,7 @@ I have added a delay for the `add` and `play` nodes so that we know that the tra
 
 Now that we have turned on the light, we need to turn it off when we want to sleep. We are going to fade out the light for added shazam and continue to play the music for 30 minutes before turning it off. We could do this at a preset time like so:
 
-![Turnoff Automation](turnoff-automation.png)
+![Turnoff Automation](../assets/turnoff-automation.png)
 
 The `Fade Down Values` function outputs an array of values counting down from 100% to 0% in increments of 5:
 
@@ -112,15 +112,15 @@ We will be using MQTT and an Android App called [IoT MQTT Panel](https://play.go
 
 So first we need to add an MQTT node and replace the timing injection node:
 
-![Turnoff Remote Control](turnoff-remote.png)
+![Turnoff Remote Control](../assets/bedside-light/turnoff-remote.png)
 
 And then in IoT MQTT Panel we can set up some controls for the lamp:
 
-![iotmqttpanel](iotmqttpanel.jpg)
+![iotmqttpanel](../assets/bedside-light/iotmqttpanel.jpg)
 
 The button with the bed on it publishes to the `home/sleep` topic. And there are a few other controls in there for manually setting the lamp's colour and brightness. Here is what the nodes look like for dealing with brightness and colour topics:
 
-![MQTT Controls](mqtt-controls.png)
+![MQTT Controls](../assets/bedside-light/mqtt-controls.png)
 
 ### Conclusion
 

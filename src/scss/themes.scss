@@ -1,13 +1,35 @@
-@media (prefers-color-scheme: dark) {
+
+
+body.dark-theme {
     img {
-      opacity: .75;
-      transition: opacity .5s ease-in-out;
+        opacity: .75;
+        transition: opacity .5s ease-in-out;
+      }
+  
+      img:hover {
+        opacity: 1;
+      }
+}
+
+@media (prefers-color-scheme: dark) {
+    body { 
+        img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+        }
+      
+        img:hover {
+            opacity: 1;
+        }
     }
 
-    img:hover {
-      opacity: 1;
+    body.light-theme {
+        img {
+            opacity: 1;
+        }
     }
 }
+
 
 #toggle-theme-button {
     $button-size: 24px;

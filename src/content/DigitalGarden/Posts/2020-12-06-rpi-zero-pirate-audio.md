@@ -14,8 +14,8 @@ As a gift, I received a [Raspberry Pi Zero Pirate Audio](https://shop.pimoroni.c
 
 Luckily, someone on Thingiverse had already created a flat case for the [Rpi Zero with the Pirate Audio HAT attached](https://www.thingiverse.com/thing:4087948). I have added to the design to create a 45 degree built in stand. The only complex part of this is that the Rpi is now used up-side-down because the power cable needed to come out of the top for clearance. There are settings on the built-in display to allow for a 180 degree rotation. 
 
-![rpi audio design](rpi-audio.png)
+![rpi audio design](../assets/rpi-audio.png)
 
-![rpi audio print](rpi-audio.jpg)
+![rpi audio print](../assets/rpi-audio.jpg)
 
 The design files for this print can be found on [Thingiverse](https://www.thingiverse.com/thing:5248110).
