@@ -1,3 +1,5 @@
+![Flame Start Page](../assets/startpage.png)
+
 ## Why I self host?
 - **Own your own data** - I would rather my data (notes/photos/videos etc.) be stored on devices I own, and if not that, then use client-side encryption (e.g. for cloud backups)
 - **Interest** - The Self Hosting community is a very vibrant and expansive area. There are constantly new approaches and apps to try out
@@ -8,7 +10,7 @@ In order of most impactful to my daily life to least impactful:
 - [Syncthing](https://syncthing.net/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/syncthing/compose.yml)) - Keep files on 2 or more devices in sync, including Linux, Mac, Windows and Android. This app has been so stable and reliable for many years for me. It is truly a set-and-forget type deal. I use it for syncing photos on my phone to my home server, as well as syncing my notes between all my devices.
 - [PhotoPrism](https://photoprism.app/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/photoprism/compose.yml)) - An excellent photo (and video) gallery with maps, face detection, RAW support and lots more. Constantly having features added to it. A brilliant Google Photos replacement.
 - [Plex](https://www.plex.tv/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/plex/compose.yml)) - For video viewing in the home and away from it
-- [Heimdall](https://heimdall.site/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/heimdall/compose.yml)) - Current start page. I only really selected this because of the popularity of it, but the lack of customisation in it will probably mean I will move on at some point.
+- [Flame](https://github.com/pawelmalak/flame/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/flame/compose.yml)) - Current start page. Looks beautiful from the start and has some amount of customisation in the GUI. The most important feature for me though is the ability to add items to the start page through using Docker labels. It keeps all the configuration inside my compose.yml files.
 - [Samba](https://github.com/dperson/samba) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/samba/compose.yml)) - Used for sharing files from my server over the local network. I am using docker image `dperson/samba` which I find to be generally stable, although a bit finicky with working out username/password combos. 
 - [Home Assistant](https://www.home-assistant.io/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/home-assistant/compose.yml)) - A home automation hub for connecting together a disparate set of providers and devices. After a lot of time setting it all up, it silently runs, controlling my house's various "smart" devices. We only notice it when it doesn't work, which is the best review for such a setup
 - [Node-RED](https://nodered.org/) ([compose.yml](https://github.com/jmc265/personal-cloud/blob/main/node-red/compose.yml)) - I have used Node-RED for many years as I love the low-code functionally-reactive style nature of the flows you can write. It currently only runs a couple of flows as I have migrated most of my home automation setup to Home Assistant (but I do sometimes miss the powerful things you can do in this tool).
@@ -41,7 +43,6 @@ To look into self hosting in the future:
 - [Tiny tiny RSS](https://tt-rss.org/) 
 	- [Reddit top rss](https://github.com/johnwarne/reddit-top-rss/ )
 - [Vault warden](https://github.com/dani-garcia/vaultwarden) if I trust myself enough to do that... 
-- Some form of start page, although I want to make my own
 - [Some form of document management](https://www.reddit.com/r/selfhosted/comments/pdf18k/document_management_ocr_processes_and_my_love_for/)
 - [n8n as an alternative to NodeRed](https://n8n.io/)
 - [Cockpit for server info and admin](https://cockpit-project.org/running.html )
