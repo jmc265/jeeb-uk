@@ -6,4 +6,4 @@
 - **Endpoint testing:** [Insomnia](https://insomnia.rest/)
 - **Source Control:** Git with [Fork](https://git-fork.com/) when VSCode internal SCM isn't enough
 
-Also see: [Terminal](Terminal.md)
+Also see: [Terminal](./Terminal.md)
