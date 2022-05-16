@@ -1,1 +1,0 @@
-- [Alt-Tab on Mac like Windows](https://alt-tab-macos.netlify.app/)
