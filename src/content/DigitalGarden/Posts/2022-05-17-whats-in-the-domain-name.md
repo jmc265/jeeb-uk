@@ -30,10 +30,12 @@ Oh my goodness. They. Are. Everywhere. Still (not sure what I would have expecte
 ## Jeeb
 So, of all those domain I searched for, how come I ended up on `jeeb[.co].uk`? A few reasons:
 - Nostalgia. I owned the domain `jeeb.co.uk` from around 2001 to around 2005. 
-- With only 4 letters, it is really short, especially with the repeated 'e' in the middle, it makes a very small succinct. 
+- With only 4 letters, it is really short, especially with the repeated 'e' in the middle, it makes a very small succinct domain. 
 - As this was to be a personal domain, I wanted it in some way to be close to my name. The 'J' at the start gets me that.
+
 But where did the 'Jeeb' name come from in the first place when I first registered it back in 2001?
 - `J` - First letter of my name
 - `ee` - I was 11 years old at the time I created the name. The double e's represented that.
 - `b` - I had just finished and really enjoy the book [The Boggart](https://en.wikipedia.org/wiki/The_Boggart). The 'B' come from the book's title.
- 
+
+Nice and simple. And so this domain will (hopefully) be my home of content for a long while yet.
