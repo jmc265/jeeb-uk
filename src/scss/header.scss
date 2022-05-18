@@ -1,0 +1,39 @@
+header {
+    position: relative;
+    border-bottom: 1px solid var(--text-color);
+
+    .logo {
+        a {
+            display: flex;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-side {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .pill {
+        padding: 0.25rem 0.5rem;
+        margin-left: 0.25rem;
+        border-radius: 20px;
+        cursor: pointer;
+        color: var(--text-color);
+    
+        &.active, &:hover {
+            color: var(--bkg-color);
+            background-color: var(--text-color);
+        }
+    
+        &.active {
+            cursor: initial;
+            pointer-events: none;
+        }
+    }
+}
