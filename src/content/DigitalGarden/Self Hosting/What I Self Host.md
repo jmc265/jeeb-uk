@@ -47,9 +47,11 @@ To look into self hosting in the future:
 - [n8n as an alternative to NodeRed](https://n8n.io/)
 - [Cockpit for server info and admin](https://cockpit-project.org/running.html )
 - [Some form of SSO for all the services](https://www.reddit.com/r/selfhosted/comments/ub7dvb/authentik_or_keycloak/ )
+	- [Securing service with Traefik/Authelia/Fail2Ban](https://www.fuzzygrim.com/posts/exposing-services)
 - [Spacedrive - Universal File Manager. To try once it is out of beta](https://github.com/spacedriveapp/spacedrive)
 - [TrueNAS](https://www.truenas.com/truenas-core/ ) OS for the base of the system. Looks like lots of great plugins as well as advanced options. 
 - [humhub private social network](https://github.com/humhub/humhub) 
 - [Crontab-ui for management of scheduled jobs on the host ](https://github.com/alseambusher/crontab-ui)
+- 
 ## Links
 - [Personal setups of people on HN](https://news.ycombinator.com/item?id=29746223)
