@@ -3,3 +3,4 @@
 - [Reactivity instead of Hooks using Signal.js](https://typeofnan.dev/solid-js-feels-like-what-i-always-wanted-react-to-be/)
 - [Hooks considered harmful](https://labs.factorialhr.com/posts/hooks-considered-harmful)
 - [Storing state in the URL](https://antonz.org/storing-state/)
+- [Low-js, htmx and alpine](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/htmx-alpine/) 
