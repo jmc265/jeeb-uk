@@ -10,3 +10,4 @@ Engineers want 3 things from a job:
 	- [Get senior candidates to do a code review instead of a coding test](https://medium.com/geekculture/are-you-using-coding-interviews-for-senior-software-developers-6bae09ed288c)
 - [Getting a candidate to edit a real code base during an interview](https://quuxplusone.github.io/blog/2022/01/06/memcached-interview/) 
 - [Get a candidate to debug code during an interview](https://www.zhenghao.io/posts/debugging-interview )
+- [How GitHub does technical tests](https://github.blog/2022-03-31-how-github-does-take-home-technical-interviews/) 
