@@ -56,6 +56,6 @@ To look into self hosting in the future:
 - [TrueNAS](https://www.truenas.com/truenas-core/ ) OS for the base of the system. Looks like lots of great plugins as well as advanced options. 
 - [humhub private social network](https://github.com/humhub/humhub) 
 - [Crontab-ui for management of scheduled jobs on the host ](https://github.com/alseambusher/crontab-ui)
-- 
+- [Changedetection on websites](https://github.com/dgtlmoon/changedetection.io) 
 ## Links
 - [Personal setups of people on HN](https://news.ycombinator.com/item?id=29746223)
