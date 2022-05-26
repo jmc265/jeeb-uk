@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
         "src/_includes/css": "assets/css",
         "src/_includes/js": "assets/js",
         "src/_includes/img": "assets/img",
+        "src/_includes/favicon": "/"
     });
 
     // Add plugins
