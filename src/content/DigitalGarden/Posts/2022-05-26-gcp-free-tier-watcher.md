@@ -28,6 +28,7 @@ Running health checks or down-detectors on Jupiter would not be wise as they mig
 - **AWS** - t4g.nano (2vCPU, 512MB memory, 10GB storage) = ~£2pm
 - **Hetzner** - CX11 (1vCPU, 2GB memory, 20GB storage) = ~£3.50pm
 - **OVH** - Starter (1vCPU, 2GB memory, 20GB storage) = ~£3pm
+
 These costs are all rough estimates, and don't take into account things like paying for reserved capacity up-front, additional costs for public IPs & egress traffic costs. But they give a good indicator that at the very least, it would be a cost of around £3pm. 
 
 But then I remembered that some of the bigger cloud providers offer "always free" tiers. And they have compute resources as part of that offering:
@@ -35,6 +36,7 @@ But then I remembered that some of the bigger cloud providers offer "always free
 - **[AWS Free Tier](https://aws.amazon.com/free)** - AWS Lambda (1 Million requests per month)
 - **[Oracle Cloud Free Tier](https://www.oracle.com/uk/cloud/free/)** - VM (1/8 OCPU, 1GB memory)
 - **[GCP Free Tier](https://cloud.google.com/free)** - VM (e2-micro, 30GB storage + free external IP)
+
 I attempted to use Azure's offering at first (as I already use Azure to host my backups, DNS, website etc.) and the terraform for this attempt can be [found here](https://github.com/jmc265/personal-cloud/blob/6e3c8450ec31cc8fdcd3eec84b0ba02d9823b724/.cloud/app_service.tf). The service did boot up, but I ran into a number of issues with web sockets and what I believe to be CPU resource constraints on the host which meant that even this simple app took ages to load. Of the other cloud providers, GCP looked the best to me, especially because of the mention in their docs of a free external IP. So I believe I can host everything I need to in GCP, absolutely free.
 
 ## Terraform
@@ -242,6 +244,7 @@ I now host 2 instances of Uptime Kuma:
 - On Jupiter (home service) which pings:
 	- Pluto's DNS entry
 	- Pluto's exposed HTTP(S) services
+
 As they are watching each other, I will now get a notification if one of the severs/services goes down.
 ### Healthchecks
 My cron jobs running on Jupiter now all ping the Healthchecks service running on Pluto. You can see an example of this [here](https://github.com/jmc265/personal-cloud/blob/main/jupiter/jeeb-uk/crontab). Healthchecks acts in a dead-man-switch way and will notify me if anything doesn't report in correctly.
