@@ -58,5 +58,7 @@ To look into self hosting in the future:
 - [Crontab-ui for management of scheduled jobs on the host ](https://github.com/alseambusher/crontab-ui)
 - [Changedetection on websites](https://github.com/dgtlmoon/changedetection.io) 
 	- [docker compose example](https://www.reddit.com/r/selfhosted/comments/uxisu8/changedetectionio_new_visual_selector)
+- [unami self hosting analytics for my sites](https://umami.is/)
+
 ## Links
 - [Personal setups of people on HN](https://news.ycombinator.com/item?id=29746223)
