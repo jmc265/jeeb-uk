@@ -7,3 +7,4 @@ https://github.com/ryanoasis/nerd-fonts
 - [CLI --help flags](https://blog.craftyguy.net/cmdline-help/)
 - [Bookmarks in bash](https://threkk.medium.com/how-to-use-bookmarks-in-bash-zsh-6b8074e40774)
 - [Shell 1 liners - Big cheat sheet](https://github.com/onceupon/Bash-Oneliner) 
+- [10 years of dotfiles - some interesting programs and tools](https://evanhahn.com/a-decade-of-dotfiles/) 

@@ -7,4 +7,6 @@
 - [Firefox Reader view](https://videoinu.com/blog/firefox-reader-view-heuristics/)
 - [Send a request on page exit (beacon, ping)](https://css-tricks.com/send-an-http-request-on-page-exit/)
 - [Use `noreferer` and `noopener` when using target blank](https://www.pixelstech.net/article/1537002042-The-danger-of-target=_blank-and-opener )
+- [System font stack](https://systemfontstack.com/) 
+	- [Some other options](https://news.ycombinator.com/item?id=31543054 )
 

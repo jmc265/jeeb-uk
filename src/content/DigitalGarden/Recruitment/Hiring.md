@@ -11,3 +11,4 @@ Engineers want 3 things from a job:
 - [Getting a candidate to edit a real code base during an interview](https://quuxplusone.github.io/blog/2022/01/06/memcached-interview/) 
 - [Get a candidate to debug code during an interview](https://www.zhenghao.io/posts/debugging-interview )
 - [How GitHub does technical tests](https://github.blog/2022-03-31-how-github-does-take-home-technical-interviews/) 
+- [In defence of coding interviews](https://biggestfish.substack.com/p/in-defense-of-coding-interviews?s=r)

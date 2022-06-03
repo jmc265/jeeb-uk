@@ -8,3 +8,4 @@
 	Work flows and processes 
 	Pair programming, walk through, overview 
 	Onboarding buddy
+- [Effective onboarding - 100 day plan, network, learn, ship](https://eugeneyan.com/writing/onboarding/ )

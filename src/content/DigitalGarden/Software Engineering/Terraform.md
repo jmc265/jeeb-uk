@@ -1,0 +1,1 @@
+https://www.bejarano.io/terraform-stateless/ 
