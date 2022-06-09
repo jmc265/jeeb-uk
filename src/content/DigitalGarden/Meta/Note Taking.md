@@ -10,3 +10,4 @@ In the end, I abandoned the structure and just went for a series of low-hierarch
 - [Using markdown for presentation slides](https://davidgarcia.dev/posts/creating-professional-slides-from-markdown-notes/) 
 - [On physical note taking and notebooks 📔](https://tylercipriani.com/blog/2022/04/30/ive-used-all-the-notebooks/ )
 - [An excellent introduction to GTD](https://hamberg.no/gtd) 
+- [Why write a journal?](https://herman.bearblog.dev/why-i-journal/ )
