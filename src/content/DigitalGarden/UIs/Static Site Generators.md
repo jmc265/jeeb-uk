@@ -8,3 +8,4 @@ I first used [Jekyll](https://jekyllrb.com/) to create james.cx. I later moved o
 - [Server-side rendering at scale](https://engineeringblog.yelp.com/2022/02/server-side-rendering-at-scale.html)
 - [11ty plugin for iterating over links and adding `target=_blank` to external links](https://franknoirot.co/posts/external-links-markdown-plugin/)
 - ["The absurd complexity of server-side rendering" - Opinions on SSR](https://gist.github.com/Widdershin/98fd4f0e416e8eb2906d11fd1da62984) ([HN](https://news.ycombinator.com/item?id=31087795))
+- [A gentle introduction to SSR](https://hire.jonasgalvez.com.br/2022/apr/30/a-gentle-introduction-to-ssr/)
