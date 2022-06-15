@@ -4,3 +4,5 @@ Domain Name Squatters are a particular type of villain. They can sit on a domain
 - [Gamer tags](https://www.spinxo.com/gamer tags) 
 - https://tools.namerobot.com/NiceBeautifulEN
 - [Made up word generator](https://randomwordgenerator.com/fake-word.php)
+- [Find a good available .com domain](https://sive.rs/com) 
+- [Micro domain finder](https://micro.domains/) 
