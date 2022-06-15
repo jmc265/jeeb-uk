@@ -1,0 +1,13 @@
+.home {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    nav {
+        font-size: 1.2rem;
+    }
+}

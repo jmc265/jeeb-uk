@@ -18,22 +18,4 @@ header {
         display: flex;
         align-items: center;
     }
-
-    .pill {
-        padding: 0.25rem 0.5rem;
-        margin-left: 0.25rem;
-        border-radius: 20px;
-        cursor: pointer;
-        color: var(--text-color);
-    
-        &.active, &:hover {
-            color: var(--bkg-color);
-            background-color: var(--text-color);
-        }
-    
-        &.active {
-            cursor: initial;
-            pointer-events: none;
-        }
-    }
 }
