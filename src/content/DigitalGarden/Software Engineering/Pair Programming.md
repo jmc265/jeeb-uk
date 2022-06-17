@@ -20,10 +20,11 @@ Pair programming is difficult to practice effectively. Unfortunately, the invers
 - Pair programming is **no substitute for knowledge sharing**. Where applicable, the knowledge should be shared with the whole team, not just 2 people.
 ### Driver role 🚗 
 - **Don't drive too fast** for the navigator. They need to understand where the car currently is located in order to direct properly
-- **Listen to directions** from your navigator! If the navigator says it is time to write a unit test do it. If they say it is time for a refactor, pause and consider that option with them.
+- **Listen to directions** from your navigator! If the navigator says it is time to write a unit test, do it. If they say it is time for a refactor, pause and consider that option with them.
 ### Navigator role 🗺 
-- **Don't be a back-seat driver**. Your role is to think about the road ahead and decide what needs to happen next. Pointing out typos is generally unnecessary as the driver likely already knows the problem and the IDE/compiler will probably tell them anyway. Stylistic comments also should be avoided as it breaks the flow of both driver & navigator and this should be solved through dev tooling.
 - **Think about the bigger picture**. This is the main role of a navigator. How are we going to get to the pre-agreed destination? Do we need to start writing some tests now? Do we need to pause and consider the implications of our change on a different part of the code base? Is it time for a break ☕️?
+- **Don't be a back-seat driver**. Pointing out typos is generally unnecessary as the driver likely already knows the problem and the IDE/compiler will probably tell them anyway. Stylistic comments also should be avoided as it breaks the flow of both driver & navigator and this should be solved through dev tooling.
+
 ## Links
 - [Pair programming is ineffective](https://matt-rickard.com/against-pair-programming/)
 - [Pair Programming Antipatterns](https://tuple.app/pair-programming-guide/antipatterns)
