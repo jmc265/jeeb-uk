@@ -1,6 +1,6 @@
-## Pair prigramming is difficult 
-Pair programming is difficult to practice effectively. Unfortunately, the oppoisute is also true: **pair programming is easy to practice ineffectively**. It is a learnt skill which is hard to pick up. Below is some advic
-### general 
+## Pair programming is difficult (🚧 WIP  🚧)
+Pair programming is difficult to practice effectively. Unfortunately, the opposite is also true: **pair programming is easy to practice ineffectively**. It is a learnt skill which is hard to pick up. I have tried to articulate some advice below for both the Driver and Navigator roles:
+### General 
 - There must be exactly 2 people and 2 roles 
 	- 2 people and 1 role is wrong 
 		- 2 drivers grabbing at the wheel will crash the car 
@@ -13,7 +13,7 @@ Pair programming is difficult to practice effectively. Unfortunately, the oppois
 - Don't worry about matching novices with experts. Certainly that pairing can help with up skulking but pairs of novices have advantages over solo programming and pairs of experts can solve complex problems 
 - Pair previewing is no swap for ccods reviews. Pair programing is a synchronous activity and therefore will suffer from group think. For trciwss are an async thing and give the reviewer time and space to form their own opinion 
 - 
-### drivers 
+### Driver role  
 - Don't drive too fast for the navigator. They need to understand where the car is in order to direct properly
 - Listel to doecriona. If the navigator says it is time to write a unit test do it 
 ### navigators 
