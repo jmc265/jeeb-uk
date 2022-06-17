@@ -16,7 +16,7 @@ Pair programming is difficult to practice effectively. Unfortunately, the invers
 	- It makes it easier to switch roles (which should be done often)
 	- If the session is in person, plug 2 keyboards into the same computer. If done remotely use something like [VSCode Live Share](https://code.visualstudio.com/learn/collaboration/live-share)
 - Don't worry about **matching novices with experts**. Certainly that pairing can help with up-skilling but pairs of novices have advantages over solo programming and pairs of experts can solve complex problems.
-- Pair previewing is **no substitute for code reviews**. Pair programming is a synchronous activity and therefore will suffer from [Groupthink](https://en.wikipedia.org/wiki/Groupthink). Code reviews are an asynchronous activity which gives the reviewer time and space to form their own opinion and thoughts.
+- Pair programming is **no substitute for code reviews**. Pair programming is a synchronous activity and therefore will suffer from [Groupthink](https://en.wikipedia.org/wiki/Groupthink). Code reviews are an asynchronous activity which gives the reviewer time and space to form their own opinions and thoughts.
 - Pair programming is **no substitute for knowledge sharing**. Where applicable, the knowledge should be shared with the whole team, not just 2 people.
 ### Driver role 🚗 
 - **Don't drive too fast** for the navigator. They need to understand where the car currently is located in order to direct properly
