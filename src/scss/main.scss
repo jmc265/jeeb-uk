@@ -16,17 +16,17 @@ body {
     text-shadow: none;
 }
 
-a, a:visited {
-    color: var(--anchor-color);
-    text-decoration: none;
-}
+a {
+    &, &:visited {
+        color: var(--anchor-color);
+        text-decoration: none;
+    }
 
-a:hover, a:focus, a:active {
-    color: var(--bkg-color);
-    background: var(--anchor-color);
-
-    img {
-        background: none;
+    &:hover, &:focus, &:active {
+        &:not(.no-hover) {
+            color: var(--bkg-color);
+            background: var(--anchor-color);
+        }
     }
 }
 

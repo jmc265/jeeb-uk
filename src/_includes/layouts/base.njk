@@ -1,3 +1,7 @@
+---
+showNavbar: true
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +14,38 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#D4443D">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFF">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#252525">
     <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 </head>
 
 <body>
+    {% if showNavbar %}
     <header>
         <div class="container">
             <div class="logo">
-                <a href="{{ '/' | url }}">
-                    <img src="{{ '/assets/img/jeebuk.svg' | url }}" class="apply-svg-filter"/>
+                <a href="{{ '/' | url }}" class="no-hover">
+                    <img src="{{ '/assets/img/jeebuk-header.svg' | url }}" class="apply-svg-filter" height="45"/>
                 </a>
             </div>
             <div class="right-side">
-                <a class="pill {{ "active" if isBlog }}" href="/">Blog</a>
-                <a class="pill {{ "active" if isDigitalGarden }}" href="/digital-garden">Digital Garden</a>
+                <a href="/feed/feed.xml" class="no-hover"><img src="{{ '/assets/img/rss.svg' | url }}" class="apply-svg-filter"/></a>
                 <img id="toggle-theme-button" src="{{ '/assets/img/sun.svg' | url }}" class="apply-svg-filter"/>
             </div>
         </div>
+        <nav class="container">
+            <a class="{{ "active" if isBlog }}" href="/posts">Blog</a>
+            <a class="{{ "active" if isDigitalGarden }}" href="/digital-garden">Digital Garden</a>
+            {# <a class="{{ "active" if isAboutMe }}" href="/about-me">About Me</a> #}
+        </nav>
     </header>
+    {% endif %}
     <main class="container" role="main">
         {{ content | safe }}
     </main>

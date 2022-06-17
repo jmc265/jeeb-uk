@@ -1,0 +1,18 @@
+nav {
+    a {
+        padding: 0.05rem 0.5rem;
+        margin-left: 0.25rem;
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:hover, &:focus, &:active {
+            color: var(--bkg-color);
+            background-color: var(--anchor-color);
+        }
+
+        &.active {
+            color: var(--bkg-color);
+            background-color: var(--text-color);
+        }
+    }
+}

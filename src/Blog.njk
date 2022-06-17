@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: jeeb.uk - Blog
+isBlog: true
+permalink: posts/index.html
+eleventyNavigation:
+    key: Blog
+    title: Blog
+---
+
+<section>
+    {% set showYear = true %}
+    {% set postslist = collections.posts %}
+    {% include "postslist.njk" %}
+</section>

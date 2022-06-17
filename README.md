@@ -2,7 +2,12 @@
 
 ## Resources:
 
-* Logo font: .SF NS Display Condensed
+* Logo font: 
+  * Previous: .SF NS Display Condensed
+  * Attempted:
+    * Katy Berry
+    * Comfortaa
+    * [Photograph Signature](https://www.dafont.com/photograph-signature.font?fpp=200&text=jeeb.uk)
 * [Website logos](https://iconmonstr.com)
 
 ## Github flows

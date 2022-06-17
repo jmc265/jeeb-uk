@@ -1,18 +1,25 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 title: jeeb.uk
-isBlog: true
+showNavbar: false
 eleventyNavigation:
-    key: Blog
+    key: Home
 ---
-<section>
-    <p class="font-size-larger">
-    <strong>Hi!</strong> I am <a href="/meta/about-me/">James</a> and below are some words on Software Engineering as well as some other things I am interested in.
-    </p>
-</section>
 
-<section>
-    {% set showYear = true %}
-    {% set postslist = collections.posts %}
-    {% include "postslist.njk" %}
-</section>
+<div class="home">
+    <section>
+        <img src="{{ '/assets/img/jeeb.svg' | url }}"/>
+    </section>
+
+    <section>
+        <h1><strong>Hi!</strong> I am James</h1>
+    </section>
+
+    <section>
+        <nav>
+            <a href="/posts">Blog</a>
+            <a href="/digital-garden">Digital Garden</a>
+            {# <a>About Me</a> #}
+        </nav>
+    </section>
+</div>
