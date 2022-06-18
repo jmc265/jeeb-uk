@@ -9,9 +9,6 @@
 	- URN is a URI with `urn:` as a schema 
 - [Practicing programming and the reason to automate tasks](https://tratt.net/laurie/blog/2022/practising_programming.html )
 - [What does code readability mean?](https://typicalprogrammer.com/what-does-code-readability-mean)
-
-
-
 - [Why we don't have a staging environment](https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment)
 - [General overview to software architecture](https://martinfowler.com/architecture/)
 - [Don't separate engineers by frontend & backend. We are all Product Engineers](https://www.michellelim.org/writing/stop-using-frontend-backend/)
