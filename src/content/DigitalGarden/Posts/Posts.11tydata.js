@@ -1,7 +1,7 @@
 module.exports = function (c) {
     return {
         "showDate": true,
-        "showBreadcrumbs": false,
+        "showBreadcrumbs": true,
         "isBlog": true,
         "isDigitalGarden": false,
     }

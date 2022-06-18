@@ -51,7 +51,7 @@ module.exports = function(c) {
                const filePath = path.parse(data.page.inputPath);
                 return {
                     "key": isIndex(filePath) ? filePath.dir : data.page.inputPath,
-                    "parent": isIndex(filePath) ? "DigitalGarden" : filePath.dir,
+                    "parent": isIndex(filePath) ? "Home" : filePath.dir,
                     "title": getPageTitle(data, filePath),
                     "order": getOrder(data, filePath)
                 }
