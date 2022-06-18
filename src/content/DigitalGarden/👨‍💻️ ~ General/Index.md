@@ -1,0 +1,21 @@
+## Links
+- [Please put units in names](https://ruudvanasseldonk.com/2022/03/20/please-put-units-in-names)
+- [Background music](https://medium.com/@marat_badykov/do-you-use-background-music-while-coding-ea6c5362ce2b )
+	- [More background music](https://medium.com/@marat_badykov/music-to-listen-to-while-coding-e810b4617a06 )
+- [Don't validate email addresses with regex - just send an email to validate](https://davidcel.is/posts/stop-validating-email-addresses-with-regex/)
+- [Difference between URL, URI, URN](https://auth0.com/blog/url-uri-urn-differences/ )
+	- URL is an address to a resource. Tells you where to locate 
+	- URI uniquely identifies a resource, but doesn't necessarily locate it 
+	- URN is a URI with `urn:` as a schema 
+- [Practicing programming and the reason to automate tasks](https://tratt.net/laurie/blog/2022/practising_programming.html )
+- [What does code readability mean?](https://typicalprogrammer.com/what-does-code-readability-mean)
+
+
+
+- [Why we don't have a staging environment](https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment)
+- [General overview to software architecture](https://martinfowler.com/architecture/)
+- [Don't separate engineers by frontend & backend. We are all Product Engineers](https://www.michellelim.org/writing/stop-using-frontend-backend/)
+- [What I've learned from 45 years in software engineering](https://www.bti360.com/what-ive-learned-in-45-years-in-the-software-industry/)
+- [Talking in a technical language can exclude people from the conversation that have a reason to contribute](https://www.sequential.dev/posts/be-less-technical/) 
+- [Opinionated guide to technology techniques, tools, principals etc](https://www.thoughtworks.com/radar )
+- [What I want to do as a software developer - create software without all the unnecessary meetings and rubbish that often accompany modern software development](https://www.lloydatkinson.net/posts/2022/my-thoughts-on-what-i-want-to-do-as-a-software-developer/) 

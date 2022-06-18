@@ -1,9 +1,0 @@
-## Links
-- [Why we don't have a staging environment](https://squeaky.ai/blog/development/why-we-dont-use-a-staging-environment)
-- https://martinfowler.com/architecture/ General overview to software architecture 
-- [Don't separate engineers by frontend & backend. We are all Product Engineers](https://www.michellelim.org/writing/stop-using-frontend-backend/)
-- [What I've learned from 45 years in software engineering](https://www.bti360.com/what-ive-learned-in-45-years-in-the-software-industry/)
-- [Talking in a technical language can exclude people from the conversation that have a reason to contribute](https://www.sequential.dev/posts/be-less-technical/) 
-- [Opinionated guide to technology techniques, tools, principals etc](https://www.thoughtworks.com/radar )
-- [Engineering estimates / commitments](https://www.shubhro.com/2022/01/30/hacks-engineering-estimates/)
-- [What I want to do as a software developer - create software without all the unnecessary meetings and rubbish that often accompany modern software development](https://www.lloydatkinson.net/posts/2022/my-thoughts-on-what-i-want-to-do-as-a-software-developer/) 

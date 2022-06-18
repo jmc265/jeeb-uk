@@ -1,4 +1,4 @@
-## Pair programming is difficult (🚧 WIP 🚧)
+## Pair programming is difficult
 Pair programming is difficult to practice effectively. Unfortunately, the inverse is also true: **pair programming is easy to practice ineffectively**. It is a learnt skill which is hard to pick up. I have tried to articulate some advice below for both the Driver and Navigator roles:
 ### General 
 - Agree a **destination (goal)** before you start 
