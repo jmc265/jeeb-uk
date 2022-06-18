@@ -38,6 +38,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
     });
+    eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
@@ -47,9 +48,9 @@ module.exports = function (eleventyConfig) {
     // Override "posts" collection to not show drafts
     eleventyConfig.addCollection("posts", (collection) => {
         return collection
-            .getFilteredByGlob("src/content/**/*.md")
-            .filter((post) => post.data.isBlog === true)
-            .filter((post) => post.date <= new Date() && !post.data.draft);
+            .getFilteredByGlob("src/content/DigitalGarden/Posts/*.md")
+            .filter((post) => post.date <= new Date() && !post.data.draft)
+            .sort((p1, p2) => p1.date - p2.date);
     });
 
     // Create Digital Garden collection
