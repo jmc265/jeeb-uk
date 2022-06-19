@@ -5,8 +5,8 @@ eleventyNavigation:
 ## What?
 This is a collection of knowledge gained from reading and experience. Across the web, these types of sites are called Personal Wikis or "Digital Gardens".
 The topics in my Digital Garden include:
-- [Software Engineering](<../Software Engineering/Index.md>)/[Programming](../👨‍💻️%20~%20General/Index.md)
-- [Cloud & Web](../The%20Web/Index.md & Web/Index.md>)/[System Design](../Design/Index.md)
+- [Programming](<../👨‍💻️ ~ General/Index.md>)
+- [Cloud & Web](<../The Web/Index.md>)/[System Design](../Design/Index.md)
 - [Self Hosting](<../Self Hosting/Index.md>)/[Smart Home](<../Smart Home/Index.md>)
 - [3D Printing](<../3D Printing/Index.md>)/[Drones](../Drones/Index.md)/Anything else that interests me
 
