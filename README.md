@@ -8,6 +8,7 @@
     * Katy Berry
     * Comfortaa
     * [Photograph Signature](https://www.dafont.com/photograph-signature.font?fpp=200&text=jeeb.uk)
+    * [Radicals](https://fontbundles.net/free-fonts/script-fonts/radicals?ref=XBlDfU)
 * [Website logos](https://iconmonstr.com)
 
 ## Github flows
