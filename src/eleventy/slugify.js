@@ -17,8 +17,10 @@ function slugifyPart(str) {
 
 module.exports = function(path) {
     let link = path;
+    console.log(path);
     link = link.replaceAll("%20", " ")
     link = link.replaceAll("&", "and");
+    link = link.replaceAll("", "programming");
     link = link.replace(".md", "")
     link = link.replace("/Index", "");
     link = link.split("/").map(part => {
