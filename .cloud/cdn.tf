@@ -15,6 +15,8 @@ resource "azurerm_cdn_endpoint" "jeeb-uk" {
 
   is_http_allowed        = true
   is_compression_enabled = true
+  
+  optimization_type = "GeneralWebDelivery"
 
   content_types_to_compress = [
     "text/plain",
