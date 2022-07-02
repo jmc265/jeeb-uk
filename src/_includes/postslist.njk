@@ -1,6 +1,6 @@
 <ol class="post-list" reversed>
     {% set currentYear = "" %}
-    {% for post in postslist | reverse %}
+    {% for post in postslist %}
     {% if showYear %}
         {% set postYear = post.date.getFullYear() %}
         {% if currentYear != postYear %}

@@ -37,6 +37,16 @@ function getOrder(data, filePath) {
     return directoryListing.findIndex((elm) => elm === searchParam);
 }
 
+function getParent(data, filePath) {
+    if (data && data.eleventyNavigation && data.eleventyNavigation.parent) {
+        return data.eleventyNavigation.parent;
+    }
+    if (isIndex(filePath)) {
+        return "Home";
+    }
+    return filePath.dir;
+}
+
 module.exports = function(c) {
     return {
         "layout": "layouts/post.njk",
@@ -51,7 +61,7 @@ module.exports = function(c) {
                const filePath = path.parse(data.page.inputPath);
                 return {
                     "key": isIndex(filePath) ? filePath.dir : data.page.inputPath,
-                    "parent": isIndex(filePath) ? "DigitalGarden" : filePath.dir,
+                    "parent": getParent(data, filePath),
                     "title": getPageTitle(data, filePath),
                     "order": getOrder(data, filePath)
                 }
