@@ -5,7 +5,3 @@ resource "azurerm_application_insights" "jeeb-uk" {
   application_type    = "web"
   retention_in_days   = "365"
 }
-
-output "app_insights_connection_string" {
-  value = azurerm_application_insights.jeeb-uk.connection_string
-}
