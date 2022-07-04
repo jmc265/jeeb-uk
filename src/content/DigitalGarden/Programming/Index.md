@@ -18,3 +18,4 @@
 - [What I want to do as a software developer - create software without all the unnecessary meetings and rubbish that often accompany modern software development](https://www.lloydatkinson.net/posts/2022/my-thoughts-on-what-i-want-to-do-as-a-software-developer/) 
 - [Lies we tell ourselves about Go](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang )
 - [Learning Rust if you know typescript](https://michaelsalim.co.uk/blog/rust-from-0-to-80-for-js-dev/ )
+- [Don't put secrets into env vars. Use something like docker secrets or Azure Key Vault instead](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/)
