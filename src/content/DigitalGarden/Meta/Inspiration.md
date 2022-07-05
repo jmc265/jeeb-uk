@@ -7,4 +7,5 @@
 - [Eddie Hinkle](https://eddiehinkle.com/ )
 - [Evergreen notes](<https://notes.andymatuschak.org/Evergreen notes>) 
 - [Ru Singh](https://rusingh.com/) 
-- [Interesting ideas for blogs](https://brainbaking.com/post/2022/04/cool-things-people-do-with-their-blogs/) 
+- [Interesting ideas for blogs](https://brainbaking.com/post/2022/04/cool-things-people-do-with-their-blogs/)
+- [Indie micro blogging ](https://book.micro.blog/)
