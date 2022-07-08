@@ -1,3 +1,5 @@
+The below is a constant 🚧 Work In Progress 🚧
+
 ## Computing
 ### Work
 - **Hardware**: Macbook Pro 13-inch, 2020
@@ -33,7 +35,7 @@
 ### Gaming
 - **VR Headset:** [Oculus Rift S](https://www.oculus.com/rift-s)
 - **Console:** PS4 (only really used to watch BluRays recently...)
-- **Handheld:** Steam Deck (very soon)
+- **Handheld:** Steam Deck 🎉
 ## Home Automation
 
 ## Photography
