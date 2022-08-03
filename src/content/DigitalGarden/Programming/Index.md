@@ -2,6 +2,7 @@
 - [Please put units in names](https://ruudvanasseldonk.com/2022/03/20/please-put-units-in-names)
 - [Background music](https://medium.com/@marat_badykov/do-you-use-background-music-while-coding-ea6c5362ce2b )
 	- [More background music](https://medium.com/@marat_badykov/music-to-listen-to-while-coding-e810b4617a06 )
+ - [More music ](https://musicforprogramming.net/latest/)
 - [Don't validate email addresses with regex - just send an email to validate](https://davidcel.is/posts/stop-validating-email-addresses-with-regex/)
 - [Difference between URL, URI, URN](https://auth0.com/blog/url-uri-urn-differences/ )
 	- URL is an address to a resource. Tells you where to locate 
@@ -18,3 +19,4 @@
 - [What I want to do as a software developer - create software without all the unnecessary meetings and rubbish that often accompany modern software development](https://www.lloydatkinson.net/posts/2022/my-thoughts-on-what-i-want-to-do-as-a-software-developer/) 
 - [Lies we tell ourselves about Go](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang )
 - [Learning Rust if you know typescript](https://michaelsalim.co.uk/blog/rust-from-0-to-80-for-js-dev/ )
+- [Don't put secrets into env vars. Use something like docker secrets or Azure Key Vault instead](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/)

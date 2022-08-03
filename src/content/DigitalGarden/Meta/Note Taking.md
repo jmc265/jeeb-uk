@@ -8,6 +8,8 @@ In the end, I abandoned the structure and just went for a series of low-hierarch
 - [Markdown alternatives](https://www.smashingmagazine.com/2022/02/thoughts-on-markdown/)
 - [Why/How to use plaintext (Markdown) for notes](https://sive.rs/plaintext)
 - [Using markdown for presentation slides](https://davidgarcia.dev/posts/creating-professional-slides-from-markdown-notes/) 
+- [Awesome Markdown software](https://github.com/BubuAnabelas/awesome-markdown)
 - [On physical note taking and notebooks 📔](https://tylercipriani.com/blog/2022/04/30/ive-used-all-the-notebooks/ )
 - [An excellent introduction to GTD](https://hamberg.no/gtd) 
 - [Why write a journal?](https://herman.bearblog.dev/why-i-journal/ )
+- [6 years of journaling](https://herman.bearblog.dev/years-of-journaling/) 
