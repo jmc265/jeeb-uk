@@ -8,7 +8,7 @@
    version="1.1"
    id="svg10969"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="favicon.svg"
+   sodipodi:docname="favicon-source.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -53,15 +53,17 @@
          aria-label="j"
          id="text16441"
          style="font-size:35.2777px;fill:#ffffff;stroke-width:13.2292">
-        <g
-           aria-label="j"
-           id="text18965"
-           style="font-weight:900;font-size:31.75px;font-family:Mango;-inkscape-font-specification:'Mango Heavy';fill:#252525;stroke:#fcffff;stroke-width:0">
-          <path
-             d="m 17.857187,7.4454865 c 1.4605,0 2.6035,-1.17475 2.6035,-2.6035 0,-1.4605 -1.143,-2.63525 -2.6035,-2.63525 -1.42875,0 -2.63525,1.17475 -2.63525,2.63525 0,1.42875 1.2065,2.6035 2.63525,2.6035 z m 0,1.23825 c -1.42875,0 -2.63525,1.17475 -2.63525,2.6352505 v 11.90625 c 0,1.49225 -1.143,2.63525 -2.57175,2.63525 h 0.127 c -1.4605,0 -2.63525,1.17475 -2.63525,2.63525 0,1.42875 1.143,2.57175 2.57175,2.6035 4.318,-0.03175 7.747,-3.556 7.747,-7.874 v -11.90625 c 0,-1.4605005 -1.143,-2.6352505 -2.6035,-2.6352505 z"
-             style="fill:#ffffff"
-             id="path21880" />
-        </g>
+        <text
+           xml:space="preserve"
+           style="font-weight:900;font-size:31.75px;font-family:Mango;-inkscape-font-specification:'Mango Heavy';fill:#252525;stroke:#fcffff;stroke-width:0"
+           x="9.8244371"
+           y="24.590487"
+           id="text18965"><tspan
+             sodipodi:role="line"
+             id="tspan18963"
+             style="font-size:31.75px;fill:#ffffff;fill-opacity:1;stroke-width:0"
+             x="9.8244371"
+             y="24.590487">j</tspan></text>
       </g>
     </g>
   </g>

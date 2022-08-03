@@ -8,7 +8,7 @@
    version="1.1"
    id="svg813"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="jeeb-home.svg"
+   sodipodi:docname="logo-big-source.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.84096521"
-     inkscape:cx="-2.9727746"
-     inkscape:cy="283.00814"
+     inkscape:zoom="1.1893044"
+     inkscape:cx="67.686624"
+     inkscape:cy="171.52884"
      inkscape:window-width="2160"
      inkscape:window-height="1406"
      inkscape:window-x="-11"
@@ -55,24 +55,24 @@
     <text
        xml:space="preserve"
        style="font-size:22.5778px;font-family:'Photograph Signature';-inkscape-font-specification:'Photograph Signature';fill:#d4443d;fill-opacity:1;stroke:#fcffff;stroke-width:0;stroke-dasharray:none"
-       x="5.1697922"
-       y="32.727741"
+       x="1.994792"
+       y="32.198574"
        id="text7479"><tspan
          sodipodi:role="line"
          id="tspan7477"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:'FONTSPRING DEMO - Rosales ExtraBold';-inkscape-font-specification:'FONTSPRING DEMO - Rosales ExtraBold, ';fill:#ffffff;fill-opacity:1;stroke-width:0"
-         x="5.1697922"
-         y="32.727741">Jeeb</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:Mango;-inkscape-font-specification:Mango;fill:#ffffff;fill-opacity:1;stroke-width:0"
+         x="1.994792"
+         y="32.198574">Jeeb</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2889px;font-family:Radicals;-inkscape-font-specification:Radicals;fill:#ffffff;fill-opacity:1;stroke:#fcffff;stroke-width:0;stroke-dasharray:none"
-       x="31.05418"
-       y="43.310291"
+       x="31.583347"
+       y="41.193623"
        id="text7635"><tspan
          sodipodi:role="line"
          id="tspan7633"
-         style="font-size:11.2889px;stroke-width:0"
-         x="31.05418"
-         y="43.310291">.uk</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:11.2889px;font-family:Mango;-inkscape-font-specification:'Mango Heavy';stroke-width:0"
+         x="31.583347"
+         y="41.193623">.uk</tspan></text>
   </g>
 </svg>
