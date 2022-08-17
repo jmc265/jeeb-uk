@@ -9,3 +9,4 @@ extra_hosts:
 - [Docker best practices for Node.js](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/)
 - [Smallest static web docker image](https://lipanski.com/posts/smallest-docker-image-static-website)
 - [Podman as an alternative to docker](https://content.fme.de/en/blog/docker-is-dead-podman-an-alternative-tool )
+- [Docker compose best practices ](https://prod.releasehub.com/blog/6-docker-compose-best-practices-for-dev-and-prod)
