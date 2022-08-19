@@ -8,3 +8,4 @@
 ## Links
 - [Questions to ask the interviewer](https://daveceddia.com/interview-questions-to-ask-company/)
 - [Questions to ask in an interview](https://posthog.com/blog/what-to-ask-in-interviews) 
+- [Questions to ask an employer](https://github.com/Twipped/InterviewThis)
