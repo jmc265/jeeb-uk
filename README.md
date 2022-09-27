@@ -9,7 +9,9 @@
     * Comfortaa
     * [Photograph Signature](https://www.dafont.com/photograph-signature.font?fpp=200&text=jeeb.uk)
     * [Radicals](https://fontbundles.net/free-fonts/script-fonts/radicals?ref=XBlDfU)
+  * Current: [Mango](https://pixelsurplus.com/collections/free-fonts/products/mango-free-font#erid5990178)
 * [Website logos](https://iconmonstr.com)
+* [Favicon generator](https://realfavicongenerator.net/)
 
 ## Github flows
 
