@@ -37,10 +37,3 @@ resource "azurerm_key_vault_certificate" "jeeb-uk-root" {
     password = "${acme_certificate.jeeb-uk-root.certificate_p12_password}"
   }
 }
-
-resource "azurerm_key_vault_secret" "jeeb-uk-root" {
-  name         = "jeeb-uk-root"
-  key_vault_id = azurerm_key_vault.key-vault.id
-
-  value = "${acme_certificate.jeeb-uk-root.certificate_pem}${acme_certificate.jeeb-uk-root.issuer_pem}"
-}
