@@ -13,3 +13,4 @@ Other rules:
 - [What's in a good error message?](https://www.morling.dev/blog/whats-in-a-good-error-message/)
 - [Logging message formats](https://medium.com/@JaouherK/creating-a-human-and-machine-freindly-logging-format-bb6d4bb01dca)
 - [Structured logging ](https://github.com/vectordotdev/docs/blob/master/guides/structured-logging-best-practices.md)
+- [Throw custom exceptions, encapsulate 3rd party exceptions and don't leak them](https://github.com/getparthenon/parthenon/wiki/Design-Decision:-Throw-Custom-Exceptions)
