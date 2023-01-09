@@ -20,3 +20,5 @@
 - [Lies we tell ourselves about Go](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang )
 - [Learning Rust if you know typescript](https://michaelsalim.co.uk/blog/rust-from-0-to-80-for-js-dev/ )
 - [Don't put secrets into env vars. Use something like docker secrets or Azure Key Vault instead](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/)
+- [Logging practices I follow ](https://www.16elt.com/2023/01/06/logging-practices-I-follow/)
+- [Logging best practices](https://talktotheduck.dev/logging-best-practices-mdc-ingestion-and-scale)
