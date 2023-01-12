@@ -10,3 +10,4 @@
 	- [A more complex way of doing dark mode](https://ryanfeigenbaum.com/dark-mode/)
 - [Pixels, ems, rems & accessibilty](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/)
 - [Defensive CSS](https://defensivecss.dev/)
+- [Why not to use tailwind](https://sancho.dev/blog/tailwind-and-design-systems)
