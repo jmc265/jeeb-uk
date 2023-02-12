@@ -3,3 +3,4 @@ node_modules/
 .terraform
 .terraform.locl.hcl
 .DS_Store
+.tfvars

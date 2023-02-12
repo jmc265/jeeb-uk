@@ -28,16 +28,16 @@ resource "acme_certificate" "jeeb-uk-root" {
   }
 }
 
-resource "azurerm_key_vault_certificate" "jeeb-uk-root" {
-  name         = "jeeb-uk-root"
-  key_vault_id = azurerm_key_vault.key-vault.id
+# resource "azurerm_key_vault_certificate" "jeeb-uk-root" {
+#   name         = "jeeb-uk-root"
+#   key_vault_id = azurerm_key_vault.key-vault.id
 
-  certificate {
-    contents = "${acme_certificate.jeeb-uk-root.certificate_p12}"
-    password = "${acme_certificate.jeeb-uk-root.certificate_p12_password}"
-  }
+#   certificate {
+#     contents = "${acme_certificate.jeeb-uk-root.certificate_p12}"
+#     password = "${acme_certificate.jeeb-uk-root.certificate_p12_password}"
+#   }
 
-  depends_on = [
-    azurerm_key_vault_access_policy.terraform
-  ]
-}
+#   depends_on = [
+#     azurerm_key_vault_access_policy.terraform
+#   ]
+# }
