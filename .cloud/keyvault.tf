@@ -20,7 +20,8 @@ resource "azurerm_key_vault_access_policy" "terraform" {
     "Import",
     "Update",
     "Delete",
-    "Purge"
+    "Purge",
+    "Recover"
   ]
 
   key_permissions = [
