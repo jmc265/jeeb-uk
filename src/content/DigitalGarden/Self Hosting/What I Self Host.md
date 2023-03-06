@@ -61,6 +61,7 @@ To look into self hosting in the future:
 	- [docker compose example](https://www.reddit.com/r/selfhosted/comments/uxisu8/changedetectionio_new_visual_selector)
 - [unami self hosting analytics for my sites](https://umami.is/)
 - [In the process of choosing a flat file blog ](https://www.privacytools.io/guides/8-simple-stupid-flat-file-cms-free-user-friendly-and-open-source)
+- [The Ever-Expanding Home Server](https://blog.chse.dev/server/)
 
 ## Links
 - [Personal setups of people on HN](https://news.ycombinator.com/item?id=29746223)
