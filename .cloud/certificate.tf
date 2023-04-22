@@ -37,7 +37,7 @@ resource "azurerm_key_vault_certificate" "jeeb-uk-root" {
     password = "${acme_certificate.jeeb-uk-root.certificate_p12_password}"
   }
 
-  depends_on = [
-    azurerm_key_vault_access_policy.terraform
-  ]
+  # depends_on = [
+  #   azurerm_key_vault_access_policy.terraform
+  # ]
 }
