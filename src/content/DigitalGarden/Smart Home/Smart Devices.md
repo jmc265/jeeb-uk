@@ -75,3 +75,5 @@ https://www.reddit.com/r/homeassistant/comments/ucpydq/reading_your_smart_meter_
 - [Water leak sensor](https://www.reddit.com/r/homeassistant/comments/rk8zwr/water_leak_sensor_%C3%A0_la_20212/)
 - [Smart Doorbell](https://www.reddit.com/r/homeautomation/comments/9zqajt/zwave_doorbell_no_subscription_no_video_just_a/)
 - [Local only devices](https://www.reddit.com/r/homeautomation/comments/qx9fdt/after_this_sengled_disaster_today_how_can_i/)
+
+https://www.vesternet.com/collections/z-wave-controllers-hubs-gateways
