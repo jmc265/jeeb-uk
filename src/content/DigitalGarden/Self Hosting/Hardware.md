@@ -5,3 +5,5 @@ Suggestions around the Internet ranged from using an old laptop to getting an ol
 ## Links 
 - https://www.reddit.com/r/selfhosted/comments/90k116/hardware_recommendation_next_step_up_from_rpi/ 
 - https://www.reddit.com/r/selfhosted/comments/siuyta/which_small_factor_or_nuc_is_best_for_hosting_and/
+
+https://cheapskatesguide.org/articles/best-mini-servers.html
