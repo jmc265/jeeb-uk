@@ -41,19 +41,17 @@ You would create 2 VMs, one in East US, the other in West US.
 
 However, it is also possible to use the `for_each` function to loop `dynamic` blocks within a resource.
 
-
-
-
+Below is an example for how to create 5 dynamic blocks of type `restriction`:
 
 ```hcl
 dynamic "restriction" {
-      for_each = toset(range(1, 6))
+    for_each = toset(range(1, 6))
 
-      content {
-        type              = "weekly_restriction"
-        start_time_of_day = "09:00:00"
-        start_day_of_week = restriction.value
-        duration_seconds  = local.eight_hours_in_seconds
-      }
+    content {
+    type              = "weekly_restriction"
+    start_time_of_day = "09:00:00"
+    start_day_of_week = restriction.value
+    duration_seconds  = local.eight_hours_in_seconds
     }
+}
 ```
