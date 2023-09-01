@@ -69,7 +69,7 @@ resource "azurerm_cdn_endpoint_custom_domain" "jeeb-uk-root" {
   cdn_endpoint_id = azurerm_cdn_endpoint.jeeb-uk.id
   host_name       = "${azurerm_dns_zone.jeeb-uk.name}"
   user_managed_https {
-    key_vault_secret_id = "${azurerm_key_vault_certificate.jeeb-uk-root.id}"
+    key_vault_secret_id = "${azurerm_key_vault_certificate.jeeb-uk-root.versionless_secret_id}"
   }
 }
 
