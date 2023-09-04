@@ -25,3 +25,18 @@ The places we can choose from include:
 - State management library (E.g. Redux, zustand, jotai)
 
 
+## Context Providers
+
+Context providers, are a great way to avoid prop drilling some static (or rarely mutated) data down a sub tree of your component hierarchy. 
+
+As context providers tie together the rendering of all components that rely on it (and all of its non-memoized children) it is best to make sure the data does not mutate very often as you can quickly end up with a lot of unnecessary re-renders. 
+
+## API cache library
+
+
+
+## `useState`
+
+
+## State management library
+
