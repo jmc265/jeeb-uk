@@ -21,7 +21,7 @@ The places we can choose from include:
 
 - Context providers
 - API cache library (E.g. React-query, SWR)
-- `useState`
+- `useState()`
 - State management library (E.g. Redux, zustand, jotai)
 
 
@@ -35,7 +35,7 @@ As context providers tie together the rendering of all components that rely on i
 
 
 
-## `useState`
+## `useState()`
 
 
 ## State management library
