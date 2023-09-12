@@ -5,5 +5,6 @@
 	- [My plugins for VSCode](https://github.com/jmc265/dotfiles/blob/master/install-tools-mac.sh)
 - **Endpoint testing:** [Insomnia](https://insomnia.rest/)
 - **Source Control:** Git with [Fork](https://git-fork.com/) when VSCode internal SCM isn't enough
+- [7 habits of top engineers ](https://engineercodex.substack.com/p/7-simple-habits-of-the-top-1-of-engineers)
 
 Also see: [Terminal](../Software/Terminal.md)
