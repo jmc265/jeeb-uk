@@ -8,3 +8,8 @@ Lyras Oxford
 https://www.reddit.com/r/programming/comments/172rs9i/good_code_is_like_a_love_letter_to_the_next/
 https://addyosmani.com/blog/good-code/
 https://www.moderndescartes.com/essays/codemates/?utm_source=tldrwebdev
+
+
+https://testing.googleblog.com/2023/11/write-clean-code-to-reduce-cognitive.html?m=1
+
+https://www.tonymottaz.com/code-for-computers-and-humans/
