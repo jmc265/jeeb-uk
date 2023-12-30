@@ -20,7 +20,19 @@ Wouldn't it be great to have ChatGPT auto-reply to some of your WhatsApp message
 
 We can do all this in under a 100 lines of code.
 
-> TLDR: The full code is here: https://github.com/jmc265/whatsapp-ai-reply
+> **TLDR:** 
+> ```shell
+> docker run \
+>   -e SELF_CONTACT_ID=xxxxx@c.us \
+>   -e REACTION_EMOJI=🙏 \
+>   -e OPEN_AI_API_KEY=${OPEN_AI_API_KEY} \
+>   -e OPEN_AI_MODEL_KEY='gpt-4-1106-preview' \
+>   -e OPEN_AI_SYSTEM_PROMPT='You are an assistant which replies to instant messenger messages' \
+>   -v ./whatsapp-auth:/mnt/auth-data \
+>   jmc265/whatsapp-ai-reply
+> ```
+> 
+> Full source code: https://github.com/jmc265/whatsapp-ai-reply
 
 First, let's get some initialisation code down to get the WhatsApp client library connected to your WhatsApp account. The below code will also store the auth information to `/mnt/auth-data` so that we can restart the process and still remain connected:
 
