@@ -24,10 +24,9 @@ We can do all this in under a 100 lines of code.
 > ```shell
 > docker run \
 >   -e SELF_CONTACT_ID=xxxxx@c.us \
->   -e REACTION_EMOJI=🙏 \
 >   -e OPEN_AI_API_KEY=${OPEN_AI_API_KEY} \
 >   -e OPEN_AI_MODEL_KEY='gpt-4-1106-preview' \
->   -e OPEN_AI_SYSTEM_PROMPT='You are an assistant which replies to instant messenger messages' \
+>   -e OPEN_AI_SYSTEM_PROMPT='You are an assistant who expands an emoji response to a message into a full text response' \
 >   -v ./whatsapp-auth:/mnt/auth-data \
 >   jmc265/whatsapp-ai-reply
 > ```
@@ -62,15 +61,14 @@ whatsAppClient.initialize();
 
 Next we need to listen to reaction events. We only care about events that:
 - Are sent by ourselves
-- Use the emoji we have chosen
 - Are reactions to text-based messages (not images, audio etc.)
 
 ```typescript
 whatsAppClient.on('message_reaction', async (whatsAppReaction) => {
-  if (whatsAppReaction.senderId !== 'xxxxxxxx@c.us') {
+  if (whatsAppReaction.senderId !== 'xxxxxx@c.us') {
     return;
   }
-  if (whatsAppReaction.reaction !== '🙏') {
+  if (!whatsAppReaction.reaction || whatsAppReaction.reaction === '') {
     return;
   }
   const whatsAppMessage = await whatsAppClient.getMessageById(whatsAppReaction.msgId._serialized);
@@ -86,8 +84,9 @@ Lastly, let's ask GPT4 for a response to the message and send it back:
 ```typescript
 const chatCompletion = await openai.chat.completions.create({
   messages: [
-    { role: 'system', content: 'You are an assistant which replies to instant messenger messages' },
-    { role: 'user', content: whatsAppMessage.body }
+    { role: 'system', content: 'You are an assistant who expands an emoji response to a message into a full text response' },
+    { role: 'user', content: whatsAppMessage.body },
+    { role: 'user', content: whatsAppReaction.reaction }
   ],
   model: 'gpt-4-1106-preview',
 });
