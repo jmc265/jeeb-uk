@@ -95,6 +95,6 @@ if (chatCompletion.choices[0].message.content) {
 }
 ```
 
-And that's all the code we need! 
+And that's all the code we need!
 
 We can wrap this up in a [Dockerfile](https://github.com/jmc265/whatsapp-ai-reply/blob/main/Dockerfile) and also use [Docker Compose](https://github.com/jmc265/whatsapp-ai-reply/blob/main/compose.yml) if we want.
