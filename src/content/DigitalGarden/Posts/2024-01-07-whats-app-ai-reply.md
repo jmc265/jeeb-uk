@@ -15,7 +15,7 @@ tags:
 
 Wouldn't it be great to have ChatGPT auto-reply to some of your WhatsApp messages on your behalf? Well with a combination of the (unoffical) [WhatsApp client library](https://wwebjs.dev/) and [OpenAI client library](https://github.com/openai/openai-node) we can.
 
-<video autoplay="true" muted="true">
+<video autoplay="true" muted="true" loop="true">
   <source src="/assets/whats-app-ai-reply/WhatsAppAIReply.mp4" type="video/mp4">
 </video>
 
