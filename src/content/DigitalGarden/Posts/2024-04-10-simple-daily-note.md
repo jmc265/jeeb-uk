@@ -35,7 +35,7 @@ hide edit button
 ```
 ````
 
-I am sure that looks lovely when rendered within Obsidian, but now that I just use VSCode on my computer and Markor in my phone, it means nothing.
+I am sure that looks lovely when rendered within Obsidian, but now that I just use VSCode on my computer and Markor on my phone, it means nothing. The information has been lost, locked within Obsidian.
 
 
 ```shell
