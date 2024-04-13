@@ -13,6 +13,8 @@ tags:
 
 If a Web Browser was aware of it's user's email account (and how to use the account to send email), then contact forms on the internet would be lot better.
 
+---
+
 Currently, contact forms on the web ask for the user's email address and a message to send (at the very least). Then there will either be a form submit with a network POST request made with the data, or the javascript running on the page will have to do an XHR request to send the message to recipient. There will have to be some backend service running in order to receive this data, and do something with it, whether that is to store it in a DB, send it onwards to another service or to directly send an email. This service should protect itself in order to stop malicious usage of the message-sending capability. 
 
 But what if the Browser was able to send an email on behalf of the browser user? Well then the Javascript running in the client would have a nice simple interface, something like:

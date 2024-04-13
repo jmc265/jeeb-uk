@@ -11,7 +11,9 @@ tags:
   - bash
   - automation
 ---
+
 It is very popular at the moment in some circles online to show off one's personal note-taking process/system. This generally revolves around [Obsidian](https://obsidian.md/) and a very convoluted set of plugins and/or templates. 
+
 ---
 
 And I was one of those people. I bought fully into Obsidian and its ecosystem of plugins and community. I had a complicated setup that did all sort of automation for me, and did various bits of post processing on the markdown files. But I have moved away from that and onto something much simpler. And I have done that for 2 reasons:
