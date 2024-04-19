@@ -2,8 +2,7 @@
 title:  "Simple Daily Notes" 
 permalink: simple-daily-notes/
 layout: post
-tags: 
-  - posts
+tags:
   - note-taking
   - notes
   - daily
