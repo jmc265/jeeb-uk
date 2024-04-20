@@ -2,8 +2,7 @@
 title: "Using Azure as a Dynamic DNS provider for your home server"
 permalink: azure-ddns/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - azure
   - terraform
@@ -14,6 +13,8 @@ tags:
 ---
 
 When hosting services from your home, you will want to use a Dynamic DNS (DDNS) entry in order to map your ever-changing IP address to a hostname you can use to access those services. For instance, `home-server.mydomain.com` will point to your IPv4 (or IPv6) address. There are providers [noip](https://www.noip.com/) and [Duck DNS](https://www.duckdns.org/), but below is a method to use an Azure DNS zone and a script to update the IP on a regular basis. We will do this using Terraform and Docker containers.
+
+---
 
 ## Terraform
 

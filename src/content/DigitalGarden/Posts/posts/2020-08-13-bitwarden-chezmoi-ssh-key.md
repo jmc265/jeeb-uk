@@ -2,8 +2,7 @@
 title:  "Using BitWarden and Chezmoi to manage SSH keys"
 permalink: bitwarden-chezmoi-ssh-keys/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - chezmoi
   - bitwarden
@@ -12,6 +11,8 @@ tags:
 ---
 
 I have recently started using [Chezmoi](https://www.chezmoi.io/) to manage my dotfiles (and various other pieces software config) across multiple machines. The distribution is done via a git repo and therefore we should not check in secrets such as the private part of the SSH key. Using [Bitwarden](https://bitwarden.com/), we can store the key in a Secure Note and retrieve on the other machines.
+
+---
 
 ## Setup
 

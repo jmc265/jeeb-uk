@@ -2,8 +2,7 @@
 title:  "Protecting endpoints with Typescript Method Decorators"
 permalink: typescript-method-decorators/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - typescript
   - backend
@@ -13,6 +12,8 @@ tags:
 ---
 
 Typescript allows for an excellent language feature called [Method Decorators](https://www.typescriptlang.org/docs/handbook/decorators.html#method-decorators). They are similar to annotations in Java and can be used to wrap or edit existing methods with new functionality. Below is an example of using Decorators to add some common functionality to endpoints, including authentication, validation and error handling.
+
+---
 
 The first decorator we will look at is validating that the incoming requests match our expectations, and return a Bad Request (HTTP 400), if not. The actual validation of the objects will be done using [joi](https://www.npmjs.com/package/joi).
 

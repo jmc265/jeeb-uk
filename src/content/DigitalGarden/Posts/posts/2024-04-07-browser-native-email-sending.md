@@ -2,8 +2,7 @@
 title:  "What if Web Browsers were able to send emails?" 
 permalink: browse-native-email-send/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - webapp
   - javascript

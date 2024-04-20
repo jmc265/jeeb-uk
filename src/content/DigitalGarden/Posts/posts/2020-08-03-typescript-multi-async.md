@@ -2,13 +2,14 @@
 title:  Typescript Multi Async Interface
 permalink: typescript-multi-async-interface/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - typescript
 ---
 
 I recently had to write a Javascript library which was going to be used in multiple different contexts by lots of different people. The purpose of the library was to supply a stream of updating values. Internally to the library, [RxJS](https://github.com/ReactiveX/rxjs) is used as it excellently models streams of updating values. However, the interface to the library should not expose the inner workings.
+
+---
 
 So, I wanted to allow the consumer of the library to access the values in a number of ways:
 

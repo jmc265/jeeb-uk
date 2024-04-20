@@ -2,8 +2,7 @@
 title:  "Using `for_each` in Terraform's `dynamic` blocks"
 permalink: dynamic-foreach-terraform/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - terraform
   - dynamic
@@ -12,6 +11,8 @@ tags:
 ---
 
 The `for_each` instruction in Terraform allows you to loop a resource or module over a set to create multiple instances. For instance, if you were to do:
+
+---
 
 ```hcl
 variable "vm_instances" {

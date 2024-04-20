@@ -2,8 +2,7 @@
 title:  "Using Application Passwords with Wordpress Docker" 
 permalink: wordpress-application-password/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - wordpress
   - php

@@ -2,13 +2,14 @@
 title:  Typescript File Inheritance
 permalink: typescript-file-inheritance/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - typescript
 ---
 
 I am not sure how useful this pattern is, but it has some interesting effects, especially when sharing code between projects. So let me give you a brief description of it and you can see where to apply it.
+
+---
 
 Imagine we are writing a simple Web App with a frontend, written in Typescript, and a Node backend, also written in Typescript. This is an excellent opportunity to share some code between the 2 projects. Let's say this simple webapp has a `User` entity that is passed back and forth between the frontend and the backend, and that the backend stores the `User` in a database. The database entry might have some additional properties, like `password` which we don't want to share with the frontend.
 

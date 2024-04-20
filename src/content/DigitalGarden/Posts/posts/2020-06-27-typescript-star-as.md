@@ -2,13 +2,14 @@
 title:  "Typescript `import * as ...`"
 permalink: typescript-import-star-as/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - typescript
 ---
 
 There is a very easy to use and simple pattern that can be used whilst importing files in Typescript. The main advantage of using this pattern is to increase the readability and scan-ability of code. And that pattern is `import * as ...`
+
+---
 
 It is especially useful when it is used with models, so let's have a look at a very simple model:
 

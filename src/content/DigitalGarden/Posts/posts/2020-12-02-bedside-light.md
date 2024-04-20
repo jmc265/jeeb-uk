@@ -2,8 +2,7 @@
 title: "Raspberry Pi bedside Lamp with Spotify and NodeRed"
 permalink: rpi-bedside-lamp-spotify/
 layout: post
-tags: 
-  - posts
+tags:
   - projects
   - rpi
   - spotify
@@ -12,6 +11,8 @@ tags:
 ---
 
 Because why wouldn't you want an MQTT controlled, automated lamp with the ability to play music? I can see I don't need to sell you on this idea any more, so let's get right in with what you need:
+
+---
 
 ## Requirements
 

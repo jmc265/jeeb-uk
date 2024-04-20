@@ -2,13 +2,14 @@
 title: "2 very early Material Design Android apps"
 permalink: material-design-android-apps/
 layout: post
-tags: 
-  - posts
+tags:
   - projects
   - android
 ---
 
 In 2014, Google announced a new design language, called [Material Design](https://material.io/design), which it put forward as the newest iteration of standard for interaction on mobile devices. At the time, it was in a very early form, the details were quite sparse and there were no apps "in the wild" which used it. My plan was to follow the standards and rules as closely as possible and create some very basic apps and release them. The 2 apps that I ended up creating are detailed below:
+
+---
 
 # J.ToDo
 ![J.ToDo](../assets/japplications/jtodo-hero.PNG)

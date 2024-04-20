@@ -2,14 +2,15 @@
 title:  "Crontab-as-code"
 permalink: crontab-as-code/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - linux
   - crontab
 ---
 
 There are [various](https://github.com/bdd/runitor) [tools](https://gitlab.science.ru.nl/bram/sch) [that](https://github.com/pforret/crontask) [either](https://github.com/dimo414/task-mon) wrap crontab, or offer alternatives to it. All I wanted though, was a simple solution to have my scheduled tasks defined as code (checked into a git repo) so that the tasks are reproducible and idempotent, just as Terraform is for IaaS.
+
+---
 
 All of my scheduled tasks are linked to services (running in docker containers), and I wanted my tasks defined alongside the service which they worked upon. Therefore, I have a directory structure as below:
 

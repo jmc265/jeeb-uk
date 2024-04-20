@@ -2,8 +2,7 @@
 title:  "Using GCP free tier VM for uptime and health checks"
 permalink: gcp-free-tier-watcher/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - web
   - cloud

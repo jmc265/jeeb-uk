@@ -3,8 +3,7 @@ title:  "LoRA"
 permalink: lora/
 layout: post
 draft: true 
-tags: 
-  - posts
+tags:
   - programming
 ---
 

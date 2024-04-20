@@ -2,8 +2,7 @@
 title: "Low-code Telegram bot for baby sleep and feed tracking"
 permalink: telegram-sleep-feed-tracker/
 layout: post
-tags: 
-  - posts
+tags:
   - projects
   - nodered
   - telegram
@@ -12,6 +11,8 @@ tags:
 ---
 
 My wife and I wanted to start tracking and visualising our baby's sleeping and feeding schedule to help us understand the rhythms from a day-to-day basis. There are multiple apps to do that and seemingly the most popular one is [Huckleberry](https://play.google.com/store/apps/details?id=com.huckleberry_labs.app&hl=en_GB&gl=US) but at $15 per month, I thought I could make something quick and simple to allow us to get the data we needed. 
+
+---
 
 The requirements were simple:
 * Track when the baby has fed

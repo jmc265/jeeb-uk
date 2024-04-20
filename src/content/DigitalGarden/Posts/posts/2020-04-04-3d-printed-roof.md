@@ -2,13 +2,14 @@
 title:  "3D modelled and printed roof"
 permalink: 3d-roof/
 layout: post
-tags: 
-  - posts
+tags:
   - other
   - 3d printing
 ---
 
 As part of renovations on our house, we wanted to explore the possibility of extending into the loft. Unfortunately the roof on our house was an odd shape with many different parts and ridges. 
+
+---
 
 When trying to consider how best to go about building in the loft, I wanted to model the existing layout of the roof as well a possibilities for extending. I could then use these designs when talking to the builders to show what we wanted.
 

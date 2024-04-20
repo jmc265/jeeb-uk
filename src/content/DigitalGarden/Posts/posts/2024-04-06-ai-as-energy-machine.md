@@ -2,8 +2,7 @@
 title:  "Does AI conform to the laws of thermodynamics?" 
 permalink: ai-as-energy-machine/
 layout: post
-tags: 
-  - posts
+tags:
   - programming
   - ai
   - machine learning

@@ -3,8 +3,7 @@ title:  "Tell them stories"
 permalink: tell-them-stories/
 layout: post
 draft: true 
-tags: 
-  - posts
+tags:
   - programming
   - terraform
   - react 
