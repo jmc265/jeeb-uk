@@ -1,1 +1,0 @@
-- [Avoid mocks (use real implementation or fakes\)](https://testing.googleblog.com/2024/02/increase-test-fidelity-by-avoiding-mocks.html?m=1)

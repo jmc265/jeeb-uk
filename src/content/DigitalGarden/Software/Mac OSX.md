@@ -1,2 +1,0 @@
-- [Alt-Tab on Mac like Windows](https://alt-tab-macos.netlify.app/)
-- [Tiny calendar in the menu bar](https://www.mowglii.com/itsycal/)
