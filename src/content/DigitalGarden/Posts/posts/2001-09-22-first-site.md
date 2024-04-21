@@ -3,9 +3,10 @@ title:  "My first web site in 2001"
 permalink: first-site/
 layout: post
 tags:
-  - projects
   - web site
   - design
+  - nostalgia
+  - html
   - Microsoft Frontpage
   - Macromedia Dreamweaver
 ---
