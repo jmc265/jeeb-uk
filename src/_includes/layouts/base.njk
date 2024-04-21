@@ -8,13 +8,14 @@ showNavbar: true
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="{{ '/assets/js/nr.js' | url }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="{{ excerpt or description or metadata.description }}">
+     <meta name="keywords" content="{{ tags }}">
+     <meta name="author" content="James Cross">
     <title>{{ title or metadata.title }}</title>
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,24 +28,16 @@ showNavbar: true
 
 <body>
     {% if showNavbar %}
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="{{ '/' | url }}" class="no-hover">
-                    <img src="{{ '/assets/img/logo-header.svg' | url }}" class="apply-svg-filter" height="45"/>
-                </a>
-            </div>
-            <div class="right-side">
-                <a href="/feed/feed.xml" class="no-hover"><img src="{{ '/assets/img/rss.svg' | url }}" class="apply-svg-filter"/></a>
-                <img id="toggle-theme-button" src="{{ '/assets/img/sun.svg' | url }}" class="apply-svg-filter"/>
-            </div>
-        </div>
+    <header class="site-header container">
+        <a href="{{ '/' | url }}">
+            <img src="{{ '/assets/img/logo-header.svg' | url }}" height="45"/>
+        </a>
+        <a href="/feed/feed.xml"><img src="{{ '/assets/img/rss.svg' | url }}"/></a>
     </header>
     {% endif %}
-    <main class="container" role="main">
+    <main class="container">
         {{ content | safe }}
     </main>
-    <script src="{{ '/assets/js/theme-switch.js' | url }}"></script>
 </body>
 
 </html>
