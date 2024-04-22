@@ -1,11 +1,7 @@
 @import "normalize";
 @import "prism-material-dark";
-
-$background-color: #f2f1eb;
-$background-accent-color: #fefcf6;
-$text-color: #101010;
-$anchor-color: #D4443D;
-$other-color: #1A354F;
+@import "variables";
+@import "tags";
 
 body {
     font-family: "Josefin Sans",helvetica neue,sans-serif;
@@ -39,6 +35,7 @@ ol, ul {
 
 .container {
     margin: 0 auto;
+    padding: 0 0.5rem;
     max-width: 700px;
 }
 
@@ -47,7 +44,13 @@ ol, ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.index-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 time {
@@ -69,65 +72,7 @@ article {
     }
 }
 
-details {
-    summary {
-        list-style: none;
-        &:after {
-            content: ' + more';
-        }
-    }
-
-    &[open] {
-        summary {
-            &:after {
-                content: ' - less';
-            }
-        }
-    }
-}
-
-.index-header {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
 .intro-text {
     display: inline;
 }
 
-.more-button {
-    background: none;
-    border: none;
-    color: $anchor-color;
-    cursor: pointer;
-    padding: 0;
-    font: inherit;
-    text-decoration: underline;
-}
-
-.tag-list {
-    list-style: none;
-    display: inline;
-    line-height: 2rem;
-    > * {
-        margin-right: 0.1rem;
-    }
-}
-
-.tag {
-    display: inline;
-    background-color: $anchor-color;
-    color: $background-color;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.5rem;
-    white-space: nowrap;
-
-    &.hidden {
-        display: none;
-    }
-    
-    a { 
-        color: $background-color;
-    }
-}

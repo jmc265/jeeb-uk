@@ -1,0 +1,35 @@
+.tag-list {
+    list-style: none;
+    display: inline;
+    line-height: 2rem;
+    > * {
+        margin-right: 0.1rem;
+    }
+}
+
+.tag {
+    display: inline;
+    background-color: $anchor-color;
+    color: $background-color;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+
+    &.hidden {
+        display: none;
+    }
+    
+    a { 
+        color: $background-color;
+    }
+}
+
+.more-button {
+    background: none;
+    border: none;
+    color: $anchor-color;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    text-decoration: underline;
+}
