@@ -30,9 +30,9 @@ showNavbar: true
     {% if showNavbar %}
     <header class="site-header container">
         <a href="{{ '/' | url }}">
-            <img src="{{ '/assets/img/logo-header.svg' | url }}" height="45"/>
+            <img src="/assets/img/logo-header.svg" height="45" eleventy:ignore/>
         </a>
-        <a href="/feed/feed.xml"><img src="{{ '/assets/img/rss.svg' | url }}"/></a>
+        <a href="/feed/feed.xml"><img src="/assets/img/rss.svg" eleventy:ignore/></a>
     </header>
     {% endif %}
     <main class="container">

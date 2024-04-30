@@ -44,7 +44,7 @@ Make sure the above are all installed and if you are using Spotify, have that se
 
 Let's deal with turning on the light first. We will setup an automation that looks like the below:
 
-![Lamp Automation](../assets/lamp-automation.png)
+![Lamp Automation](/content/posts/assets/bedside-light/lamp-automation.png)
 
 Let's walk through that from right to left.
 
@@ -70,7 +70,7 @@ The left-most node is a simple inject which triggers at 22:00 every day of the w
 
 Next let's add some some nodes to start playing some music at the same time:
 
-![Music Automation](../assets/music-automation.png)
+![Music Automation](/content/posts/assets/bedside-light/music-automation.png)
 
 We have a list of nodes that effect Mopidy:
 
@@ -85,7 +85,7 @@ I have added a delay for the `add` and `play` nodes so that we know that the tra
 
 Now that we have turned on the light, we need to turn it off when we want to sleep. We are going to fade out the light for added shazam and continue to play the music for 30 minutes before turning it off. We could do this at a preset time like so:
 
-![Turnoff Automation](../assets/turnoff-automation.png)
+![Turnoff Automation](/content/posts/assets/bedside-light/turnoff-automation.png)
 
 The `Fade Down Values` function outputs an array of values counting down from 100% to 0% in increments of 5:
 
@@ -113,19 +113,19 @@ We will be using MQTT and an Android App called [IoT MQTT Panel](https://play.go
 
 So first we need to add an MQTT node and replace the timing injection node:
 
-![Turnoff Remote Control](../assets/bedside-light/turnoff-remote.png)
+![Turnoff Remote Control](/content/posts/assets/bedside-light/turnoff-remote.png)
 
 And then in IoT MQTT Panel we can set up some controls for the lamp:
 
-![iotmqttpanel](../assets/bedside-light/iotmqttpanel.jpg)
+![iotmqttpanel](/content/posts/assets/bedside-light/iotmqttpanel.jpg)
 
 The button with the bed on it publishes to the `home/sleep` topic. And there are a few other controls in there for manually setting the lamp's colour and brightness. Here is what the nodes look like for dealing with brightness and colour topics:
 
-![MQTT Controls](../assets/bedside-light/mqtt-controls.png)
+![MQTT Controls](/content/posts/assets/bedside-light/mqtt-controls.png)
 
 ### Conclusion
 
-And we are done! The light and music will start at 22:00 every day. The light will fade out when you click the button in the Android App and the music will stop 30 minutes later. The whole flow can be [found here](../assets/bedside-light/flows.json).
+And we are done! The light and music will start at 22:00 every day. The light will fade out when you click the button in the Android App and the music will stop 30 minutes later. The whole flow can be [found here](/content/posts/assets/bedside-light/flows.json).
 
 I have some thoughts on how to extend this:
 

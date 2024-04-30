@@ -5,7 +5,7 @@ showNavbar: false
 ---
 
 <section class="index-header">
-    <img src="{{ '/assets/img/logo-big.svg' | url }}" height="200" width="200"/>
+    <img src="/assets/img/logo-big.svg" height="200" width="200" eleventy:ignore/>
 </section>
 
 <section>
@@ -29,7 +29,7 @@ showNavbar: false
             <article>
                 <header><h2>{{ post.data.title }}</h2></header>
                 {% if post.data.page.excerpt %}
-                <p>{{ post.data.page.excerpt | markdownToHtml | safe }}</p>
+                    <p>{{ post.data.page.excerpt | markdownToHtml | safe }}</p>
                 {% endif %}
                 <footer>
                     <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>

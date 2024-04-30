@@ -16,11 +16,11 @@ When trying to consider how best to go about building in the loft, I wanted to m
 
 Lucky, we had accurate sketches of the geometry of the house already when other work was done on our house. I spent some time modelling this in [SketchUp](https://app.sketchup.com):
 
-![3D roof design](../assets/3droof.png)
+![3D roof design](/content/posts/assets/3droof.png)
 
 And then simply print it out with my [Monoprice Mini V2](https://www.monoprice.uk/products/monoprice-select-mini-v2-3d-printer-with-heated-build-plate):
 
-![3D roof print](../assets/3droof.jpg)
+![3D roof print](/content/posts/assets/3droof.jpg)
 (Please forgive the rough edges, I didn't spend any time finishing it)
 
 After conferring with a few different builders, using the model to better communicate what we had in mind, we decided not to proceed with any extension as it would be too complex and costly. 

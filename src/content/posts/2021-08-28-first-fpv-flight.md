@@ -12,6 +12,6 @@ This is my first attempt at flying my [Beta85X V2](https://betafpv.com/collectio
 
 ---
 
-![Beta85X V2](../assets/beta85x.jpg)
+![Beta85X V2](/content/posts/assets/beta85x.jpg)
 
 https://www.youtube.com/watch?v=E6Myad6036o

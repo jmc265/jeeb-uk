@@ -12,7 +12,7 @@ tags:
   - self host
 ---
 
-![Uptime Kuma](../assets/pluto-uptime.png)
+![Uptime Kuma](/content/posts/assets/pluto-uptime.png)
 
 I [host a bunch of services](<../Self Hosting/What I Self Host.md>) on a server in my house, which I call Jupiter ([Why "Jupiter"?](<../Self Hosting/Device Naming.md>)). I also have cron jobs on the server which run important things like [backups of my documents and photos/videos](<../Self Hosting/Backups.md>). I need to know (immediately) if:
 - Jupiter goes down

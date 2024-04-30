@@ -5,11 +5,13 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const markdownIt = require("markdown-it");
 const slugify = require("./src/eleventy/slugify");
+const Image = require('@11ty/eleventy-img');
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const { parseHTML } = require('linkedom')
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPassthroughCopy({
-        "src/content/posts/assets": "assets/",
         "src/_includes/img": "assets/img",
         "src/_includes/css": "assets/css",
         "src/_includes/js": "assets/js",
@@ -29,7 +31,22 @@ module.exports = function (eleventyConfig) {
         lite: true
     });
 
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		extensions: "html",
+		formats: ["avif", "jpeg"],
+		widths: [350, 700, 1400, "auto"],
+		defaultAttributes: {
+			loading: "lazy",
+			decoding: "async",
+            sizes: "(max-width: 400px) 350px, (max-width: 600px) 550px, 700px",
+		},
+        filenameFormat: function (id, src, width, format, options) {
+            return `${src}-${width}.${format}`;
+        }
+	});
+
     eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+    eleventyConfig.addLayoutAlias("gallery", "layouts/gallery.njk");
 
     eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
 
@@ -73,26 +90,22 @@ module.exports = function (eleventyConfig) {
         linkify: true,
         modifyToken: function (token, env) {
             switch (token.type) {
-                case 'image':
-                    const src = token.attrObj.src;
-                    if (src.startsWith("../assets")) {
-                        token.attrObj.src = src.replace("../assets", "/assets");
-                    }
-                    break;
+                // case 'image':
+                //     const src = token.attrObj.src;
+                //     if (src.startsWith("../assets")) {
+                //         token.attrObj.src = src.replace("../assets", "/assets");
+                //     }
+                //     break;
                 case 'link_open':
                     const href = token.attrObj.href;
                     if (href && (!href.includes('jeeb.uk') &&
-                        !href.includes('jupiter:8082') &&
+                        !href.includes('jupiter:8080') &&
                         !href.startsWith('./') &&
                         !href.startsWith('../') &&
                         !href.startsWith('/') &&
                         !href.startsWith('#'))) {
                             token.attrObj.target = '_blank';
                             token.attrObj.rel = 'noopener noreferrer';
-                    }
-                    if (href.endsWith(".md")) {
-                        const slugifiedHref = slugify(href);
-                        token.attrObj.href = `/${slugifiedHref.replaceAll("../", "")}`;
                     }
                     break;
             }

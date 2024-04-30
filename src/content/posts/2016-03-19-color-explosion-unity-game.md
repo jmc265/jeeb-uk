@@ -10,7 +10,7 @@ tags:
   - c-sharp
 ---
 
-![](../assets/colour-explosion.PNG)
+![](/content/posts/assets/colour-explosion.PNG)
 
 ---
 
