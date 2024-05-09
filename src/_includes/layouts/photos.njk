@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+
+<article>
+    {% set taglist = collections.gallery %}
+    {% for post in taglist | reverse %}
+        {% for image in post.content | markdownToImagesOnly %}
+            {{ image | safe }}
+        {% endfor %}
+    {% endfor %}
+</article>

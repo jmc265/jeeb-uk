@@ -65,6 +65,12 @@ module.exports = function (eleventyConfig) {
             .sort((p1, p2) => p1.date - p2.date);
     });
 
+    eleventyConfig.addCollection("gallery", (collection) => {
+        return collection
+            .getFilteredByTag("photography")
+            .sort((p1, p2) => p1.date - p2.date);
+    });
+
     eleventyConfig.addCollection("postTags", function (collectionAPI) {
         let collection = collectionAPI.getFilteredByGlob("src/content/posts/*.md");
         let resultArrays = {};
@@ -122,6 +128,17 @@ module.exports = function (eleventyConfig) {
         markdownLibrary.linkify.set({});
         markdownLibrary.disable('link');
         return markdownLibrary.renderInline(str).replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+    });
+
+    eleventyConfig.addFilter("markdownToImagesOnly", str => {
+        let markdownLibrary = markdownIt({
+            html: true,
+            breaks: false,
+        });
+        markdownLibrary.linkify.set({});
+        markdownLibrary.disable('link');
+        const inline = markdownLibrary.renderInline(str).replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+        return inline.match(/<img\s+[^>]*?>/g);
     });
 
     return {
