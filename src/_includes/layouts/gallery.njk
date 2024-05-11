@@ -2,18 +2,14 @@
 layout: layouts/base.njk
 ---
 
-<article class="article-body">
-    <header>
-        <h1>{{ title }}</h1>
-        <small><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
-    </header>
-    <section>
-        {{ content | safe }}
-    </section>
-    {# <section>
-        {% for photo in photos %}
-            {% image photo.split(",")[0], photo.split(",")[1], "(min-width: 30em) 50vw, 100vw" %}
-        {% endfor %}
-    </section> #}
-</article>
-
+<main class="container">
+    <article class="article-body">
+        <header>
+            <h1>{{ title }}</h1>
+            <small><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+        </header>
+        <section>
+            {{ content | safe }}
+        </section>
+    </article>
+</main>

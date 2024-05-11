@@ -4,41 +4,44 @@ title: jeeb.uk
 showNavbar: false
 ---
 
-<section class="index-header">
-    <img src="/assets/img/logo-big.svg" height="200" width="200" eleventy:ignore/>
-</section>
+<main class="container">
+    <section class="index-header">
+        <img src="/assets/img/logo-big.svg" height="200" width="200" eleventy:ignore/>
+        </section>
 
-<section>
-    <h1>Hi! I am James</h1>
-    <p class="intro-text">
-        <span>Below are some musings on</span> 
-        <ol class="tag-list">
-        {% for tag in collections.postTags %}
-            {% set tagUrl %}/tag/{{ tag.tag | slug }}/{% endset %}
-            <li class="tag {% if loop.index0 >= 10 %}hidden{% endif %}"><a href="{{ tagUrl | url }}">{{ tag.tag }}</a></li>
-        {% endfor %}
-        </ol> 
-        <button onclick="expandAll()" class="more-button">+ more</button>
-</section>
+        <section>
+        <h1>Hi! I am James</h1>
+        <p class="intro-text">
+            <span>Below are some musings on</span> 
+            <ol class="tag-list">
+            {% for tag in collections.postTags %}
+                {% set tagUrl %}/tag/{{ tag.tag | slug }}/{% endset %}
+                <li class="tag {% if loop.index0 >= 10 %}hidden{% endif %}"><a href="{{ tagUrl | url }}">{{ tag.tag }}</a></li>
+            {% endfor %}
+            </ol> 
+            <button onclick="expandAll()" class="more-button">+ more</button> <br/>
+            I also occassionally take some <a href="/photos"><span class="tag"/>photos</span></a>
+        </section>
 
-<section>
-    {% set postslist = collections.posts | reverse %}
-    <ol reversed>
-        {% for post in postslist %}
-        <a href="{{ post.url | url}}">
-            <article>
-                <header><h2>{{ post.data.title }}</h2></header>
-                {% if post.data.page.excerpt %}
-                    <p>{{ post.data.page.excerpt | markdownToHtml | safe }}</p>
-                {% endif %}
-                <footer>
-                    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                </footer>
-            </article>
-        </a>
-        {% endfor %}
-    </ol>
-</section>
+        <section>
+        {% set postslist = collections.posts | reverse %}
+        <ol reversed>
+            {% for post in postslist %}
+            <a href="{{ post.url | url}}">
+                <article>
+                    <header><h2>{{ post.data.title }}</h2></header>
+                    {% if post.data.page.excerpt %}
+                        <p>{{ post.data.page.excerpt | markdownToHtml | safe }}</p>
+                    {% endif %}
+                    <footer>
+                        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                    </footer>
+                </article>
+            </a>
+            {% endfor %}
+        </ol>
+    </section>
+</main>
 
 <script>
     function expandAll() {

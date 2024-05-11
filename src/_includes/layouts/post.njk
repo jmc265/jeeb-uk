@@ -2,23 +2,25 @@
 layout: layouts/base.njk
 ---
 
-<article class="article-body">
-    <header>
-        <h1>{{ title }}</h1>
-        <small><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
-    </header>
+<main class="container">
+    <article class="article-body">
+        <header>
+            <h1>{{ title }}</h1>
+            <small><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+        </header>
+        <section>
+            {{ content | safe }}
+        </section>
+    </article>
     <section>
-        {{ content | safe }}
+        <p>Tags:
+            <ol class="tag-list">
+            {% for tag in tags %}
+                {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
+                <li class="tag {% if loop.index0 >= 10 %}hidden{% endif %}"><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ol> 
+        </p>
     </section>
-</article>
-<section>
-    <p>Tags:
-        <ol class="tag-list">
-        {% for tag in tags %}
-            {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
-            <li class="tag {% if loop.index0 >= 10 %}hidden{% endif %}"><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
-        {% endfor %}
-        </ol> 
-    </p>
-</section>
+</main>
 

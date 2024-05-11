@@ -1,6 +1,6 @@
 ---
-title:  "Train Photos" 
-permalink: train-photos/
+title:  "Train Textures" 
+permalink: train-Textures/
 layout: gallery
 tags:
   - photography

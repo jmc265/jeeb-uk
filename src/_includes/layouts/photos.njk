@@ -2,11 +2,14 @@
 layout: layouts/base.njk
 ---
 
-<article>
-    {% set taglist = collections.gallery %}
-    {% for post in taglist | reverse %}
-        {% for image in post.content | markdownToImagesOnly %}
-            {{ image | safe }}
+<main class="container full-width">
+    <article class="gallery">
+        {% set taglist = collections.gallery %}
+        {% for post in taglist | reverse %}
+            {% for image in post.content | markdownToImagesOnly %}
+                {{ image | safe }}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-</article>
+    </article>
+</main>
+
