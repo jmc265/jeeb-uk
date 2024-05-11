@@ -11,5 +11,38 @@ layout: layouts/base.njk
             {% endfor %}
         {% endfor %}
     </article>
+
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-image" eleventy:ignore>
+            <button id="close-button" class="close-button">X</button>
+        </div>
+    </div>
 </main>
 
+
+<script>
+    const lightBox = document.querySelector(".lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const allImages = document.querySelectorAll('img');
+    const closeButton = document.getElementById('close-button');
+    for (const image of allImages) {
+        if (!image.srcset) {
+            continue;
+        }
+        console.log(image);
+        image.onclick = () => {
+            const srcSet = image.srcset.split(',');
+            const biggestSize = srcSet[srcSet.length-1].trim().split(" ");  
+            const biggestSizeFile = biggestSize[0];
+            lightboxImage.src = biggestSizeFile;
+            lightBox.style.display = "block";
+            document.body.style.overflowY = "hidden";
+        }
+    }
+    closeButton.onclick = () => {
+        lightboxImage.src = "";
+        lightBox.style.display = "none";
+        document.body.style.overflowY = "auto";
+    };
+</script>

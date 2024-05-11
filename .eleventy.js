@@ -62,6 +62,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("posts", (collection) => {
         return collection
             .getFilteredByGlob("src/content/posts/*.md")
+            .filter((item) => !item.data.hideFromIndex)
             .sort((p1, p2) => p1.date - p2.date);
     });
 
