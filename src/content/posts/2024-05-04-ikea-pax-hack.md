@@ -13,7 +13,6 @@ tags:
 
 ---
 
-
 ## Constructing
 
 The first step is the easiest: construct the wardrobe shells according to the IKEA instructions.
@@ -21,6 +20,7 @@ The first step is the easiest: construct the wardrobe shells according to the IK
 ![](/content/posts/assets/ikea-pax-hack/shells-in-place.jpg)
 
 Then came the hard bit of working out exactly how to fill in the gap between the wardrobe and the ceiling as well as the wall. I bought various lengths of wood from [Cheshire Mouldings](https://www.cheshiremouldings.co.uk), specifically:
+
 - [Square Corner Pine](https://www.cheshiremouldings.co.uk/square-corner-angle/) to sit on top of the wardrobe
 - [Double Rounded Cover Pine](https://www.cheshiremouldings.co.uk/twice-round-cover/) to wrap around the bottom of the wardrobe (only visible in the finished photo at the bottom of this page)
 - [Rounded One Edge Pine](https://www.cheshiremouldings.co.uk/round-one-edge-cover) to join the wardrobe to the wall (only visible in the finished photo at the bottom of this page)
@@ -45,11 +45,11 @@ The bookshelf will only ever have 6 shelves in it, and set heights, so the dozen
 
 ![](/content/posts/assets/ikea-pax-hack/filled-holes-sanded.jpg)
 
-The final bit that happened here (un-photoed) was going round the whole thing with caulk to smooth out all the rough edges. 
+The final bit that happened here (un-photoed) was going round the whole thing with caulk to smooth out all the rough edges.
 
 ## Painting
 
-And now to the most fun stage: painting. 
+And now to the most fun stage: painting.
 
 The choice of primer was most important. A lot of others online suggest [Zinsser ZINBIN500 B.I.N Primer/Sealer Stain Killer Paint](https://www.amazon.co.uk/gp/product/B003C40YZW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1) so that is exactly what I used. If it is of use to anyone: you need 1L of that primer to do 2 coats of the size of wardrobe I have chosen along with all 4 doors and the 6 bookshelf shelves.
 
@@ -61,7 +61,7 @@ It is really starting to take shape now.
 
 ## Finishing Steps
 
-Some final touches are need to finish the project off. 
+Some final touches are need to finish the project off.
 
 I wanted to wallpaper the back of the bookshelves to add a little bit of interest and inject some different colours. I am very pleased with how this turned out:
 

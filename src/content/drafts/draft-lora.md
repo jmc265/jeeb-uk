@@ -75,4 +75,3 @@ The last step here is to simply wrap this up in a small Javascript app and let i
 ╰─ ls face | wc -l
 1098
 ```
-

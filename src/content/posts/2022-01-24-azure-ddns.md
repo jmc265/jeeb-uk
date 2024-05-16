@@ -92,7 +92,7 @@ docker run --rm \
     azddns
 ```
 
-Running this docker run command should be done on a regular basis. This could be done with a cron job, or by using [ofelia](https://github.com/mcuadros/ofelia). 
+Running this docker run command should be done on a regular basis. This could be done with a cron job, or by using [ofelia](https://github.com/mcuadros/ofelia).
 
 Here is the docker-compose entry:
 

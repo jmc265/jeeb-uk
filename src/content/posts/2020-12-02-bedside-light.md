@@ -79,7 +79,7 @@ We have a list of nodes that effect Mopidy:
 1. `tracklist.add` - This is where you can choose which tracks to play. I have set the `uris` value to [`["spotify:playlist:37i9dQZF1DX9uKNf5jGX6m"]`](https://open.spotify.com/playlist/37i9dQZF1DX9uKNf5jGX6m)
 1. `playback.play` - Play the tracks!
 
-I have added a delay for the `add` and `play` nodes so that we know that the tracklist has been cleared first and the volume set correctly. 
+I have added a delay for the `add` and `play` nodes so that we know that the tracklist has been cleared first and the volume set correctly.
 
 ### Turning off the light
 
@@ -109,7 +109,7 @@ But that isn't quite good enough. We might want to turn off the lamp before or a
 
 ### Remote Control
 
-We will be using MQTT and an Android App called [IoT MQTT Panel](https://play.google.com/store/apps/details?id=snr.lab.iotmqttpanel.prod&hl=en_GB) to turn off the lamp when we are ready. 
+We will be using MQTT and an Android App called [IoT MQTT Panel](https://play.google.com/store/apps/details?id=snr.lab.iotmqttpanel.prod&hl=en_GB) to turn off the lamp when we are ready.
 
 So first we need to add an MQTT node and replace the timing injection node:
 

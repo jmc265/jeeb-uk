@@ -11,7 +11,7 @@ tags:
   - automation
 ---
 
-It is very popular at the moment in some circles online to show off one's personal note-taking process/system. This generally revolves around [Obsidian](https://obsidian.md/) and a very convoluted set of plugins and/or templates. 
+It is very popular at the moment in some circles online to show off one's personal note-taking process/system. This generally revolves around [Obsidian](https://obsidian.md/) and a very convoluted set of plugins and/or templates.
 
 ---
 
@@ -39,9 +39,10 @@ I am sure that looks lovely when rendered within Obsidian, but now that I just u
 
 ## Simple Daily Notes
 
-So let's make something that is simple, automated and has no vendor lock in. First, we will start with a template for a Markdown file that we will want created every day for us to use: 
+So let's make something that is simple, automated and has no vendor lock in. First, we will start with a template for a Markdown file that we will want created every day for us to use:
 
 > `snippets/daily-note.md`
+
 ```markdown
 # 📓
 ## Todo
@@ -62,11 +63,12 @@ current_date=$(date +%F)
 cat snippets/daily-note.md >> daily/${current_date}.md
 ```
 
-Then every day, we get a brand new empty file that we can use for the day's notes. 
+Then every day, we get a brand new empty file that we can use for the day's notes.
 
 There is one additional feature that I wanted, which is for the contents underneath the `## Todo` heading to be copied from one day to the next. This way, my incomplete ToDos follow me through the days until they are completed. With a small change to our template and little bit of `sed` we can accomplish that:
 
 > `snippets/daily-note.md`
+
 ```markdown
 # 📓
 ## Todo
@@ -74,6 +76,7 @@ There is one additional feature that I wanted, which is for the contents underne
 ```
 
 > `make-daily-note.sh`
+
 ```shell
 current_date=$(date +%F)
 yesterday_date=$(date +%F -d "yesterday")

@@ -8,7 +8,7 @@ tags:
   - SketchUp
 ---
 
-As part of renovations on our house, we wanted to explore the possibility of extending into the loft. Unfortunately the roof on our house was an odd shape with many different parts and ridges. 
+As part of renovations on our house, we wanted to explore the possibility of extending into the loft. Unfortunately the roof on our house was an odd shape with many different parts and ridges.
 
 ---
 
@@ -23,4 +23,4 @@ And then simply print it out with my [Monoprice Mini V2](https://www.monoprice.u
 ![3D roof print](/content/posts/assets/3droof.jpg)
 (Please forgive the rough edges, I didn't spend any time finishing it)
 
-After conferring with a few different builders, using the model to better communicate what we had in mind, we decided not to proceed with any extension as it would be too complex and costly. 
+After conferring with a few different builders, using the model to better communicate what we had in mind, we decided not to proceed with any extension as it would be too complex and costly.

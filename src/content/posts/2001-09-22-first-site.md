@@ -11,11 +11,11 @@ tags:
   - Macromedia Dreamweaver
 ---
 
-Back in 2001, when I was 11 years old, my dad bought a website domain for me to use. 
+Back in 2001, when I was 11 years old, my dad bought a website domain for me to use.
 
 ---
 
-According to the [Wayback Machine](https://archive.org/web/) this site lasted from Sep 2001 to Jan 2004 and it looks exactly as you might expect an 11 year old to design a site at the turn of the millennium. 
+According to the [Wayback Machine](https://archive.org/web/) this site lasted from Sep 2001 to Jan 2004 and it looks exactly as you might expect an 11 year old to design a site at the turn of the millennium.
 
 The `index.html` features the most rare of HTML artefacts these days: the horizontal scrolling marquee.
 ![homepage](/content/posts/assets/first-site/home.png)

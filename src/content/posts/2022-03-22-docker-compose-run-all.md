@@ -8,7 +8,7 @@ tags:
   - Docker Compose
 ---
 
-For my home server, I have a number of `docker-compose.yml` files, one for each application I run, in a sub-directory. I wanted a way to automatically do a `docker-compose up -d` for all of the applications at once, so that I don't have to `cd` into each directory in turn. 
+For my home server, I have a number of `docker-compose.yml` files, one for each application I run, in a sub-directory. I wanted a way to automatically do a `docker-compose up -d` for all of the applications at once, so that I don't have to `cd` into each directory in turn.
 
 ---
 
