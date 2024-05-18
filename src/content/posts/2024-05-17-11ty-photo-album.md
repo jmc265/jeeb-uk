@@ -30,6 +30,7 @@ eleventyConfig.addCollection("gallery", (collection) => {
 
 Then, on `photos.njk` we will iterate over the collection and using a custom filter (shown underneath), we will output each individual image:
 
+{% raw %}
 ```html
 <div>
     {% for post in collections.gallery | reverse %}
@@ -39,6 +40,7 @@ Then, on `photos.njk` we will iterate over the collection and using a custom fil
     {% endfor %}
 </div>
 ```
+{% endraw %}
 
 And finally, the actual meat of the solution which is a custom filter that renders the Markdown to HTML and then extracts all the `<img>` tags:
 
