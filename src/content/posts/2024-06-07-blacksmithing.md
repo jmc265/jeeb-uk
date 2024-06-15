@@ -10,7 +10,7 @@ tags:
 
 ![Two hand forged knives](/content/posts/assets/blacksmithing.jpg)
 
-Today, I went to the [Firebird Forge](https://www.firebirdforge.co.uk/) for the day and (under the excellent tuition from Mort, the Blacksmith) learnt a small part of what it means to do blacksmithing. Apart from a couple of blisters on my hammer-wielding hand, I also walked away with the above 2 knives I made.
+Today, I went to the [Firebird Forge](https://www.firebirdforge.co.uk/) for the day and (under the excellent tuition of Mort, the Blacksmith) learnt a small part of what it means to do blacksmithing. Apart from a couple of blisters on my hammer-wielding hand, I also walked away with the above 2 knives I made.
 
 ---
 
