@@ -1,5 +1,6 @@
 ---
 title: "Blacksmithing"
+permalink: blacksmithing/
 layout: post
 tags:
   - blacksmithing
