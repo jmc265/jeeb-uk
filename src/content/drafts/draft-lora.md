@@ -5,6 +5,11 @@ layout: post
 draft: true 
 tags:
   - programming
+  - stable diffusion
+  - sdxl
+  - lora
+  - training
+  - generative artificial intelligence
 ---
 
 I wanted to learn about the new wave of "AI" image generation, particularly Stable Diffusion and how to create a LoRA (low-ranking adaptation) which would allow me to add training data to the model. I thought an excellent approach to this would be to train a LoRA based on my face in order to generate a professional looking headshot of myself for use on LinkedIn etc.
@@ -75,3 +80,81 @@ The last step here is to simply wrap this up in a small Javascript app and let i
 ╰─ ls face | wc -l
 1098
 ```
+
+## Attempt 1
+
+For my first attempt I choose only 12 of the 1100 images available to me in the hopes that it would provide a fast (if inaccurate) model which would allow me to determine if this process was going to work at all for what I wanted it for. The 12 I chose were all from my wedding photos, taken by a professional photographer and of very high quality. 
+
+I used these 12 images, along with the regularization images found on [github.com/tobecwb/stable-diffusion-regularization-images](https://github.com/tobecwb/stable-diffusion-regularization-images/tree/main/sdxl). Using an RTX 4090 rented from [runpod](https://www.runpod.io) I ran the images through the training process. Each epoch would take about 15 minutes, which seemed really fast. I stopped the process after 3 epochs and took a look at the results. And they weren't bad, for a first attempt at least. The output did vaguely look like me at times. But we could certainly do better than that.
+
+## Attempt 2
+
+So in my next attempt, I tried to give the learning process all 1100 images. I quickly cancelled it after it showed that it would take 300 hours per epoch (would would cost more than $100 on runpod!). I clearly needed to alter my process a little bit and understand what was taking the time before I launched that my photos at it again.
+
+## Attempt 3
+
+For an estimate on timings I gave it all 87 of my wedding photos which would take 16 hours per epoch. Still a very long time, especially if I wanted to let this run for all 10 epochs that I had originally intended.
+
+I looked around the web for some guidance and found a few pages that I took various bits of advice from:
+
+- https://aituts.com/sdxl-lora/
+- https://rentry.org/59xed3#number-of-steps
+- https://medium.com/@yushantripleseven/dreambooth-sdxl-using-kohya-ss-on-vast-ai-10e1bfa26eed
+
+## Attempt 4
+
+Based off of the above recommendations, I decided I wanted to try a smaller amount of photos, but make sure they were the highest quality of my photos which were cropped to an aspect ratio of 1:1 (to match the output of the SDXL model).
+
+So I wrote a script to go through all my photos to get the top 100 highest quality images that were square:
+
+```javascript
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+const directoryPath = './face';
+
+fs.readdir(directoryPath, (err, files) => {
+  if (err) {
+    console.error('Error reading directory:', err);
+    return;
+  }
+
+  const data = [];
+
+  files.forEach((filename) => {
+    const filePath = `${directoryPath}/${filename}`;
+
+    try {
+      const result = execSync(`identify -format "%wx%h\\n" "${filePath}"`, {
+        encoding: 'utf-8',
+        stdio: 'pipe'
+      });
+
+      const dim = result.trim().split('x');
+      data.push({
+        file: filename,
+        width: Number(dim[0]),
+        height: Number(dim[1])
+      })
+    } catch (error) {
+      console.error(`Error running identify command for ${filename}:`, error.message);
+    }
+  });
+
+  const images = data.filter((image) => image.width === image.height)
+                     .filter((image) => image.width > 512)
+                     .sort((imageA, imageB) => imageB.width - imageA.width)
+                     .slice(0, 100)
+                     .map((image) => image.file);
+  images.forEach((imageFile) => execSync(`cp ./face/${imageFile} ./face-top100/${imageFile}`));
+});
+```
+
+## Attempt 5
+
+jx265 model name
+
+## Attempt 6
+
+WD14 captioning
+
