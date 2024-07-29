@@ -53,6 +53,70 @@ MariaDB [photoprism]> SELECT f.file_name, m.x, m.y, m.w, m.h from files f JOIN m
 
 And we have the file name and location within image of my face!
 
+So I wrote a script to automate the process of pulling out all of the images that contained me within them, and copy them to a new folder for training purposes:
+
+```javascript
+const { execSync } = require("child_process");
+const fs = require('fs');
+const path = require('path');
+
+const SQL_PASSWORD = process.env.SQL_PASSWORD;
+const DOCKER_APP_DATA = process.env.DOCKER_APP_DATA;
+const PHOTO_BASE_DIR = `${process.env.PRIMARY_STORAGE}/media/home`;
+const PHOTO_SIDECAR_BASE_DIR = `${DOCKER_APP_DATA}/photoprism/sidecar/photos`;
+
+function getData() {
+    const sql = `SELECT f.file_name, m.x, m.y, m.w, m.h from files f JOIN markers m ON f.file_uid = m.file_uid JOIN subjects s ON m.subj_uid = s.subj_uid WHERE s.subj_name = 'James';`;
+    const dockerCommand = `docker exec mariadb mariadb --user root -p${SQL_PASSWORD} -D photoprism -N -t -e "${sql}"`;
+    const cmdResponse = execSync(dockerCommand);
+    const sqlResponse = cmdResponse.toString();
+
+    return sqlResponse.split("\n")
+        .filter(line => !line.startsWith("+--"))
+        .map(line => {
+            const parts = line.split('|');
+            if (parts.length !== 7) {
+                return null;
+            }
+            return {
+                file: path.parse(parts[1].trim().replace('photos/', '')),
+                x: Number(parts[2].trim()),
+                y: Number(parts[3].trim()),
+                w: Number(parts[4].trim()),
+                h: Number(parts[5].trim())
+            }
+        })
+        .filter(Boolean);
+}
+
+function copyImage(data) {
+    console.log(`Copy Image ${JSON.stringify(data)}`);
+    const originalFilePath = `${PHOTO_BASE_DIR}/${data.file.dir}/${data.file.base}`;
+    const sidecarFilePath = `${PHOTO_SIDECAR_BASE_DIR}/${data.file.dir}/${data.file.base}`;
+    const outputFilePath = `./james-photos/${data.file.name}${data.file.ext}`;
+
+    let importFile;
+    if (fs.existsSync(originalFilePath)) {
+        importFile = originalFilePath;
+    } else if (fs.existsSync(sidecarFilePath)) {
+        importFile = sidecarFilePath;
+    } else {
+        return null;
+    }
+
+    try {
+        execSync(`cp ${importFile} ${outputFilePath}`)
+    } catch (e) {
+        console.warn(`Error copying ${importFile}`);
+    }
+}
+
+const data = getData();
+for (const d of data) {
+    copyImage(d);
+}
+```
+
 ### Cropping
 
 Now that I have this data, I need to crop down each image to only show my face. We can see that the above data for `x`, `y`, `w` and `h` are all floats between 0 and 1, and I took a guess that these were percentages within the context of the resolution of the image. So for instance, on the first row above, my face would appear 38.75% from the left size of the image (`x`), 27.2727% from the bottom (`y`) and would have a width equal to 18.0469% of the width of the total image (`w`) and 26.9231% of the height (`h`).
@@ -150,11 +214,64 @@ fs.readdir(directoryPath, (err, files) => {
 });
 ```
 
+I also changed 2 other things during this attempt:
+
+- Used an instance name of "jx265" instead of "James". The Stable Diffusion model already has a concept of what "James" might look like, and so by using a unique string, I can better identify myself when asking for output
+- Used WD14 captioning instead of BLIP. There is lots of chat about which is better, I have no idea, but thought I would give it a go
+
+Finally, I found a bunch of exported configs of people doing the similar type of thing as I was doing in Koya_ss, so I attempted importing some of those configs.
+
+I ran into a bunch of issues on this attempt, mainly Out Of Memory errors. So on to the next attempt
+
 ## Attempt 5
 
-jx265 model name
+Whilst looking around it was strange how much directly conflicting information there is around on how best to train these models. One opinion which came up was that you don't really need the regularization images. So I gave that a go. This time I didn't get OOM errors, but each epoch would take ~50 minutes.
 
 ## Attempt 6
 
-WD14 captioning
+I did everything the same as in Attempt 5, but I cut down the amount of photos of me down even further from 100 to 54 (not sure why I ended up on that number...). This time, each epoch was taking 27 minutes which was much more palatable.
 
+Once the model has trained the first epoch I stopped the process and attempted to get some output using the prompt "Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo <lora:jx265:1>". The output did look a lot closer to me than the output I was getting in Attempt 1, but there were no pictures there that would trick anyone that knows me into thinking it was an actual photo of me.
+
+An interesting thing that I also found from this set of models was that Stable Diffusion would pretty much refuse to render anything other than a headshot of me. It would occasionally get my shoulders in if I asked for it, but it wouldn't put in the rest of my body. The reason for this, I figured, was because all the images it has been trained on were close-crops of my face. It actually didn't know what to render for the rest of my body and so refused to do so.
+
+## Attempt 7
+
+I switched over to using an RTX A5000 which seemed like a better fit for around the same price as the 4090. This time I ran the process with:
+
+- WD14 captioning - making sure to prefix the tag list with `jx265, man, `
+- No regularization images
+- Only the 100 highest quality, square crop photos of me
+- Maximum resolution of 512 x 512
+
+Each epoch would take 90 minutes, which was again too long to run this for, so I cancelled the process.
+
+## Attempt 8
+
+After reading a bunch more online, I figured that I was attempting to throw too much data at the problem. Instead, what I needed was less images (maybe about 20 to 30), that were higher quality, 1024x1024 in size and not all close-crops on my face.
+
+So I:
+
+- Looked through all the images of me, sorted by largest filesize first
+- Selected an image that had a non-occluded view of me
+- Imported into GIMP
+- Crop with fixed aspect ratio of 1:1
+- Scaled the image to 1024x1024
+- "Export As" into a new folder
+
+Whilst cropping I made sure to get some close-crops and some full body shots (as well as some in between) in order to show the full spectrum of what I looked like to the training process.
+
+This time, each epoch would take 28 minutes, which was down to a reasonable level. I let the whole thing run for 4 hours and 40 minutes in order to get all 10 epochs.
+
+## Attempt 9
+
+ADetailer
+
+## Attempt 10
+
+Comparing epochs using x/y/z plot
+
+## Attempt 11 onwards
+
+All the prompts
+ChatGPT crated prompts
