@@ -10,6 +10,8 @@ tags:
   - lora
   - training
   - generative artificial intelligence
+  - Automatic1111
+  - Koya_ss
 ---
 
 I wanted to learn about the new wave of "AI" image generation, particularly Stable Diffusion and how to create a LoRA (low-ranking adaptation) which would allow me to add training data to the model. I thought an excellent approach to this would be to train a LoRA based on my face in order to generate a professional looking headshot of myself for use on LinkedIn etc.
@@ -259,19 +261,85 @@ So I:
 - Scaled the image to 1024x1024
 - "Export As" into a new folder
 
-Whilst cropping I made sure to get some close-crops and some full body shots (as well as some in between) in order to show the full spectrum of what I looked like to the training process.
+Whilst cropping, I made sure to get some close-crops and some full body shots (as well as some in between) in order to show the full spectrum of what I looked like to the training process.
 
 This time, each epoch would take 28 minutes, which was down to a reasonable level. I let the whole thing run for 4 hours and 40 minutes in order to get all 10 epochs.
 
+And now I had it. These 10 models started to output pictures that looked very much like me indeed. Certainly some of the models were better than others, and occasionally it did weird things, but I could easily hand pick a few images from the set I created that looked no different from photos of me.
+
+Furthermore, I could generate images that weren't just crops on my face.
+
 ## Attempt 9
 
-ADetailer
+There is a tab in the Automatic1111 user interface labelled "ADetailer". On my reading around online, people had mentioned it as a magic single button fix for getting more realistic pictures generated of faces. So naturally I enabled it generated some more images. And they were right, the outcome looked a better in small but significant ways.
 
 ## Attempt 10
 
-Comparing epochs using x/y/z plot
+I wanted to compare all of the models output using the same prompt and seed. Automatic1111 has a mechanism to do this. At the bottom of the Generate tab there is a "Script" tab. Opening that up you can add an "X/Y/Z Plot". For the X plot you need type "Prompt S/R". Within the prompt itself, add the lora reference to the end: "<lora:jx265:1>". Then in the Prompt S/R box, you need to put the same value again and then a comma separated list of all the other lora references: "<lora:jx265:1>, <lora:jx265-000001:1>, <lora:jx265-000002:1>, <lora:jx265-000003:1>, <lora:jx265-000004:1> <lora:jx265-000005:1>, <lora:jx265-000006:1>, <lora:jx265-000007:1>, <lora:jx265-000008:1> <lora:jx265-000009:1>".
 
-## Attempt 11 onwards
+This will generate an image that contains plots each of the models output alongside each other for easy comparison of the models.
 
-All the prompts
+## Attempt 11 
+
+Then on the tedious business of "prompt engineering" (NOTE: I do not consider any part of the prompt creation process as an "engineering" task). This involved a bit of looking around online for examples, and a bit of mashing all that together. Mostly it involved crossed fingers waiting for the result. Small iterations on the prompt did not result in small iterations of the output which is very frustrating. Anyway, here is a list of most of the prompts I attempted with varying success:
+
+### Positive Prompt
+
+```
+Photograph of James man, professional headshot, portrait <lora:James:1>
+
+Full face shot of James man with professional style like a corporate headshot <lora:James:1>
+Zoomed out Full face shot of James man with professional style like a corporate headshot <lora:James:1>
+Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo <lora:jx265:1>
+jx265 man full body shot in a forest, photorealistic, sharp <lora:James:1>
+jx265 man full body shot in a forest, photorealistic, sharp
+Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo
+photo of jx265, <lora:jx265:1>, highlight hair, sitting outside restaurant, wearing dress, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores
+photo of jx265, man, highlight hair, sitting outside restaurant, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores , <lora:jx265:1>
+photo of jx265, man, highlight hair, office setting, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores, <lora:jx265-000001:1>
+photo of jx265, man, smiling, professional headshot, studio lighting, looking at the camera, ultra sharp quality, dof, out-of-focus background, crystal clear, highly detailed glossy eyes, high detailed skin, skin pores <lora:jx265:1>
+
+head shot of a handsome jx265 man, white shirt, red tie, clean shaven, smiling, bright blue eyes <lora:jx265:1>
+
+portrait photo headshot of jx265 man, sharp focus, elegant, render, octane, detailed, award winning photography, masterpiece, rim lit, sharp focus, highly detailed, trending on artstation, nikon, kodak, 16:9, 50mm portrait photography, hard rim lighting photographybeta ar 2:3 beta upbeta upbeta <lora:jx265:1>
+
+(Realistic),masterpiece,best quality,cinematic lighting,natural shadow,highest detail,depth of field,insane details,intricate,aesthetic, photo of a handsome jx265 man,Bowl cut,full body,dynamic pose,BREAK Snow-capped mountains,alpine meadows,crystal-clear lakes,hiking trails,wildlife,pristine forests  <lora:jx265:1>
+
+Realistic photo, close-up: jx265 man smiling in black and white filter. Styled like Ansel Adams’ photography.  <lora:jx265:1>
+
+8k linkedin professional profile photo of jx265 in a suit with studio lighting, bokeh, corporate portrait headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful  <lora:jx265:1>
+
+portrait of (jx265 man) wearing a lawyer suit, bookshelf background, professional photo, white background, Amazing Details, Best Quality, 80mm Sigma f/1.4 or any ZEISS lens --tiled upscale <lora:jx265:1>
+
+portrait of (jx265 man) wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens <lora:jx265:1>
+
+8k linkedin professional profile photo of (((jx265 man))) with studio lighting, ((bokeh)), corporate portrait closeup headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful, solid blue background,  dramatic lighting highly detailed, 80mm Sigma f/1.4 or any ZEISS lens  <lora:jx265:1>
+
+photorealistic, visionary portrait of jx265 with weather-worn features, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, rendered in sepia tones, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265:1>
+
+photorealistic, visionary portrait of jx265, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265-000001:1>
+
+happy jx265, portrait photography, beautiful, morning sunlight, smooth light, shot on kodak portra 200, film grain, nostalgic mood <lora:jx265:1>
+
+jx265 photo portrait, film noir style, monochrome, high contrast, dramatic shadows, 1940s style, mysterious, cinematic <lora:jx265:1>
+
+jx265 in the cafe, comic, graphic illustration, comic art, graphic novel art, vibrant, highly detailed, colored, 2d minimalistic  <lora:jx265-000001:1>
+```
+
+### Negative Prompt
+
+```
+ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, out of frame, ugly, extra limbs, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck, extra head, cloned head, extra body, cloned body, watermark. extra hands, clone hands, weird hand, weird finger, weird arm, (mutation:1.3), (deformed:1.3), (blurry), (bad anatomy:1.1), (bad proportions:1.2), out of frame, ugly, (long neck:1.2), (worst quality:1.4), (low quality:1.4), (monochrome:1.1), text, signature, watermark, bad anatomy, disfigured, jpeg artifacts, 3d max, grotesque, desaturated, blur, haze, polysyndactyly
+disfigured, ugly, bad, immature, cartoon, anime, 3d, painting, b&w
+old, wrinkles, mole, blemish,(oversmoothed, 3d render) scar, sad, severe, 2d, sketch, painting, digital art, drawing, disfigured, elongated body (deformed iris, deformed pupils, semi-realistic, cgi, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, (extra fingers, mutated hands, poorly drawn hands, poorly drawn face), mutation, deformed, (blurry), dehydrated, bad anatomy, bad proportions, (extra limbs), cloned face, disfigured, gross proportions, (malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, NSFW), nude, underwear, muscular, elongated body, high contrast, airbrushed, blurry, disfigured, cartoon, blurry, dark lighting, low quality, low resolution, cropped, text, caption, signature, clay, kitsch, oversaturated
+```
+
+## Attempt 12
+
 ChatGPT crated prompts
+
+
+## What I missed
+
+Didn't manually caption the training images
+Lora strength <lora:jx265:0.8>
