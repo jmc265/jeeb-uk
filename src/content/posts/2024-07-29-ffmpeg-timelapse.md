@@ -18,7 +18,7 @@ I recently needed to capture a 24 hour timelapse video of my back garden in orde
 
 So I zip-tied an external camera I had lying around to the railing on my balcony, pointed it in just the right way and waited for a sunny day (surprising more difficult that expected at the end of the July).
 
-I had a bash script waiting which would make photos every 60 seconds and store them a sequential jpgs. Then when I interrupted that process another ffmpeg command would stich all the photos together at 30fps to make a lovely little video.
+I had a bash script waiting which would take photos every 60 seconds and store them in sequential jpg in a folder. Then, when I interrupted that process another ffmpeg command would stich all the photos together at 30fps to make a lovely little video.
 
 ```shell
 #!/bin/bash

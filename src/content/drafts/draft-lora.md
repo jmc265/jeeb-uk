@@ -149,7 +149,7 @@ The last step here is to simply wrap this up in a small Javascript app and let i
 
 ## Attempt 1
 
-For my first attempt I choose only 12 of the 1100 images available to me in the hopes that it would provide a fast (if inaccurate) model which would allow me to determine if this process was going to work at all for what I wanted it for. The 12 I chose were all from my wedding photos, taken by a professional photographer and of very high quality. 
+For my first attempt I choose only 12 of the 1100 images available to me in the hopes that it would provide a fast (if inaccurate) model which would allow me to determine if this process was going to work at all for what I wanted it for. The 12 I chose were all from my wedding photos, taken by a professional photographer and of very high quality.
 
 I used these 12 images, along with the regularization images found on [github.com/tobecwb/stable-diffusion-regularization-images](https://github.com/tobecwb/stable-diffusion-regularization-images/tree/main/sdxl). Using an RTX 4090 rented from [runpod](https://www.runpod.io) I ran the images through the training process. Each epoch would take about 15 minutes, which seemed really fast. I stopped the process after 3 epochs and took a look at the results. And they weren't bad, for a first attempt at least. The output did vaguely look like me at times. But we could certainly do better than that.
 
@@ -163,9 +163,9 @@ For an estimate on timings I gave it all 87 of my wedding photos which would tak
 
 I looked around the web for some guidance and found a few pages that I took various bits of advice from:
 
-- https://aituts.com/sdxl-lora/
-- https://rentry.org/59xed3#number-of-steps
-- https://medium.com/@yushantripleseven/dreambooth-sdxl-using-kohya-ss-on-vast-ai-10e1bfa26eed
+* https://aituts.com/sdxl-lora/
+* https://rentry.org/59xed3#number-of-steps
+* https://medium.com/@yushantripleseven/dreambooth-sdxl-using-kohya-ss-on-vast-ai-10e1bfa26eed
 
 ## Attempt 4
 
@@ -218,8 +218,8 @@ fs.readdir(directoryPath, (err, files) => {
 
 I also changed 2 other things during this attempt:
 
-- Used an instance name of "jx265" instead of "James". The Stable Diffusion model already has a concept of what "James" might look like, and so by using a unique string, I can better identify myself when asking for output
-- Used WD14 captioning instead of BLIP. There is lots of chat about which is better, I have no idea, but thought I would give it a go
+* Used an instance name of "jx265" instead of "James". The Stable Diffusion model already has a concept of what "James" might look like, and so by using a unique string, I can better identify myself when asking for output
+* Used WD14 captioning instead of BLIP. There is lots of chat about which is better, I have no idea, but thought I would give it a go
 
 Finally, I found a bunch of exported configs of people doing the similar type of thing as I was doing in Koya_ss, so I attempted importing some of those configs.
 
@@ -241,10 +241,10 @@ An interesting thing that I also found from this set of models was that Stable D
 
 I switched over to using an RTX A5000 which seemed like a better fit for around the same price as the 4090. This time I ran the process with:
 
-- WD14 captioning - making sure to prefix the tag list with `jx265, man, `
-- No regularization images
-- Only the 100 highest quality, square crop photos of me
-- Maximum resolution of 512 x 512
+* WD14 captioning - making sure to prefix the tag list with `jx265, man,`
+* No regularization images
+* Only the 100 highest quality, square crop photos of me
+* Maximum resolution of 512 x 512
 
 Each epoch would take 90 minutes, which was again too long to run this for, so I cancelled the process.
 
@@ -254,12 +254,12 @@ After reading a bunch more online, I figured that I was attempting to throw too 
 
 So I:
 
-- Looked through all the images of me, sorted by largest filesize first
-- Selected an image that had a non-occluded view of me
-- Imported into GIMP
-- Crop with fixed aspect ratio of 1:1
-- Scaled the image to 1024x1024
-- "Export As" into a new folder
+* Looked through all the images of me, sorted by largest filesize first
+* Selected an image that had a non-occluded view of me
+* Imported into GIMP
+* Crop with fixed aspect ratio of 1:1
+* Scaled the image to 1024x1024
+* "Export As" into a new folder
 
 Whilst cropping, I made sure to get some close-crops and some full body shots (as well as some in between) in order to show the full spectrum of what I looked like to the training process.
 
@@ -279,65 +279,48 @@ I wanted to compare all of the models output using the same prompt and seed. Aut
 
 This will generate an image that contains plots each of the models output alongside each other for easy comparison of the models.
 
-## Attempt 11 
+## Attempt 11
 
 Then on the tedious business of "prompt engineering" (NOTE: I do not consider any part of the prompt creation process as an "engineering" task). This involved a bit of looking around online for examples, and a bit of mashing all that together. Mostly it involved crossed fingers waiting for the result. Small iterations on the prompt did not result in small iterations of the output which is very frustrating. Anyway, here is a list of most of the prompts I attempted with varying success:
 
 ### Positive Prompt
 
 ```
-Photograph of James man, professional headshot, portrait <lora:James:1>
-
-Full face shot of James man with professional style like a corporate headshot <lora:James:1>
-Zoomed out Full face shot of James man with professional style like a corporate headshot <lora:James:1>
-Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo <lora:jx265:1>
-jx265 man full body shot in a forest, photorealistic, sharp <lora:James:1>
-jx265 man full body shot in a forest, photorealistic, sharp
-Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo
-photo of jx265, <lora:jx265:1>, highlight hair, sitting outside restaurant, wearing dress, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores
-photo of jx265, man, highlight hair, sitting outside restaurant, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores , <lora:jx265:1>
-photo of jx265, man, highlight hair, office setting, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores, <lora:jx265-000001:1>
-photo of jx265, man, smiling, professional headshot, studio lighting, looking at the camera, ultra sharp quality, dof, out-of-focus background, crystal clear, highly detailed glossy eyes, high detailed skin, skin pores <lora:jx265:1>
-
-head shot of a handsome jx265 man, white shirt, red tie, clean shaven, smiling, bright blue eyes <lora:jx265:1>
-
-portrait photo headshot of jx265 man, sharp focus, elegant, render, octane, detailed, award winning photography, masterpiece, rim lit, sharp focus, highly detailed, trending on artstation, nikon, kodak, 16:9, 50mm portrait photography, hard rim lighting photographybeta ar 2:3 beta upbeta upbeta <lora:jx265:1>
-
-(Realistic),masterpiece,best quality,cinematic lighting,natural shadow,highest detail,depth of field,insane details,intricate,aesthetic, photo of a handsome jx265 man,Bowl cut,full body,dynamic pose,BREAK Snow-capped mountains,alpine meadows,crystal-clear lakes,hiking trails,wildlife,pristine forests  <lora:jx265:1>
-
-Realistic photo, close-up: jx265 man smiling in black and white filter. Styled like Ansel Adams’ photography.  <lora:jx265:1>
-
-8k linkedin professional profile photo of jx265 in a suit with studio lighting, bokeh, corporate portrait headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful  <lora:jx265:1>
-
-portrait of (jx265 man) wearing a lawyer suit, bookshelf background, professional photo, white background, Amazing Details, Best Quality, 80mm Sigma f/1.4 or any ZEISS lens --tiled upscale <lora:jx265:1>
-
-portrait of (jx265 man) wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens <lora:jx265:1>
-
-8k linkedin professional profile photo of (((jx265 man))) with studio lighting, ((bokeh)), corporate portrait closeup headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful, solid blue background,  dramatic lighting highly detailed, 80mm Sigma f/1.4 or any ZEISS lens  <lora:jx265:1>
-
-photorealistic, visionary portrait of jx265 with weather-worn features, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, rendered in sepia tones, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265:1>
-
-photorealistic, visionary portrait of jx265, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265-000001:1>
-
-happy jx265, portrait photography, beautiful, morning sunlight, smooth light, shot on kodak portra 200, film grain, nostalgic mood <lora:jx265:1>
-
-jx265 photo portrait, film noir style, monochrome, high contrast, dramatic shadows, 1940s style, mysterious, cinematic <lora:jx265:1>
-
-jx265 in the cafe, comic, graphic illustration, comic art, graphic novel art, vibrant, highly detailed, colored, 2d minimalistic  <lora:jx265-000001:1>
+- Photograph of James man, professional headshot, portrait <lora:James:1>
+- Full face shot of James man with professional style like a corporate headshot <lora:James:1>
+- Zoomed out Full face shot of James man with professional style like a corporate headshot <lora:James:1>
+- Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo <lora:jx265:1>
+- jx265 man full body shot in a forest, photorealistic, sharp <lora:James:1>
+- Portrait headshot of jx265 man, realistic, full face, crisp, sharp photo <lora:jx265:1>
+- photo of jx265, <lora:jx265:1>, highlight hair, sitting outside restaurant, wearing dress, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores
+- photo of jx265, man, highlight hair, office setting, rim lighting, studio lighting, looking at the camera, dslr, ultra quality, sharp focus, tack sharp, dof, film grain, Fujifilm XT3, crystal clear, 8K UHD, highly detailed glossy eyes, high detailed skin, skin pores, <lora:jx265-000001:1>
+- photo of jx265, man, smiling, professional headshot, studio lighting, looking at the camera, ultra sharp quality, dof, out-of-focus background, crystal clear, highly detailed glossy eyes, high detailed skin, skin pores <lora:jx265:1>
+- head shot of a jx265 man, white shirt, red tie, clean shaven, smiling, bright blue eyes <lora:jx265:1>
+- portrait photo headshot of jx265 man, sharp focus, elegant, render, octane, detailed, award winning photography, masterpiece, rim lit, sharp focus, highly detailed, trending on artstation, nikon, kodak, 16:9, 50mm portrait photography, hard rim lighting photographybeta ar 2:3 beta upbeta upbeta <lora:jx265:1>
+- (Realistic),masterpiece,best quality,cinematic lighting,natural shadow,highest detail,depth of field,insane details,intricate,aesthetic, photo of a jx265 man,full body,dynamic pose,BREAK Snow-capped mountains,alpine meadows,crystal-clear lakes,hiking trails,wildlife,pristine forests  <lora:jx265:1>
+- Realistic photo, close-up: jx265 man smiling in black and white filter. Styled like Ansel Adams’ photography. <lora:jx265:1>
+- 8k linkedin professional profile photo of jx265 in a suit with studio lighting, bokeh, corporate portrait headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful  <lora:jx265:1>
+- portrait of (jx265 man) wearing a lawyer suit, bookshelf background, professional photo, white background, Amazing Details, Best Quality, 80mm Sigma f/1.4 or any ZEISS lens --tiled upscale <lora:jx265:1>
+- portrait of (jx265 man) wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens <lora:jx265:1>
+- 8k linkedin professional profile photo of (((jx265 man))) with studio lighting, ((bokeh)), corporate portrait closeup headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful, solid blue background,  dramatic lighting highly detailed, 80mm Sigma f/1.4 or any ZEISS lens  <lora:jx265:1>
+- photorealistic, visionary portrait of jx265 with weather-worn features, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, rendered in sepia tones, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265:1>
+- photorealistic, visionary portrait of jx265, digitally enhanced, high contrast, chiaroscuro lighting technique, intimate, close-up, detailed, steady gaze, evoking rembrandt, timeless, expressive, highly detailed, sharp focus, high resolution <lora:jx265-000001:1>
+- happy jx265, portrait photography, beautiful, morning sunlight, smooth light, shot on kodak portra 200, film grain, nostalgic mood <lora:jx265:1>
+- jx265 photo portrait, film noir style, monochrome, high contrast, dramatic shadows, 1940s style, mysterious, cinematic <lora:jx265:1>
+- jx265 in the cafe, comic, graphic illustration, comic art, graphic novel art, vibrant, highly detailed, colored, 2d minimalistic  <lora:jx265-000001:1>
 ```
 
 ### Negative Prompt
 
 ```
-ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, out of frame, ugly, extra limbs, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck, extra head, cloned head, extra body, cloned body, watermark. extra hands, clone hands, weird hand, weird finger, weird arm, (mutation:1.3), (deformed:1.3), (blurry), (bad anatomy:1.1), (bad proportions:1.2), out of frame, ugly, (long neck:1.2), (worst quality:1.4), (low quality:1.4), (monochrome:1.1), text, signature, watermark, bad anatomy, disfigured, jpeg artifacts, 3d max, grotesque, desaturated, blur, haze, polysyndactyly
-disfigured, ugly, bad, immature, cartoon, anime, 3d, painting, b&w
-old, wrinkles, mole, blemish,(oversmoothed, 3d render) scar, sad, severe, 2d, sketch, painting, digital art, drawing, disfigured, elongated body (deformed iris, deformed pupils, semi-realistic, cgi, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, (extra fingers, mutated hands, poorly drawn hands, poorly drawn face), mutation, deformed, (blurry), dehydrated, bad anatomy, bad proportions, (extra limbs), cloned face, disfigured, gross proportions, (malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, NSFW), nude, underwear, muscular, elongated body, high contrast, airbrushed, blurry, disfigured, cartoon, blurry, dark lighting, low quality, low resolution, cropped, text, caption, signature, clay, kitsch, oversaturated
+- ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, out of frame, ugly, extra limbs, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck, extra head, cloned head, extra body, cloned body, watermark. extra hands, clone hands, weird hand, weird finger, weird arm, (mutation:1.3), (deformed:1.3), (blurry), (bad anatomy:1.1), (bad proportions:1.2), out of frame, ugly, (long neck:1.2), (worst quality:1.4), (low quality:1.4), (monochrome:1.1), text, signature, watermark, bad anatomy, disfigured, jpeg artifacts, 3d max, grotesque, desaturated, blur, haze, polysyndactyly
+- disfigured, ugly, bad, immature, cartoon, anime, 3d, painting, b&w
+- old, wrinkles, mole, blemish,(oversmoothed, 3d render) scar, sad, severe, 2d, sketch, painting, digital art, drawing, disfigured, elongated body (deformed iris, deformed pupils, semi-realistic, cgi, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, (extra fingers, mutated hands, poorly drawn hands, poorly drawn face), mutation, deformed, (blurry), dehydrated, bad anatomy, bad proportions, (extra limbs), cloned face, disfigured, gross proportions, (malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, NSFW), nude, underwear, muscular, elongated body, high contrast, airbrushed, blurry, disfigured, cartoon, blurry, dark lighting, low quality, low resolution, cropped, text, caption, signature, clay, kitsch, oversaturated
 ```
 
 ## Attempt 12
 
-ChatGPT crated prompts
-
+As I mentioned, I found the act of creating prompts really quite tedious. This is mostly because it wasn't really possible to tweak a prompt a small amount and expect small change in output. I might have been missing something in the Automatic1111 UI (because honestly it isn't the most intuitive interface ever), but that is the experience I had. So I figure, why not get an LLM to help generate prompts? I can give it the prompts I have listed above to seed the question, but then let the LLM churn out a whole bunch of varying prompts and then feed those into the SDXL model. I don't even really have to vet the output of the LLM because I only care about the output from SDXL. 
 
 ## What I missed
 
