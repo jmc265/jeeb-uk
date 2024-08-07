@@ -41,7 +41,7 @@ This had a foreign key to a table `subjects` which had a row for myself and anot
 
 ```
 MariaDB [photoprism]> SELECT f.file_name, m.x, m.y, m.w, m.h from files f JOIN markers m ON f.file_uid = m.file_uid JOIN subjects s ON m.subj_uid = s.subj_uid WHERE s.subj_name = 'James';
-+---------------------------------------------+----------+----------+-----------+-----------+
++-----------------------------------------+----------+----------+-----------+-----------+
 | file_name                               | x        | y        | w         | h         |
 +-----------------------------------------+----------+----------+-----------+-----------+
 | photos/2008/Uni/2008-05-31_21.00.59.jpg |   0.3875 | 0.272727 |  0.180469 |  0.269231 |
@@ -155,7 +155,7 @@ I used these 12 images, along with the regularization images found on [github.co
 
 ## Attempt 2
 
-So in my next attempt, I tried to give the learning process all 1100 images. I quickly cancelled it after it showed that it would take 300 hours per epoch (would would cost more than $100 on runpod!). I clearly needed to alter my process a little bit and understand what was taking the time before I launched that my photos at it again.
+So in my next attempt, I tried to give the learning process all 1100 images. I quickly cancelled it after it showed that it would take 300 hours per epoch (which would cost more than $100 on runpod!). I clearly needed to alter my process a little bit and understand what was taking the time before I launched that my photos at it again.
 
 ## Attempt 3
 
@@ -320,66 +320,95 @@ Then on the tedious business of "prompt engineering" (NOTE: I do not consider an
 
 ## Attempt 12
 
-As I mentioned, I found the act of creating prompts really quite tedious. This is mostly because it wasn't really possible to tweak a prompt a small amount and expect small change in output. I might have been missing something in the Automatic1111 UI (because honestly it isn't the most intuitive interface ever), but that is the experience I had. So I figure, why not get an LLM to help generate prompts? I can give it the prompts I have listed above to seed the question, but then let the LLM churn out a whole bunch of varying prompts and then feed those into the SDXL model. I don't even really have to vet the output of the LLM because I only care about the output from SDXL. 
+As I mentioned, I found the act of creating prompts really quite tedious. This is mostly because it wasn't really possible to tweak a prompt a small amount and expect small change in output. I might have been missing something in the Automatic1111 UI (because honestly it isn't the most intuitive interface ever), but that is the experience I had. So I figure, why not get an LLM to help generate prompts? I can give it the prompts I have listed above to seed the question, but then let the LLM churn out a whole bunch of varying prompts and then feed those into the SDXL model. I don't even really have to vet the output of the LLM because I only care about the output from SDXL.
 
-ChatGpt-4o: "Create a positive and a negative prompt for Stable Diffusion that ask it to create a professional headshot style photo of a subject called jx265. Here are some positive prompts that have been used before: ... And here are some negative prompts used before: ..."
-Output: 
+So I asked ChatGPT-4o to "Create a positive and a negative prompt for Stable Diffusion that ask it to create a professional headshot style photo of a subject called jx265. Here are some positive prompts that have been used before: ... And here are some negative prompts used before: ..."
 
-Positive Prompt:
-LinkedIn professional headshot of (jx265 man), sharp focus, elegant, award-winning photography, natural background, masterpiece quality, rim lit, studio lighting, highly detailed, trending on artstation, Nikon, Kodak, 8K resolution, solid blue background, crisp, and clean, ultra-realistic, centered, looking directly at the camera <lora:jx265:1>
-Negative Prompt:
-ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, bad anatomy, bad proportions, extra limbs, cloned face, extra head, watermark, extra hands, weird hand, weird finger, weird arm, mutation:1.3, deformed:1.3, blurry, bad anatomy:1.1, bad proportions:1.2, long neck:1.2, worst quality:1.4, low quality:1.4, monochrome:1.1, text, signature, old, wrinkles, mole, blemish, disfigured, oversmoothed, 3d render, scar, sad, severe, 2d, sketch, painting, digital art, drawing, anime, cgi, dehydrated, elongated body, NSFW, nude, underwear, muscular, dark lighting, clay, kitsch, oversaturated
+> **Positive Prompt:**
+>
+> LinkedIn professional headshot of (jx265 man), sharp focus, elegant, award-winning photography, natural background, masterpiece quality, rim lit, studio lighting, highly detailed, trending on artstation, Nikon, Kodak, 8K resolution, solid blue background, crisp, and clean, ultra-realistic, centered, looking directly at the camera <lora:jx265:1>
+>
+> **Negative Prompt:**
+> 
+> ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, bad anatomy, bad proportions, extra limbs, cloned face, extra head, watermark, extra hands, weird hand, weird finger, weird arm, mutation:1.3, deformed:1.3, blurry, bad anatomy:1.1, bad proportions:1.2, long neck:1.2, worst quality:1.4, low quality:1.4, monochrome:1.1, text, signature, old, wrinkles, mole, blemish, disfigured, oversmoothed, 3d render, scar, sad, severe, 2d, sketch, painting, digital art, drawing, anime, cgi, dehydrated, elongated body, NSFW, nude, underwear, muscular, dark lighting, clay, kitsch, oversaturated
 
-Prompt: "Can you create 10 more positive prompts with a large variation in the input words"
-	1.	Business headshot of jx265, indoor setting, formal attire, sophisticated, professional lighting, clear background, DSLR quality, highly detailed, elegant composition, neutral color tones lora:jx265:1
-	2.	Portrait of jx265 man in a corporate office, wearing glasses, natural light, professional style, ultra-sharp focus, shallow depth of field, modern background, realistic textures, high-resolution, pristine lora:jx265:1
-	3.	High-definition profile photo of jx265, clean-shaven, business suit, confident expression, well-lit, polished look, magazine-quality, studio backdrop, finely detailed, vibrant colors lora:jx265:1
-	4.	Elegant headshot of jx265 man, artistic lighting, bokeh effect, well-balanced composition, sharp details, realistic, high dynamic range, professional attire, medium shot, warm tones lora:jx265:1
-	5.	LinkedIn profile picture of jx265, smart casual, smiling, outdoor background, natural light, sharp focus, high-quality, vibrant setting, contemporary style, impeccable details lora:jx265:1
-	6.	8K portrait photo of jx265 man, in a modern office, serious expression, crisp and clear, soft lighting, realistic skin texture, professional appearance, full-frame, vibrant resolution lora:jx265:1
-	7.	Studio headshot of jx265, classic portrait style, minimalistic background, high detail, expert lighting, professional grade, natural expression, modern look, razor-sharp focus, color accuracy lora:jx265-000001:1
-	8.	Close-up headshot of jx265, casual wear, relaxed look, interior setting, natural shadows, realistic details, ultra-high-resolution, artistic composition, engaging gaze, vivid clarity lora:jx265:1
-	9.	Professional photo of jx265, formal outfit, confident stance, corporate background, softbox lighting, hyper-realistic quality, crystal clear details, natural posture, visually striking lora:jx265:1
-	10.	Highly detailed portrait of jx265 man, business environment, sharp focus, elegant lighting, photorealistic quality, natural colors, crisp image, dynamic composition, serene expression lora:jx265:1
+Pretty much just a re-mix of my input, which is fine. So I ask it to put a bit more effort into the prompts: "Can you create 10 more positive prompts with a large variation in the input words"
 
-Prompt: "And now remove the idea of it being professional, headshot or business-like. Create 10 prompts that will create striking, realistic photos that resemble jx265. Make sure to add more words and detail to each prompt"
-    1.	Photorealistic image of jx265 sitting in a cozy corner of a vintage cafe, autumn afternoon, natural light streaming in through large windows, candid moment captured while sipping a steaming cup of coffee, highly detailed textures on wooden table and chair, vibrant colors of decor and foliage, warm ambiance, soft shadows, intricate details in clothing, relaxed and introspective expression lora:jx265:1
-	2.	jx265 in a lush, blooming garden, surrounded by a myriad of colorful flowers, golden hour lighting creating a warm, enchanting glow, wearing casual and comfortable clothing, sitting on a rustic bench, soft focus on the background, realistic textures of plants and flowers, serene and contemplative expression, rich and vibrant color palette, ultra-high-resolution, capturing the tranquility and beauty of nature lora:jx265:1
-	3.	Portrait of jx265 during a rainy day, standing under a classic black umbrella, wet city street background with reflections on the pavement, realistic raindrops and puddles, moody and atmospheric lighting, sharp details on face and clothing, highly realistic water textures, reflective surfaces of buildings and cars, capturing the essence of a rainy urban scene, introspective and thoughtful expression lora:jx265:1
-	4.	Close-up of jx265 at a serene beach, during sunset, wind gently blowing through hair, relaxed and happy expression, golden sunlight casting a warm glow, waves and sand in the background, photorealistic textures of the beach environment, detailed and natural looking hair, realistic skin tones, sense of peace and contentment, vibrant and rich colors, high-resolution image capturing the beauty of the moment lora:jx265:1
-	5.	jx265 dancing energetically at a colorful festival, lively and bustling background filled with festival-goers, joy and motion beautifully captured, vibrant atmosphere with bright lights and decorations, crisp details on clothing and face, motion blur adding a sense of movement, festival lights illuminating the scene, photorealistic quality, high energy and excitement, detailed patterns and textures, wide smile and expressive eyes lora:jx265:1
-	6.	Intimate portrait of jx265 reading a book by a crackling fireplace, warm and cozy lighting casting a gentle glow, detailed textures on the book cover and pages, calm and focused expression, realistic fire glow reflecting on face and surroundings, high-resolution image capturing every detail from the crackling embers to the soft fabric of a nearby blanket, serene and peaceful mood, soft shadows and rich warm tones, bookshelf in the background lora:jx265:1
-	7.	Photorealistic image of jx265 hiking in the breathtaking mountains, panoramic and stunning landscape with towering peaks, rugged and practical hiking attire, natural lighting showcasing the beauty of nature, sharp focus on jx265 with detailed textures on clothing and gear, expansive scenery in the background, immersive depth and sense of adventure, vivid and rich colors, capturing the essence of exploration and connection with nature, serene and determined expression lora:jx265:1
-	8.	jx265 playing an acoustic guitar in a sun-dappled park, sunlight filtering through the leaves of tall trees, realistic and intricate wood textures on the guitar, relaxed posture and engaging smile, high-detail in clothing and facial features, lifelike and vibrant park background with people walking and greenery, photorealistic quality, capturing a moment of musical expression and joy, vibrant and rich colors, sense of peace and connection with nature lora:jx265:1
-	9.	Striking photorealistic image of jx265 exploring a bustling and vibrant marketplace, dynamic background filled with colorful stalls and diverse crowd, sharp focus on jx265 with detailed textures on clothing and skin, candid moment captured while admiring a beautifully crafted item, lively atmosphere with rich and varied colors, realistic lighting and shadows, depiction of cultural richness and human interaction, ultra-realistic quality, sense of discovery and curiosity, detailed and expressive facial features lora:jx265:1
-	10.	jx265 enjoying an outdoor concert during a warm summer evening, dramatic stage lighting creating an energetic and vibrant atmosphere, vivid colors highlighting the excitement of the event, animated and expressive facial features, photorealistic quality, detailed crowd in the background, immersive feel with realistic textures on clothing and surroundings, capturing the thrill of live music, joyous and energetic expression, soft shadows and well-defined lighting adding depth lora:jx265:1
+> 1. Business headshot of jx265, indoor setting, formal attire, sophisticated, professional lighting, clear background, DSLR quality, highly detailed, elegant composition, neutral color tones <lora:jx265:1>
+> 2. Portrait of jx265 man in a corporate office, wearing glasses, natural light, professional style, ultra-sharp focus, shallow depth of field, modern background, realistic textures, high-resolution, pristine <lora:jx265:1>
+> 3. High-definition profile photo of jx265, clean-shaven, business suit, confident expression, well-lit, polished look, magazine-quality, studio backdrop, finely detailed, vibrant colors <lora:jx265:1>
+> 4. Elegant headshot of jx265 man, artistic lighting, bokeh effect, well-balanced composition, sharp details, realistic, high dynamic range, professional attire, medium shot, warm tones <lora:jx265:1>
+> 5. LinkedIn profile picture of jx265, smart casual, smiling, outdoor background, natural light, sharp focus, high-quality, vibrant setting, contemporary style, impeccable details <lora:jx265:1>
+> 6. 8K portrait photo of jx265 man, in a modern office, serious expression, crisp and clear, soft lighting, realistic skin texture, professional appearance, full-frame, vibrant resolution <lora:jx265:1>
+> 7. Studio headshot of jx265, classic portrait style, minimalistic background, high detail, expert lighting, professional grade, natural expression, modern look, razor-sharp focus, color accuracy l<lora:jx265:1>
+> 8. Close-up headshot of jx265, casual wear, relaxed look, interior setting, natural shadows, realistic details, ultra-high-resolution, artistic composition, engaging gaze, vivid clarity <lora:jx265:1>
+> 9. Professional photo of jx265, formal outfit, confident stance, corporate background, softbox lighting, hyper-realistic quality, crystal clear details, natural posture, visually striking <lora:jx265:1>
+> 10. Highly detailed portrait of jx265 man, business environment, sharp focus, elegant lighting, photorealistic quality, natural colors, crisp image, dynamic composition, serene expression <lora:jx265:1>
 
+All of which are worth trying out in SDXL. I then wanted it to create some more prompts which were not about profession headshots: "And now remove the idea of it being professional, headshot or business-like. Create 10 prompts that will create striking, realistic photos that resemble jx265. Make sure to add more words and detail to each prompt"
 
-Prompt: How can I craft a prompt for sdxl model such that it will most resemble the LORA named jx265?
-    To craft a prompt for the SDXL model that will most closely resemble the LORA named jx265, you should consider incorporating detailed descriptors and context. This includes physical features, environmental settings, emotions, actions, and any specific attributes that the LORA captures well.
-    Here’s a detailed breakdown:
-        1.	Subject Details: Include general features about jx265 like gender, age, hair color, skin tone, attire, etc.
-        2.	Setting and Environment: Describe the surroundings to add context and richness.
-        3.	Lighting and Mood: Specify the type of lighting and the overall mood you want to capture in the image.
-        4.	Focus and Detail: Mention camera settings or descriptors that highlight the level of detail and focus you require.
-        5.	Emotional Tone or Action: Provide insights into the subject’s emotion or action, which lends personality and dynamism to the image.
-        6.	LORA Specificity: Reference the LORA (jx265) explicitly to ensure the model you are using is aligned with the characteristics captured by the LORA.
-    Here is a crafted prompt that encapsulates these elements:
-    Example Prompt:
-    Photorealistic portrait of jx265, a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt. The scene is set in a lush garden during golden hour, with sunlight casting a warm, soft glow. The background is slightly out of focus, creating a gentle bokeh effect with vibrant floral tones. The man is sitting on a rustic wooden bench, reading a book with a relaxed and contented expression. Detailed textures of the garden environment and his clothing are visible, with crisp, clear focus on his facial features. The LORA named jx265 should be distinctly referenced, ensuring high detail and likeness, capturing natural shadows and realistic skin tones. Ultra-high-resolution image with high dynamic range, capturing the serene and tranquil mood flawlessly. <lora:jx265:1>
-    Breakdown:
-        •	Subject Details: “a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt.”
-        •	Setting and Environment: “The scene is set in a lush garden during golden hour.”
-        •	Lighting and Mood: “sunlight casting a warm, soft glow.”
-        •	Focus and Detail: “crisp, clear focus on his facial features,” “high detail and likeness.”
-        •	Emotional Tone or Action: “sitting on a rustic wooden bench, reading a book with a relaxed and contented expression.”
-        •	LORA Specificity: “lora:jx265:1”
-    Adaptable Template:
-    You can also use this template to create different prompts:
-    Photorealistic portrait of jx265, [subject description: age, hair color, skin tone, attire]. The scene is set in [environment: describe setting and time of day], with [lighting: type of lighting and effects]. The background features [background detail: describe background]. The subject is [action/emotion: what the subject is doing and their expression]. Detailed textures of [specific visual elements] are visible, with [camera settings: focus, resolution, dynamic range]. The likeness of the LORA named jx265 should be distinctly referenced, ensuring high detail, capturing [specific features: natural shadows, realistic skin tones]. [Extra descriptors: any additional details]. <lora:jx265:1>
-    This approach helps ensure that the SDXL model captures the distinctive characteristics represented by the LORA named jx265, resulting in a highly similar resemblance.
+> 1. Photorealistic image of jx265 sitting in a cozy corner of a vintage cafe, autumn afternoon, natural light streaming in through large windows, candid moment captured while sipping a steaming cup of coffee, highly detailed textures on wooden table and chair, vibrant colors of decor and foliage, warm ambiance, soft shadows, intricate details in clothing, relaxed and introspective expression <lora:jx265:1>
+> 2. jx265 in a lush, blooming garden, surrounded by a myriad of colorful flowers, golden hour lighting creating a warm, enchanting glow, wearing casual and comfortable clothing, sitting on a rustic bench, soft focus on the background, realistic textures of plants and flowers, serene and contemplative expression, rich and vibrant color palette, ultra-high-resolution, capturing the tranquility and beauty of nature <lora:jx265:1>
+> 3. Portrait of jx265 during a rainy day, standing under a classic black umbrella, wet city street background with reflections on the pavement, realistic raindrops and puddles, moody and atmospheric lighting, sharp details on face and clothing, highly realistic water textures, reflective surfaces of buildings and cars, capturing the essence of a rainy urban scene, introspective and thoughtful expression <lora:jx265:1>
+> 4. Close-up of jx265 at a serene beach, during sunset, wind gently blowing through hair, relaxed and happy expression, golden sunlight casting a warm glow, waves and sand in the background, photorealistic textures of the beach environment, detailed and natural looking hair, realistic skin tones, sense of peace and contentment, vibrant and rich colors, high-resolution image capturing the beauty of the moment <lora:jx265:1>
+> 5. jx265 dancing energetically at a colorful festival, lively and bustling background filled with festival-goers, joy and motion beautifully captured, vibrant atmosphere with bright lights and decorations, crisp details on clothing and face, motion blur adding a sense of movement, festival lights illuminating the scene, photorealistic quality, high energy and excitement, detailed patterns and textures, wide smile and expressive eyes <lora:jx265:1>
+> 6. Intimate portrait of jx265 reading a book by a crackling fireplace, warm and cozy lighting casting a gentle glow, detailed textures on the book cover and pages, calm and focused expression, realistic fire glow reflecting on face and surroundings, high-resolution image capturing every detail from the crackling embers to the soft fabric of a nearby blanket, serene and peaceful mood, soft shadows and rich warm tones, bookshelf in the background <lora:jx265:1>
+> 7. Photorealistic image of jx265 hiking in the breathtaking mountains, panoramic and stunning landscape with towering peaks, rugged and practical hiking attire, natural lighting showcasing the beauty of nature, sharp focus on jx265 with detailed textures on clothing and gear, expansive scenery in the background, immersive depth and sense of adventure, vivid and rich colors, capturing the essence of exploration and connection with nature, serene and determined expression <lora:jx265:1>
+> 8. jx265 playing an acoustic guitar in a sun-dappled park, sunlight filtering through the leaves of tall trees, realistic and intricate wood textures on the guitar, relaxed posture and engaging smile, high-detail in clothing and facial features, lifelike and vibrant park background with people walking and greenery, photorealistic quality, capturing a moment of musical expression and joy, vibrant and rich colors, sense of peace and connection with nature <lora:jx265:1>
+> 9. Striking photorealistic image of jx265 exploring a bustling and vibrant marketplace, dynamic background filled with colorful stalls and diverse crowd, sharp focus on jx265 with detailed textures on clothing and skin, candid moment captured while admiring a beautifully crafted item, lively atmosphere with rich and varied colors, realistic lighting and shadows, depiction of cultural richness and human interaction, ultra-realistic quality, sense of discovery and curiosity, detailed and expressive facial features <lora:jx265:1>
+> 10. jx265 enjoying an outdoor concert during a warm summer evening, dramatic stage lighting creating an energetic and vibrant atmosphere, vivid colors highlighting the excitement of the event, animated and expressive facial features, photorealistic quality, detailed crowd in the background, immersive feel with realistic textures on clothing and surroundings, capturing the thrill of live music, joyous and energetic expression, soft shadows and well-defined lighting adding depth <lora:jx265:1>
 
-## What I missed
+Finally, I wanted ChatGPT to give me some more general advice on how to create an image with SDXL that looked like me: "How can I craft a prompt for sdxl model such that it will most resemble the LORA named jx265?"
 
-Didn't manually caption the training images
-Lora strength <lora:jx265:0.8>
+> To craft a prompt for the SDXL model that will most closely resemble the LORA named jx265, you should consider incorporating detailed descriptors and context. This includes physical features, environmental settings, emotions, actions, and any specific attributes that the LORA captures well.
+> Here’s a detailed breakdown:
+>
+> 1. Subject Details: Include general features about jx265 like gender, age, hair color, skin tone, attire, etc.
+> 2. Setting and Environment: Describe the surroundings to add context and richness.
+> 3. Lighting and Mood: Specify the type of lighting and the overall mood you want to capture in the image.
+> 4. Focus and Detail: Mention camera settings or descriptors that highlight the level of detail and focus you require.
+> 5. Emotional Tone or Action: Provide insights into the subject’s emotion or action, which lends personality and dynamism to the image.
+> 6. LORA Specificity: Reference the LORA (jx265) explicitly to ensure the model you are using is aligned with the characteristics captured by the LORA.
+>
+> Here is a crafted prompt that encapsulates these elements:
+>
+> **Example Prompt:**
+>
+> Photorealistic portrait of jx265, a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt. The scene is set in a lush garden during golden hour, with sunlight casting a warm, soft glow. The background is slightly out of focus, creating a gentle bokeh effect with vibrant floral tones. The man is sitting on a rustic wooden bench, reading a book with a relaxed and contented expression. Detailed textures of the garden environment and his clothing are visible, with crisp, clear focus on his facial features. The LORA named jx265 should be distinctly referenced, ensuring high detail and likeness, capturing natural shadows and realistic skin tones. Ultra-high-resolution image with high dynamic range, capturing the serene and tranquil mood flawlessly. <lora:jx265:1>
+>
+> **Breakdown:**
+>
+> * Subject Details: “a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt.”
+> * Setting and Environment: “The scene is set in a lush garden during golden hour.”
+> * Lighting and Mood: “sunlight casting a warm, soft glow.”
+> * Focus and Detail: “crisp, clear focus on his facial features,” “high detail and likeness.”
+> * Emotional Tone or Action: “sitting on a rustic wooden bench, reading a book with a relaxed and contented expression.”
+> * LORA Specificity: “lora:jx265:1”
+>
+> **Adaptable Template:**
+>
+> You can also use this template to create different prompts:
+>
+> Photorealistic portrait of jx265, [subject description: age, hair color, skin tone, attire]. The scene is set in [environment: describe setting and time of day], with [lighting: type of lighting and effects]. The background features [background detail: describe background]. The subject is [action/emotion: what the subject is doing and their expression]. Detailed textures of [specific visual elements] are visible, with [camera settings: focus, resolution, dynamic range]. The likeness of the LORA named jx265 should be distinctly referenced, ensuring high detail, capturing [specific features: natural shadows, realistic skin tones]. [Extra descriptors: any additional details]. <lora:jx265:1>
+>
+> This approach helps ensure that the SDXL model captures the distinctive characteristics represented by the LORA named jx265, resulting in a highly similar resemblance.
+
+## Conclusion
+
+I would love to add outcome images for each of the attempts above, but now that I know how easy the process is to generate a model based off of someone face (and how few training images it needs), I will not be doing that.
+
+The key things that I found out whilst training a LoRA are:
+
+* You only need around 20 images
+    * They need to be different crops of the person (face, shoulder-length, full body)
+    * They need to be square (1024x1024) images to match the SDXL model output
+* Regularization images are not necessary
+* The instance prompt needs to be a unique string (jx265)
+* Use WD14 Captioning
+
+And when generating an output image
+
+* Use ADetailer for a more realistic looking face
+* Find examples of negative prompts online (or use the ones in this post)
+* Use the X/Y/Z plotter to try the same prompt and seed with the various epochs of the model
+* Use ChatGPT to help with prompt creation because it is a tedious business

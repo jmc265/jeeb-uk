@@ -5,13 +5,6 @@ layout: post
 draft: true 
 tags:
   - programming
-  - terraform
-  - react 
-  - state management 
-  - redux 
-  - next.js
-  - context providers 
-  - cache 
 ---
 
 > “Tell them stories. They need the truth. You must tell them true stories, and everything will be well, just tell them stories.”
