@@ -322,6 +322,15 @@ Then on the tedious business of "prompt engineering" (NOTE: I do not consider an
 
 As I mentioned, I found the act of creating prompts really quite tedious. This is mostly because it wasn't really possible to tweak a prompt a small amount and expect small change in output. I might have been missing something in the Automatic1111 UI (because honestly it isn't the most intuitive interface ever), but that is the experience I had. So I figure, why not get an LLM to help generate prompts? I can give it the prompts I have listed above to seed the question, but then let the LLM churn out a whole bunch of varying prompts and then feed those into the SDXL model. I don't even really have to vet the output of the LLM because I only care about the output from SDXL. 
 
+ChatGpt-4o: "Create a positive and a negative prompt for Stable Diffusion that ask it to create a professional headshot style photo of a subject called jx265. Here are some positive prompts that have been used before: ... And here are some negative prompts used before: ..."
+Output: 
+
+Positive Prompt:
+LinkedIn professional headshot of (jx265 man), sharp focus, elegant, award-winning photography, natural background, masterpiece quality, rim lit, studio lighting, highly detailed, trending on artstation, Nikon, Kodak, 8K resolution, solid blue background, crisp, and clean, ultra-realistic, centered, looking directly at the camera <lora:jx265:1>
+Negative Prompt:
+ugly, duplicate, morbid, mutilated, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, bad anatomy, bad proportions, extra limbs, cloned face, extra head, watermark, extra hands, weird hand, weird finger, weird arm, mutation:1.3, deformed:1.3, blurry, bad anatomy:1.1, bad proportions:1.2, long neck:1.2, worst quality:1.4, low quality:1.4, monochrome:1.1, text, signature, old, wrinkles, mole, blemish, disfigured, oversmoothed, 3d render, scar, sad, severe, 2d, sketch, painting, digital art, drawing, anime, cgi, dehydrated, elongated body, NSFW, nude, underwear, muscular, dark lighting, clay, kitsch, oversaturated
+
+
 ## What I missed
 
 Didn't manually caption the training images
