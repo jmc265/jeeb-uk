@@ -501,21 +501,40 @@ And when generating an output image
 - Create a high-resolution vintage-style photograph of jx265. Jx265 should be dressed in classic 1950s attire, such or neat suit, smiling joyfully. Utilize sepia tones, subtle film grain, and slightly softened edges. The setting should resemble an old-timey studio with vintage props like a rotary phone and floral wallpaper. <lora:jx265:1>
     - 00025-2640895880
 - Generate a modern, high-resolution photograph of jx265 standing on a bustling city street at dusk. Jx265 should be smiling brightly, with the golden light from streetlights and headlights casting a warm glow on their face. Capture the cityscape with blurred motion of pedestrians and vehicles in the background. <lora:jx265:1>
+    - 00026-639930909
 - Produce a classic black and white photograph of jx265 with a happy expression, standing against an urban backdrop. Emphasize strong contrasts and deep shadows to highlight jx265’s facial features, with detailed textures on clothing and a finely structured urban environment for added realism. <lora:jx265:1>
+    - 00027-3083744684
 - Create a high-resolution photograph of jx265 on a sandy beach at sunset, dressed in casual summer attire. Jx265 should be smiling warmly, with the sun setting behind them casting a golden glow and slight lens flare. Waves gently lap at the shore in the background, with footprints in the sand adding detail. <lora:jx265:1>
+    - 00028-2063670553
 - Generate a high-resolution photograph of jx265 standing in a lush, green forest, wearing outdoor gear. Jx265 is smiling and bathed in natural sunlight filtering through the canopy, casting dappled light and shadows. Forest elements like ferns, fallen leaves, and tree bark should be clearly detailed. <lora:jx265:1>
+    - 00029-198308439
 - Produce an art deco-inspired high-resolution photograph of jx265, with geometric shapes and elegant lines incorporated into the background and outfit. Jx265, smiling, dressed in a sleek, 1920s-inspired outfit with gold and black details. Use luxurious, clean lighting to create an upscale, glamorous setting. <lora:jx265:1>
+    - 00030-4146729375
 - Create a high-resolution photograph of jx265 on a rainy day, standing under a colorful umbrella and smiling joyfully. Details should include raindrops on the umbrella, reflections in puddles, and a brightly lit, wet urban environment. The sky should be overcast with gentle raindrops visible in the air. <lora:jx265:1>
+    - 00031-3925698473
 - Generate a high-resolution cinematic still of jx265, with dramatic, natural lighting and a shallow depth of field. Jx265 should be smiling while interacting with a recognizable urban setting, with a slightly blurred background emphasizing bokeh effects from city lights and street elements. <lora:jx265:1>
+    - 00032-2485099629
 - Produce a high-resolution photograph of jx265 on a sports field, smiling confidently in athletic wear suited for the specific sport (such as soccer or basketball gear). Capture dynamic movement in the background with teammates or equipment, and strong, natural lighting highlighting their athleticism. <lora:jx265:1>
+    - 00033-480587006
 - Create a high-resolution photograph of jx265 at a beautifully arranged outdoor picnic, surrounded by friends and family. Jx265 is smiling happily with a feast laid out on a blanket, vibrant fruits, and checkered cloth. Natural sunlight, with a clear sky and distant trees, adds a summery ambiance. <lora:jx265:1>
+    - 00034-1118151046
 - Generate a high-resolution photograph of jx265 in a snowy landscape, wearing a cozy winter coat, scarf, and gloves. Jx265 should be smiling joyfully with softly falling snowflakes visible. Background details include pine trees dusted with snow, sparkling icicles, and a serene, overcast sky. <lora:jx265:1>
+    - 00035-1537139638
 - Produce a high-resolution photograph of jx265 with a retro Polaroid style, smiling widely. Include a classic white Polaroid border and slightly faded colors. The setting should incorporate a whimsical, nostalgic background, such as a carnival or beach scene, with a slight vignette effect. <lora:jx265:1>
+    - 00036-3923708682
 - Create a high-resolution photograph of jx265 at a famous landmark such as the Eiffel Tower or the Great Wall of China, smiling excitedly. Ensure clear details of the landmark in the background, with Jx265 engaged in a candid, travel-related activity, such as taking photos or enjoying local cuisine. <lora:jx265:1>
+    - 00037-3885217923
 - Generate a high-resolution photograph of jx265 in a quaint, cozy cafe, smiling pleasantly with a steaming cup of coffee in hand. The cafe environment should be warmly lit, with detailed elements like rustic wooden tables, latte art, and aromatic pastries in the background. <lora:jx265:1>
+    - Just images of coffee shops
 - Produce a high-resolution glamour photograph of jx265, dressed elegantly in evening wear, such as a chic gown or tailored suit. Jx265 should be smiling confidently, with dramatic studio lighting creating refined highlights and shadows. The background should be a rich, deep color with subtle patterns. <lora:jx265:1>
+    - 00038-1314761103
 - Create a high-resolution photograph of jx265 swimming underwater in a crystal-clear pool, smiling and surrounded by bubbles. Use clear, bright lighting to capture the underwater environment, with ripples and sunlight creating shimmering patterns on their face and the pool floor. <lora:jx265:1>
+    - All females
 - Generate a high-resolution photograph of jx265 in a park during autumn, dressed in warm, casual clothing. Jx265 is smiling while surrounded by vibrant fall leaves in shades of red, orange, and yellow. Include warm sunlight, casting long shadows and a crisp, clear day. <lora:jx265:1>
+    - 00039-2811510760
 - Produce a high-resolution photograph of jx265 enjoying a music festival, with a big joyful smile. Capture the vibrancy of the festival with colorful stage lights, banners, and an excited crowd. Ensure environmental details like festival-goers, stage equipment, and clear sky contribute to the atmosphere. <lora:jx265:1>
+    - 00040-2045349419
 - Create a high-resolution photograph of jx265 in a hand-drawn sketch style, smiling happily. Use subtle pencil shading and lines to give the appearance of a high-quality sketch while maintaining realistic facial features and background elements like a lively cafe scene or tranquil park setting. <lora:jx265:1>
+    - 00041-1493791435
 - Generate a high-resolution photograph of jx265 holding a pet, such as a dog or cat, both smiling happily. Jx265 should be in a comfortable, cozy setting like a home living room with detailed elements such as a plush sofa, warm lighting, and personal decorations in the background. <lora:jx265:1>
+    - 00042-666032749
