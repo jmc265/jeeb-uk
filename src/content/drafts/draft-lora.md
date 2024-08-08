@@ -275,7 +275,7 @@ There is a tab in the Automatic1111 user interface labelled "ADetailer". On my r
 
 ## Attempt 10
 
-I wanted to compare all of the models output using the same prompt and seed. Automatic1111 has a mechanism to do this. At the bottom of the Generate tab there is a "Script" tab. Opening that up you can add an "X/Y/Z Plot". For the X plot you need type "Prompt S/R". Within the prompt itself, add the lora reference to the end: "<lora:jx265:1>". Then in the Prompt S/R box, you need to put the same value again and then a comma separated list of all the other lora references: "<lora:jx265:1>, <lora:jx265-000001:1>, <lora:jx265-000002:1>, <lora:jx265-000003:1>, <lora:jx265-000004:1> <lora:jx265-000005:1>, <lora:jx265-000006:1>, <lora:jx265-000007:1>, <lora:jx265-000008:1> <lora:jx265-000009:1>".
+I wanted to compare all of the models output using the same prompt and seed. Automatic1111 has a mechanism to do this. At the bottom of the Generate tab there is a "Script" tab. Opening that up you can add an "X/Y/Z Plot". For the X plot you need type "Prompt S/R". Within the prompt itself, add the lora reference to the end: "<lora:jx265:1>". Then in the Prompt S/R box, you need to put the same value again and then a comma separated list of all the other lora references: "<lora:jx265:1>, <lora:jx265-000001:1>, <lora:jx265-000002:1>, <lora:jx265-000003:1>, <lora:jx265-000004:1>, <lora:jx265-000005:1>, <lora:jx265-000006:1>, <lora:jx265-000007:1>, <lora:jx265-000008:1>, <lora:jx265-000009:1>".
 
 This will generate an image that contains plots each of the models output alongside each other for easy comparison of the models.
 
