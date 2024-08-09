@@ -538,3 +538,5 @@ And when generating an output image
     - 00041-1493791435
 - Generate a high-resolution photograph of jx265 holding a pet, such as a dog or cat, both smiling happily. Jx265 should be in a comfortable, cozy setting like a home living room with detailed elements such as a plush sofa, warm lighting, and personal decorations in the background. <lora:jx265:1>
     - 00042-666032749
+
+417 separate images
