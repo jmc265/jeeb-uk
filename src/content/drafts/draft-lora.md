@@ -446,8 +446,26 @@ And when generating an output image
 * Use ChatGPT to help with prompt creation because it is a tedious business
 
 
+## Issues
+
+The model had various recurring issues when attempting to generate images:
+
+**Feet/Legs**
 
 
+**Hands**
+
+
+**Mouth/Teeth**
+
+
+**Art Style**
+
+
+**Gender**
+
+
+**Other**
 
 
 - LinkedIn professional headshot of (jx265 man), sharp focus, elegant, award-winning photography, natural background, masterpiece quality, rim lit, studio lighting, highly detailed, trending on artstation, Nikon, Kodak, 8K resolution, solid blue background, crisp, and clean, ultra-realistic, centered, looking directly at the camera <lora:jx265:1>
