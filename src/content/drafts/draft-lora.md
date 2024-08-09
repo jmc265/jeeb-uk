@@ -358,51 +358,7 @@ All of which are worth trying out in SDXL. I then wanted it to create some more 
 > 9. Striking photorealistic image of jx265 exploring a bustling and vibrant marketplace, dynamic background filled with colorful stalls and diverse crowd, sharp focus on jx265 with detailed textures on clothing and skin, candid moment captured while admiring a beautifully crafted item, lively atmosphere with rich and varied colors, realistic lighting and shadows, depiction of cultural richness and human interaction, ultra-realistic quality, sense of discovery and curiosity, detailed and expressive facial features <lora:jx265:1>
 > 10. jx265 enjoying an outdoor concert during a warm summer evening, dramatic stage lighting creating an energetic and vibrant atmosphere, vivid colors highlighting the excitement of the event, animated and expressive facial features, photorealistic quality, detailed crowd in the background, immersive feel with realistic textures on clothing and surroundings, capturing the thrill of live music, joyous and energetic expression, soft shadows and well-defined lighting adding depth <lora:jx265:1>
 
-Finally, I wanted ChatGPT to give me some more general advice on how to create an image with SDXL that looked like me: "How can I craft a prompt for sdxl model such that it will most resemble the LORA named jx265?"
-
-> To craft a prompt for the SDXL model that will most closely resemble the LORA named jx265, you should consider incorporating detailed descriptors and context. This includes physical features, environmental settings, emotions, actions, and any specific attributes that the LORA captures well.
-> Here’s a detailed breakdown:
->
-> 1. Subject Details: Include general features about jx265 like gender, age, hair color, skin tone, attire, etc.
-> 2. Setting and Environment: Describe the surroundings to add context and richness.
-> 3. Lighting and Mood: Specify the type of lighting and the overall mood you want to capture in the image.
-> 4. Focus and Detail: Mention camera settings or descriptors that highlight the level of detail and focus you require.
-> 5. Emotional Tone or Action: Provide insights into the subject’s emotion or action, which lends personality and dynamism to the image.
-> 6. LORA Specificity: Reference the LORA (jx265) explicitly to ensure the model you are using is aligned with the characteristics captured by the LORA.
->
-> Here is a crafted prompt that encapsulates these elements:
->
-> **Example Prompt:**
->
-> Photorealistic portrait of jx265, a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt. The scene is set in a lush garden during golden hour, with sunlight casting a warm, soft glow. The background is slightly out of focus, creating a gentle bokeh effect with vibrant floral tones. The man is sitting on a rustic wooden bench, reading a book with a relaxed and contented expression. Detailed textures of the garden environment and his clothing are visible, with crisp, clear focus on his facial features. The LORA named jx265 should be distinctly referenced, ensuring high detail and likeness, capturing natural shadows and realistic skin tones. Ultra-high-resolution image with high dynamic range, capturing the serene and tranquil mood flawlessly. <lora:jx265:1>
->
-> **Breakdown:**
->
-> * Subject Details: “a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt.”
-> * Setting and Environment: “The scene is set in a lush garden during golden hour.”
-> * Lighting and Mood: “sunlight casting a warm, soft glow.”
-> * Focus and Detail: “crisp, clear focus on his facial features,” “high detail and likeness.”
-> * Emotional Tone or Action: “sitting on a rustic wooden bench, reading a book with a relaxed and contented expression.”
-> * LORA Specificity: “lora:jx265:1”
->
-> **Adaptable Template:**
->
-> You can also use this template to create different prompts:
->
-> Photorealistic portrait of jx265, [subject description: age, hair color, skin tone, attire]. The scene is set in [environment: describe setting and time of day], with [lighting: type of lighting and effects]. The background features [background detail: describe background]. The subject is [action/emotion: what the subject is doing and their expression]. Detailed textures of [specific visual elements] are visible, with [camera settings: focus, resolution, dynamic range]. The likeness of the LORA named jx265 should be distinctly referenced, ensuring high detail, capturing [specific features: natural shadows, realistic skin tones]. [Extra descriptors: any additional details]. <lora:jx265:1>
->
-> This approach helps ensure that the SDXL model captures the distinctive characteristics represented by the LORA named jx265, resulting in a highly similar resemblance.
-
-
-
-
-
-"Create a positive prompt for Stable Diffusion that asks it to create a happy photo of a subject called jx265. The prompt must be written in a way that will create an image that resembles jx265 as much as possible. It must also output a very photographic image"
-> Create a vibrant, high-resolution photograph of a person named jx265. jx265 should be depicted smiling warmly, with a natural and joyful expression. Ensure the lighting is soft and flattering, bringing out the contours of their face in a realistic manner. The background should be slightly blurred to emphasize the subject, resembling a professional portrait photography style. Pay close attention to details such as skin texture, hair, and eye sparkle to achieve a lifelike result. Include elements that suggest a warm, sunny day with natural surroundings, enhancing the overall positivity and happiness conveyed by the image.
-
-> "Create a high-resolution photograph of jx265, a person with light brown skin, curly black hair, and bright green eyes. They should be seated in a relaxed pose, smiling warmly with a slight head tilt. The lighting should be natural and diffused, casting gentle shadows to create depth. The background should feature a slightly blurred park scene with sunlight filtering through trees, enhancing the focus on jx265. They are wearing a light blue shirt with a subtle pattern and simple stud earrings. Pay close attention to the fine details like skin texture, hair strands, and eye reflections to ensure a lifelike appearance."
-
-"Can you create 20 more example prompts of the same nature, but make sure to a lot of variation between the different prompts. Perhaps use different art styles or ask for different settings making sure to generate high quality, photogenic and realistic output"
+I then wanted a large variety of different styles to choose from so I asked: "Can you create 20 more example prompts of the same nature, but make sure to a lot of variation between the different prompts. Perhaps use different art styles or ask for different settings making sure to generate high quality, photogenic and realistic output"
 
 > 1. Vintage Style Portrait: “Create a high-resolution vintage-style photograph of jx265. Jx265 should be dressed in classic 1950s attire, such as a pin-up dress or neat suit, smiling joyfully. Utilize sepia tones, subtle film grain, and slightly softened edges. The setting should resemble an old-timey studio with vintage props like a rotary phone and floral wallpaper.”
 > 2. Urban Street Photography: “Generate a modern, high-resolution photograph of jx265 standing on a bustling city street at dusk. Jx265 should be smiling brightly, with the golden light from streetlights and headlights casting a warm glow on their face. Capture the cityscape with blurred motion of pedestrians and vehicles in the background.”
@@ -425,6 +381,28 @@ Finally, I wanted ChatGPT to give me some more general advice on how to create a
 > 19. Sketch Style: “Create a high-resolution photograph of jx265 in a hand-drawn sketch style, smiling happily. Use subtle pencil shading and lines to give the appearance of a high-quality sketch while maintaining realistic facial features and background elements like a lively cafe scene or tranquil park setting.”
 > 20. Portrait with Pet: “Generate a high-resolution photograph of jx265 holding a pet, such as a dog or cat, both smiling happily. Jx265 should be in a comfortable, cozy setting like a home living room with detailed elements such as a plush sofa, warm lighting, and personal decorations in the background.”
 
+Finally, I wanted ChatGPT to give me some more general advice on how to create an image with SDXL that looked like me: "How can I craft a prompt for sdxl model such that it will most resemble the LORA named jx265?"
+
+> To craft a prompt for the SDXL model that will most closely resemble the LORA named jx265, you should consider incorporating detailed descriptors and context. This includes physical features, environmental settings, emotions, actions, and any specific attributes that the LORA captures well.
+> Here’s a detailed breakdown:
+>
+> 1. Subject Details: Include general features about jx265 like gender, age, hair color, skin tone, attire, etc.
+> 2. Setting and Environment: Describe the surroundings to add context and richness.
+> 3. Lighting and Mood: Specify the type of lighting and the overall mood you want to capture in the image.
+> 4. Focus and Detail: Mention camera settings or descriptors that highlight the level of detail and focus you require.
+> 5. Emotional Tone or Action: Provide insights into the subject’s emotion or action, which lends personality and dynamism to the image.
+> 6. LORA Specificity: Reference the LORA (jx265) explicitly to ensure the model you are using is aligned with the characteristics captured by the LORA.
+>
+> Here is a crafted prompt that encapsulates these elements:
+>
+> **Example Prompt:**
+>
+> Photorealistic portrait of jx265, a young man in his late 20s, with short dark hair, fair skin, and wearing a casual button-up shirt. The scene is set in a lush garden during golden hour, with sunlight casting a warm, soft glow. The background is slightly out of focus, creating a gentle bokeh effect with vibrant floral tones. The man is sitting on a rustic wooden bench, reading a book with a relaxed and contented expression. Detailed textures of the garden environment and his clothing are visible, with crisp, clear focus on his facial features. The LORA named jx265 should be distinctly referenced, ensuring high detail and likeness, capturing natural shadows and realistic skin tones. Ultra-high-resolution image with high dynamic range, capturing the serene and tranquil mood flawlessly. <lora:jx265:1>
+
+Once I had all of those prompts, I entered them into Automatic1111 UI one at a time, making sure to use all 10 of my LoRAs each time so that I got 10 outputs per prompt.
+
+When I had all of those generated, I rated each and every image from 1 (completely unusable) to 5 (looks exactly like me). I also had my wife check over the images I rated 4 and 5 to make sure I did not have a distorted view of what I looked like.
+
 ## Conclusion
 
 I would love to add outcome images for each of the attempts above, but now that I know how easy the process is to generate a model based off of someone's face (and how few training images it needs), I will not be doing that.
@@ -446,26 +424,49 @@ And when generating an output image
 * Use ChatGPT to help with prompt creation because it is a tedious business
 
 
-## Issues
+## Failure modes
 
 The model had various recurring issues when attempting to generate images:
 
 **Feet/Legs**
-
+![](lora/feet.png)
 
 **Hands**
+![](lora/hands.png)
 
 
 **Mouth/Teeth**
-
+![](lora/mouth.png)
 
 **Art Style**
-
+![](lora/style.png)
 
 **Gender**
 
 
 **Other**
+![](lora/other.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - LinkedIn professional headshot of (jx265 man), sharp focus, elegant, award-winning photography, natural background, masterpiece quality, rim lit, studio lighting, highly detailed, trending on artstation, Nikon, Kodak, 8K resolution, solid blue background, crisp, and clean, ultra-realistic, centered, looking directly at the camera <lora:jx265:1>
