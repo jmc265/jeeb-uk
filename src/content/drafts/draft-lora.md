@@ -540,3 +540,5 @@ And when generating an output image
     - 00042-666032749
 
 417 separate images
+
+594 images for all generated since the start
