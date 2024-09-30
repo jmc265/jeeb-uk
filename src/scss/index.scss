@@ -4,7 +4,7 @@
 @import "tags";
 
 body {
-    font-family: "Josefin Sans",helvetica neue,sans-serif;
+    font-family: "Josefin Sans", helvetica neue, sans-serif;
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: -.01rem;
@@ -14,7 +14,14 @@ body {
     color: $text-color;
 }
 
-h1, h2, h3, h4, h5, h6, p, time {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+time {
     color: $text-color;
     margin-top: 0;
     margin-bottom: 0;
@@ -29,7 +36,8 @@ a {
     }
 }
 
-ol, ul {
+ol,
+ul {
     padding: 0;
 }
 
@@ -68,7 +76,8 @@ article {
     margin-bottom: 1rem;
     border-radius: 0.25rem;
 
-    ol, ul {
+    ol,
+    ul {
         margin-left: 1rem;
     }
 
@@ -79,14 +88,6 @@ article {
 }
 
 article.gallery {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // max-width: 100%;
-
-    // & > * {
-    //     max-height: 200px;
-    // }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: dense;
@@ -124,7 +125,8 @@ article.gallery {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black overlay */
     z-index: 9999;
 }
 

@@ -4,12 +4,14 @@ layout: layouts/base.njk
 
 <main class="container full-width">
     <article class="gallery">
+        <ul>
         {% set taglist = collections.gallery %}
         {% for post in taglist | reverse %}
             {% for image in post.content | markdownToImagesOnly %}
-                {{ image | safe }}
+                <li>{{ image | safe }}</li>
             {% endfor %}
         {% endfor %}
+        </ul>
     </article>
 
     <div class="lightbox">
@@ -30,7 +32,6 @@ layout: layouts/base.njk
         if (!image.srcset) {
             continue;
         }
-        console.log(image);
         image.onclick = () => {
             const srcSet = image.srcset.split(',');
             const biggestSize = srcSet[srcSet.length-1].trim().split(" ");  
