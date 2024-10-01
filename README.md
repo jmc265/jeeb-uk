@@ -33,7 +33,9 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUB-ID>"
 ```
 
 ## Github actions
+
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
+
 ```shell
 az ad sp create-for-rbac --name github-static-builder --role contributor --scopes /subscriptions/c0f8603c-4a9c-495a-90cf-91033e31205f/resourceGroups/james-cx --sdk-auth
 ```
