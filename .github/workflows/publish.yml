@@ -15,6 +15,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+    environment: prod
     steps:
       - name: CHECKOUT
         uses: actions/checkout@v2
