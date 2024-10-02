@@ -36,8 +36,10 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<SUB-ID>"
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
 
+Re-create AZURE_CREDENTIALS env var for github actions:
+
 ```shell
-az ad sp create-for-rbac --name github-static-builder --role contributor --scopes /subscriptions/c0f8603c-4a9c-495a-90cf-91033e31205f/resourceGroups/james-cx --sdk-auth
+az ad sp create-for-rbac --name github-static-builder --role contributor --scopes /subscriptions/c0f8603c-4a9c-495a-90cf-91033e31205f/resourceGroups/jeeb-uk --years 2
 ```
 
 ## Links
