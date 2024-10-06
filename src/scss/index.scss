@@ -88,10 +88,13 @@ article {
 }
 
 article.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-flow: dense;
-    gap: 0 0.5rem;
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: dense;
+        gap: 0 0.5rem;
+    }
 
     @media (max-width: 1024px) {
         & {
